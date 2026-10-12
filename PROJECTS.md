@@ -1,6 +1,6 @@
 # Maintenance report by project
 
-Generated on 2026-10-09 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
+Generated on 2026-10-12 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
 
 ## Scrapy and its deps
 
@@ -28,15 +28,12 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: y
 
 ### scrapy/cssselect
 
-[Repository](https://github.com/scrapy/cssselect) · commit [`d1f8b2a`](https://github.com/scrapy/cssselect/commit/d1f8b2a771a6976efea0038ac3e9b8efb85cfef7) · 20/28 checks passing
+[Repository](https://github.com/scrapy/cssselect) · commit [`805705c`](https://github.com/scrapy/cssselect/commit/805705c5a204721d3c486250377a756bd6fa54a5) · 23/28 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes
 
 **Python versions**
 
-- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
-- ❌ [`latest-python`](REPORT.md#latest-python): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
-- ❌ [`python-classifiers`](REPORT.md#python-classifiers): no classifiers for 3.15
 - ❌ [`latest-pypy`](REPORT.md#latest-pypy): PyPy 3.12 not found in CI workflows or tox config
 
 **Typing**
@@ -75,7 +72,7 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no
 
 ### scrapy/itemadapter
 
-[Repository](https://github.com/scrapy/itemadapter) · commit [`ef0b748`](https://github.com/scrapy/itemadapter/commit/ef0b748c57de506a0524db06537e006a207a40b5) · 20/25 checks passing
+[Repository](https://github.com/scrapy/itemadapter) · commit [`2f10420`](https://github.com/scrapy/itemadapter/commit/2f104200f917ca2ef4b7beb734b97ff74878fca3) · 20/25 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: no
 
@@ -791,7 +788,7 @@ supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: yes
 
 ### scrapy/frostwork
 
-[Repository](https://github.com/scrapy/frostwork) · commit [`d8ef1a1`](https://github.com/scrapy/frostwork/commit/d8ef1a1b7bcb76a60821bf13fe7d19e224bc01a9) · 13/20 checks passing
+[Repository](https://github.com/scrapy/frostwork) · commit [`eaf5cff`](https://github.com/scrapy/frostwork/commit/eaf5cffc3727568d2651273502c2852b660e3738) · 13/20 checks passing
 
 supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: no
 

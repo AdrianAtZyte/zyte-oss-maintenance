@@ -1,6 +1,6 @@
 # Maintenance report
 
-Generated on 2026-10-09 with `oss-maint report`. Do not edit by hand. See [PROJECTS.md](PROJECTS.md) for what fails in each project.
+Generated on 2026-10-12 with `oss-maint report`. Do not edit by hand. See [PROJECTS.md](PROJECTS.md) for what fails in each project.
 
 ✅ passes · ❌ fails · ➖ not applicable · ⚠️ check error · yes/no or a value: result of an informational check. Click a symbol for details.
 
@@ -10,7 +10,7 @@ Values that checks compare projects against.
 
 - Latest Python: 3.15
 - Upcoming Python, with a release candidate: none
-- Supported Python versions, with EOL dates: 3.11 (2027-10-31), 3.12 (2028-10-31), 3.13 (2029-10-31), 3.14 (2030-10-31), 3.15 (unknown)
+- Supported Python versions, with EOL dates: 3.11 (2027-10-31), 3.12 (2028-10-31), 3.13 (2029-10-31), 3.14 (2030-10-31), 3.15 (2031-10-31)
 - Python versions of the latest PyPy release: 3.11, 3.12
 - End-of-life PyPy Python versions: 3.6, 3.7, 3.8, 3.9, 3.10
 - Latest sphinx-scrapy: 0.13.0
@@ -23,9 +23,9 @@ Checks passing per group.
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | --- |
 | **Scrapy and its deps** | | | | | | | | | | |
 | [scrapy/scrapy](https://github.com/scrapy/scrapy) | [❌ 4/5](#python-versions) | [✅ 5/5](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [✅ 3/3](#tests-and-coverage) | [❌ 4/5](#linting) | [✅ 4/4](#documentation) | [✅ 4/4](#releases) | [4](PROJECTS.md#scrapyscrapy) | [`be7bdc4`](https://github.com/scrapy/scrapy/commit/be7bdc4cd16644018fa56ef3503dce86744fa6d5) |
-| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌ 1/5](#python-versions) | [✅ 5/5](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 2/3](#tests-and-coverage) | [✅ 5/5](#linting) | [❌ 0/2](#documentation) | [✅ 4/4](#releases) | [8](PROJECTS.md#scrapycssselect) | [`d1f8b2a`](https://github.com/scrapy/cssselect/commit/d1f8b2a771a6976efea0038ac3e9b8efb85cfef7) |
+| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌ 4/5](#python-versions) | [✅ 5/5](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 2/3](#tests-and-coverage) | [✅ 5/5](#linting) | [❌ 0/2](#documentation) | [✅ 4/4](#releases) | [5](PROJECTS.md#scrapycssselect) | [`805705c`](https://github.com/scrapy/cssselect/commit/805705c5a204721d3c486250377a756bd6fa54a5) |
 | [scrapy/formerly](https://github.com/scrapy/formerly) | [❌ 1/5](#python-versions) | [✅ 5/5](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [✅ 3/3](#tests-and-coverage) | [❌ 2/3](#linting) | [➖](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyformerly) | [`1286733`](https://github.com/scrapy/formerly/commit/1286733c171d2138bc6dcb59b49ee4df5228fd40) |
-| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌ 4/5](#python-versions) | [✅ 5/5](#packaging) | [✅ 1/1](#dependencies) | [❌ 2/4](#typing) | [❌ 2/3](#tests-and-coverage) | [✅ 3/3](#linting) | [➖](#documentation) | [❌ 3/4](#releases) | [5](PROJECTS.md#scrapyitemadapter) | [`ef0b748`](https://github.com/scrapy/itemadapter/commit/ef0b748c57de506a0524db06537e006a207a40b5) |
+| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌ 4/5](#python-versions) | [✅ 5/5](#packaging) | [✅ 1/1](#dependencies) | [❌ 2/4](#typing) | [❌ 2/3](#tests-and-coverage) | [✅ 3/3](#linting) | [➖](#documentation) | [❌ 3/4](#releases) | [5](PROJECTS.md#scrapyitemadapter) | [`2f10420`](https://github.com/scrapy/itemadapter/commit/2f104200f917ca2ef4b7beb734b97ff74878fca3) |
 | [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | [❌ 1/5](#python-versions) | [✅ 5/5](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/3](#tests-and-coverage) | [✅ 5/5](#linting) | [❌ 0/2](#documentation) | [❌ 2/4](#releases) | [10](PROJECTS.md#scrapyitemloaders) | [`f3e6800`](https://github.com/scrapy/itemloaders/commit/f3e680016d0fd49f24a656f440938ec14c0cd9db) |
 | [scrapy/parsel](https://github.com/scrapy/parsel) | [❌ 3/5](#python-versions) | [❌ 4/5](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [✅ 3/3](#tests-and-coverage) | [✅ 5/5](#linting) | [✅ 4/4](#documentation) | [✅ 4/4](#releases) | [4](PROJECTS.md#scrapyparsel) | [`8ee96b7`](https://github.com/scrapy/parsel/commit/8ee96b7239775b4dbf214fd17e51d49e95538f16) |
 | [scrapy/protego](https://github.com/scrapy/protego) | [❌ 3/5](#python-versions) | [✅ 5/5](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [✅ 3/3](#tests-and-coverage) | [✅ 3/3](#linting) | [➖](#documentation) | [✅ 4/4](#releases) | [3](PROJECTS.md#scrapyprotego) | [`53d6df8`](https://github.com/scrapy/protego/commit/53d6df88ea74a29561d4c415d45ee77ddc86c1af) |
@@ -53,7 +53,7 @@ Checks passing per group.
 | [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌ 0/3](#python-versions) | [❌ 0/3](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/3](#tests-and-coverage) | [❌ 0/3](#linting) | [➖](#documentation) | [❌ 2/4](#releases) | [16](PROJECTS.md#scrapinghubscrapinghub-entrypoint-scrapy) | [`bf9632c`](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy/commit/bf9632c78355b545126363ce557106c1b9c3bb54) |
 | **Others** | | | | | | | | | | |
 | [scrapy/form2request](https://github.com/scrapy/form2request) | [❌ 0/3](#python-versions) | [❌ 4/5](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [✅ 3/3](#tests-and-coverage) | [✅ 5/5](#linting) | [❌ 0/2](#documentation) | [✅ 4/4](#releases) | [7](PROJECTS.md#scrapyform2request) | [`a251597`](https://github.com/scrapy/form2request/commit/a251597d9fa44cbd03736ec1da37f85593dfe820) |
-| [scrapy/frostwork](https://github.com/scrapy/frostwork) | [❌ 2/3](#python-versions) | [✅ 3/3](#packaging) | [❌ 1/2](#dependencies) | [❌ 1/2](#typing) | [❌ 0/3](#tests-and-coverage) | [❌ 2/3](#linting) | [➖](#documentation) | [✅ 4/4](#releases) | [7](PROJECTS.md#scrapyfrostwork) | [`d8ef1a1`](https://github.com/scrapy/frostwork/commit/d8ef1a1b7bcb76a60821bf13fe7d19e224bc01a9) |
+| [scrapy/frostwork](https://github.com/scrapy/frostwork) | [❌ 2/3](#python-versions) | [✅ 3/3](#packaging) | [❌ 1/2](#dependencies) | [❌ 1/2](#typing) | [❌ 0/3](#tests-and-coverage) | [❌ 2/3](#linting) | [➖](#documentation) | [✅ 4/4](#releases) | [7](PROJECTS.md#scrapyfrostwork) | [`eaf5cff`](https://github.com/scrapy/frostwork/commit/eaf5cffc3727568d2651273502c2852b660e3738) |
 | [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#python-versions) | [➖](#packaging) | [➖](#dependencies) | [➖](#typing) | [➖](#tests-and-coverage) | [➖](#linting) | [➖](#documentation) | [✅ 1/1](#releases) | [0](PROJECTS.md#scrapyscrapy-agent-plugin) | [`d424e42`](https://github.com/scrapy/scrapy-agent-plugin/commit/d424e42a35116c108e986614b75ec7cd9cf9909e) |
 | [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | [❌ 0/3](#python-versions) | [✅ 5/5](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 2/3](#tests-and-coverage) | [❌ 4/5](#linting) | [❌ 1/4](#documentation) | [❌ 3/4](#releases) | [11](PROJECTS.md#scrapyscrapy-lint) | [`30a3872`](https://github.com/scrapy/scrapy-lint/commit/30a387279f0be38a48237d31725b1d52a2bcf297) |
 | [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | [❌ 2/3](#python-versions) | [✅ 5/5](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [✅ 3/3](#tests-and-coverage) | [✅ 3/3](#linting) | [➖](#documentation) | [✅ 4/4](#releases) | [2](PROJECTS.md#scrapyscrapy-mcp-official) | [`5530c67`](https://github.com/scrapy/scrapy-mcp-official/commit/5530c671a7078f4f06479422c623d10b846d3db9) |
@@ -77,10 +77,10 @@ Checks passing per group.
 
 | Check | Statement | Results |
 | --- | --- | --- |
-| [`no-eol-python`](#no-eol-python) | Support for end-of-life Python versions is dropped. | 9/44 passing |
-| [`latest-python`](#latest-python) | The latest stable Python version is declared as supported and tested in CI. | 13/44 passing |
+| [`no-eol-python`](#no-eol-python) | Support for end-of-life Python versions is dropped. | 10/44 passing |
+| [`latest-python`](#latest-python) | The latest stable Python version is declared as supported and tested in CI. | 14/44 passing |
 | [`unreleased-python`](#unreleased-python) | The upcoming Python version is tested in CI, once it has a release candidate. | 0/0 passing |
-| [`python-classifiers`](#python-classifiers) | Python version classifiers match requires-python: there is one for every supported Python version it allows, and none for versions it excludes. | 13/42 passing |
+| [`python-classifiers`](#python-classifiers) | Python version classifiers match requires-python: there is one for every supported Python version it allows, and none for versions it excludes. | 14/42 passing |
 | [`supports-pypy`](#supports-pypy) | The project supports PyPy: it has the PyPy classifier or tests PyPy in CI. | 12/44 yes |
 | [`latest-pypy`](#latest-pypy) | The latest PyPy version is declared as supported and tested in CI. | 0/12 passing |
 | [`no-eol-pypy`](#no-eol-pypy) | End-of-life PyPy versions are not tested in CI. | 12/12 passing |
@@ -89,7 +89,7 @@ Checks passing per group.
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Scrapy and its deps** | | | | | | | |
 | [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | ✅ | [➖](#unreleased-python) | ✅ | yes | [❌](#latest-pypy) | ✅ |
-| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | yes | [❌](#latest-pypy) | ✅ |
+| [scrapy/cssselect](https://github.com/scrapy/cssselect) | ✅ | ✅ | [➖](#unreleased-python) | ✅ | yes | [❌](#latest-pypy) | ✅ |
 | [scrapy/formerly](https://github.com/scrapy/formerly) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | yes | [❌](#latest-pypy) | ✅ |
 | [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | ✅ | ✅ | [➖](#unreleased-python) | ✅ | yes | [❌](#latest-pypy) | ✅ |
 | [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | yes | [❌](#latest-pypy) | ✅ |
@@ -143,7 +143,6 @@ Checks passing per group.
 
 Support for end-of-life Python versions is dropped.
 
-- ❌ [scrapy/cssselect](https://github.com/scrapy/cssselect): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [scrapy/formerly](https://github.com/scrapy/formerly): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [scrapy/itemloaders](https://github.com/scrapy/itemloaders): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [scrapy/parsel](https://github.com/scrapy/parsel): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
@@ -185,7 +184,6 @@ Support for end-of-life Python versions is dropped.
 
 The latest stable Python version is declared as supported and tested in CI.
 
-- ❌ [scrapy/cssselect](https://github.com/scrapy/cssselect): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [scrapy/formerly](https://github.com/scrapy/formerly): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [scrapy/itemloaders](https://github.com/scrapy/itemloaders): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
@@ -231,7 +229,6 @@ The upcoming Python version is tested in CI, once it has a release candidate.
 
 Python version classifiers match requires-python: there is one for every supported Python version it allows, and none for versions it excludes.
 
-- ❌ [scrapy/cssselect](https://github.com/scrapy/cssselect): no classifiers for 3.15
 - ❌ [scrapy/formerly](https://github.com/scrapy/formerly): no classifiers for 3.15
 - ❌ [scrapy/itemloaders](https://github.com/scrapy/itemloaders): no classifiers for 3.15
 - ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): no classifiers for 3.15
