@@ -1276,3 +1276,30 @@ def test_docs_stable_links(make_repo: MakeRepo) -> None:
     assert run("docs-stable-links", make_repo(files)) == Result(
         Status.FAIL, "links to latest in README.rst; 1.0 in pyproject.toml"
     )
+
+
+def test_pr_guard_trusted_users(make_repo: MakeRepo) -> None:
+    assert run("pr-guard-trusted-users", make_repo({})).status is Status.NA
+    workflow = """\
+        jobs:
+          guard:
+            steps:
+            - uses: scrapy/unattended-pr-guard@0123456789abcdef  # 0.2.0
+              with:
+                {orgs}
+                trusted-users: >-
+                  {users}
+                  carol
+        """
+    path = ".github/workflows/guard.yml"
+    repo = make_repo({path: workflow.format(orgs="", users="Alice, bob,")})
+    assert run("pr-guard-trusted-users", repo) == Result(
+        Status.FAIL, "public members of trusted orgs: Alice"
+    )
+    orgs = "trusted-orgs: owner, org"
+    repo = make_repo({path: workflow.format(orgs=orgs, users="Alice, bob,")})
+    assert run("pr-guard-trusted-users", repo) == Result(
+        Status.FAIL, "public members of trusted orgs: Alice, bob"
+    )
+    repo = make_repo({path: workflow.format(orgs=orgs, users="dave,")})
+    assert run("pr-guard-trusted-users", repo).status is Status.PASS
