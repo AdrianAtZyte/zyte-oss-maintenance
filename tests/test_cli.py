@@ -20,6 +20,10 @@ def test_report(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
         (checkout / "pyproject.toml").write_text(
             '[build-system]\nbuild-backend = "hatchling.build"\n', encoding="utf-8"
         )
+        if name == "good":
+            (checkout / "setup.cfg").write_text(
+                "[metadata]\nname = example\n", encoding="utf-8"
+            )
         git = ["git", "-C", str(checkout), "-c", "user.name=x", "-c", "user.email=x@x"]
         subprocess.run([*git, "init", "-q"], check=True)
         subprocess.run([*git, "commit", "-q", "--allow-empty", "-m", "x"], check=True)
@@ -37,6 +41,11 @@ def test_report(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
     report = (tmp_path / "REPORT.md").read_text(encoding="utf-8")
     assert "- Latest Python: 3.11\n" in report
     assert report.index("## Reference data") < report.index("## Summary")
+    assert (
+        "## Release candidates\n\n"
+        "Projects with commits since their latest release, oldest release first.\n\n"
+        "- [owner/good](https://github.com/owner/good): 1.1 (2026-03-04)\n"
+    ) in report
     assert (
         "| [`hatchling`](#hatchling) | The build backend is hatchling. | 1/2 passing |"
         in report

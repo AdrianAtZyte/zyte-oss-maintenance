@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
 from textwrap import dedent
 from typing import TYPE_CHECKING
 
@@ -791,6 +792,22 @@ def test_sphinx_scrapy_pins(make_repo: MakeRepo) -> None:
 )
 def test_ruff_rules(make_repo: MakeRepo, files: dict[str, str], status: Status) -> None:
     assert run("ruff-rules", make_repo(files)).status is status
+
+
+@pytest.mark.parametrize(
+    ("name", "committed", "status"),
+    [
+        ("example", datetime(2026, 3, 5, tzinfo=UTC), Status.YES),
+        ("example", datetime(2026, 3, 4, tzinfo=UTC), Status.NO),
+        ("unpublished", datetime(2026, 3, 5, tzinfo=UTC), Status.NA),
+    ],
+)
+def test_unreleased_changes(
+    make_repo: MakeRepo, name: str, committed: datetime, status: Status
+) -> None:
+    repo = make_repo({"pyproject.toml": f'[project]\nname = "{name}"\n'})
+    repo.__dict__["committed"] = committed
+    assert run("unreleased-changes", repo).status is status
 
 
 @pytest.mark.parametrize(

@@ -10,8 +10,9 @@ publishing to PyPI through trusted publishing.
   linting, …), one module per group.
 - [`REPORT.md`](REPORT.md): the latest report by check. It has the reference
   data that checks compare projects against, such as the latest Python
-  version, a project × group summary, then per group the statements, a
-  project × check table, and an explanation of every failure.
+  version, a project × group summary, the projects with commits since their
+  latest release, then per group the statements, a project × check table,
+  and an explanation of every failure.
 - [`PROJECTS.md`](PROJECTS.md): the same results by project, listing only
   what fails (and notes worth reading) in each.
 
@@ -78,7 +79,8 @@ projects without docs. Exceptions are reported as check errors.
 
 Informational checks, added with `@group.info(...)`, report a fact instead of
 passing or failing: the function returns a bool, shown as "yes" or "no", or a
-value to show, e.g. the license, or None for "no". They show facts that other
+value to show, e.g. the license, None for "no", or a `Result`, e.g.
+`not_applicable()`. They show facts that other
 checks depend on, e.g. `has-sphinx-docs` next to the docs linters, or are
 useful to see in the report.
 

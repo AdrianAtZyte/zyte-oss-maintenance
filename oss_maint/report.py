@@ -126,6 +126,7 @@ def render_report(
         )
 
     lines += _project_rows(project_groups, projects, len(groups) + 2, summary_row)
+    lines += _render_release_candidates(projects)
 
     for group in groups:
         lines += _render_group(group, project_groups, projects)
@@ -143,6 +144,26 @@ def _render_facts(groups: list[Group]) -> list[str]:
         "Values that checks compare projects against.",
         "",
         *(f"- {fact.label}: {fact.run()}" for fact in facts),
+    ]
+
+
+def _render_release_candidates(projects: list[ProjectResults]) -> list[str]:
+    candidates = [
+        p
+        for p in projects
+        if (r := p.results.get("unreleased-changes")) and r.status is Status.YES
+    ]
+    if not candidates:
+        return []
+    # Values of latest-release end with the release date, e.g. "1.1 (2026-03-04)".
+    candidates.sort(key=lambda p: p.results["latest-release"].value.rpartition(" ")[2])
+    return [
+        "",
+        "## Release candidates",
+        "",
+        "Projects with commits since their latest release, oldest release first.",
+        "",
+        *(f"- {_link(p)}: {p.results['latest-release'].value}" for p in candidates),
     ]
 
 
