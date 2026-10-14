@@ -523,6 +523,49 @@ def test_codecov(make_repo: MakeRepo) -> None:
     assert run("codecov", repo).status is Status.PASS
 
 
+CODECOV_WORKFLOW = "jobs:\n  test:\n    steps:\n    - run: codecov\n"
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        ({}, Result(Status.NA, "Coverage is not uploaded to Codecov.")),
+        (
+            {".github/workflows/test.yml": CODECOV_WORKFLOW},
+            Result(Status.FAIL, "no Codecov config"),
+        ),
+        (
+            {
+                ".github/workflows/test.yml": CODECOV_WORKFLOW,
+                ".codecov.yml": (
+                    "coverage:\n  status:\n    patch: false\n"
+                    "    project:\n      default:\n        target: 100%\n"
+                ),
+            },
+            Result(Status.PASS),
+        ),
+        (
+            {
+                ".github/workflows/test.yml": CODECOV_WORKFLOW,
+                "codecov.yml": (
+                    "coverage:\n  status:\n    project:\n"
+                    "      a:\n        target: 100%\n      b:\n        target: 90%\n"
+                ),
+            },
+            Result(
+                Status.FAIL,
+                "patch status not disabled, project status target not 100% in "
+                "codecov.yml",
+            ),
+        ),
+    ],
+)
+def test_codecov_status(
+    make_repo: MakeRepo, files: dict[str, str], result: Result
+) -> None:
+    assert run("codecov-status", make_repo(files)) == result
+
+
 @pytest.mark.parametrize(
     ("files", "status"),
     [
