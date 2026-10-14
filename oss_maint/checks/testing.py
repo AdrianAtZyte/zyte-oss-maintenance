@@ -7,7 +7,7 @@ from typing import Any
 from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 
-from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
+from oss_maint.core import Group, Repo, Result, Status, failed, not_applicable, passed
 
 group = Group("tests", "Tests and coverage")
 
@@ -38,6 +38,43 @@ def codecov_test_results(repo: Repo) -> Result:
     if "test_results" in _codecov_report_types(repo):
         return passed()
     return failed("no codecov/codecov-action step with report_type: test_results")
+
+
+CODECOV_CONFIGS = [
+    f"{d}{n}.{e}"
+    for d in ("", ".github/")
+    for n in ("codecov", ".codecov")
+    for e in ("yml", "yaml")
+]
+
+
+@group.check(
+    "The Codecov config disables the patch status and sets a 100% target for "
+    "the project status."
+)
+def codecov_status(repo: Repo) -> Result:
+    if codecov(repo).status is not Status.PASS:
+        return not_applicable("Coverage is not uploaded to Codecov.")
+    path = next((p for p in CODECOV_CONFIGS if repo.exists(p)), None)
+    if path is None:
+        return failed("no Codecov config")
+    status = ((repo.read_yaml(path) or {}).get("coverage") or {}).get("status") or {}
+    problems = []
+    if status.get("patch") is not False:
+        problems.append("patch status not disabled")
+    project = status.get("project")
+    if not (
+        isinstance(project, dict)
+        and project
+        and all(
+            str((s or {}).get("target", "")).rstrip("%") == "100"
+            for s in project.values()
+        )
+    ):
+        problems.append("project status target not 100%")
+    if problems:
+        return failed(f"{', '.join(problems)} in {path}")
+    return passed()
 
 
 @group.check("Branch coverage is enabled.")
