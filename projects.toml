@@ -1,9 +1,7 @@
 # Projects to check, as GitHub "owner/name", in groups. The report shows groups
 # and the projects in them in this order.
 #
-# Groups other than "Others" were initially filled on 2026-10-09 with their
-# main projects and the dependencies of those (including scrapy-zyte-api's
-# "provider" extra) not in earlier groups. Move projects between groups freely.
+# Move projects between groups freely.
 
 [[groups]]
 title = "Scrapy and its deps"
@@ -17,8 +15,24 @@ repos = [
     "scrapy/protego",
     "scrapy/queuelib",
     "scrapy/w3lib",
-    "scrapy/sphinx-scrapy",
-    "scrapy/sphinx-llm-friendly",
+    "scrapy/xtractmime",
+]
+
+[[groups]]
+title = "Scrapy plugins"
+repos = [
+    "scrapy-plugins/scrapy-download-handlers-incubator",
+    "scrapy-plugins/scrapy-playwright",
+    "scrapy-plugins/scrapy-spider-metadata",
+    "zytedata/duplicate-url-discarder",
+    "zytedata/duplicate-url-discarder-rules",
+    "scrapy-plugins/scrapy-feedexport-warc",
+    "scrapy-plugins/scrapy-feedexporter-azure-storage",
+    "scrapy-plugins/scrapy-feedexporter-dropbox",
+    "scrapy-plugins/scrapy-feedexporter-google-drive",
+    "scrapy-plugins/scrapy-feedexporter-google-sheets",
+    "scrapy-plugins/scrapy-feedexporter-onedrive",
+    "scrapy-plugins/scrapy-feedexporter-sftp",
 ]
 
 [[groups]]
@@ -28,6 +42,7 @@ repos = [
     "scrapinghub/andi",
     "scrapinghub/web-poet",
     "zytedata/url-matcher",
+    "scrapy/frostwork",
 ]
 
 [[groups]]
@@ -37,10 +52,6 @@ repos = [
     "zytedata/python-zyte-api",
     "scrapy-plugins/scrapy-zyte-smartproxy",
     "zytedata/zyte-common-items",
-    "zytedata/zyte-parsers",
-    "zytedata/clear-html",
-    "zytedata/html-text",
-    "scrapinghub/price-parser",
 ]
 
 [[groups]]
@@ -49,31 +60,50 @@ repos = [
     "scrapinghub/python-scrapinghub",
     "scrapinghub/shub",
     "scrapinghub/scrapinghub-entrypoint-scrapy",
+    "scrapinghub/shub-workflow",
+    "scrapinghub/scrapy-frontera",
+    "scrapinghub/frontera",
+    "scrapinghub/hcf-backend",
+]
+
+[[groups]]
+title = "Data extraction"
+repos = [
+    "zytedata/zyte-parsers",
+    "zytedata/clear-html",
+    "zytedata/html-text",
+    "scrapinghub/price-parser",
+    "scrapinghub/dateparser",
+    "scrapinghub/extruct",
+    "scrapinghub/number-parser",
+]
+
+[[groups]]
+title = "Monitoring"
+repos = [
+    "scrapinghub/spidermon",
+    "scrapy-plugins/zyte-spidermon",
+]
+
+[[groups]]
+title = "AI agents"
+repos = [
+    "scrapy/scrapy-agent-plugin",
+    "scrapy/scrapy-mcp-official",
+    "zytedata/agent-exam",
+    "zytedata/claude-measure-usage",
+    "zytedata/harness-run",
 ]
 
 [[groups]]
 title = "Others"
 repos = [
     "scrapy/form2request",
-    "scrapy/frostwork",
-    "scrapy/scrapy-agent-plugin",
     "scrapy/scrapy-lint",
-    "scrapy/scrapy-mcp-official",
+    "scrapy/sphinx-scrapy",
+    "scrapy/sphinx-llm-friendly",
     "scrapy/unattended-pr-guard",
-    "scrapy/xtractmime",
-    "scrapy-plugins/scrapy-download-handlers-incubator",
-    "scrapy-plugins/scrapy-playwright",
-    "scrapy-plugins/scrapy-spider-metadata",
-    "scrapy-plugins/zyte-spidermon",
-    "scrapinghub/dateparser",
-    "scrapinghub/extruct",
-    "scrapinghub/number-parser",
     "scrapinghub/scrapyrt",
-    "scrapinghub/spidermon",
-    "zytedata/agent-exam",
-    "zytedata/claude-measure-usage",
-    "zytedata/duplicate-url-discarder",
-    "zytedata/harness-run",
 ]
 
 # Checks that do not apply to a project, with the reason. They are reported as
