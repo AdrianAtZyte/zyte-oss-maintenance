@@ -51,6 +51,8 @@ def run_checks(
         project_results = {}
         for group, check in checks:
             reason = project_skip.get(check.id, project_skip.get(group.id))
+            for tag in sorted(check.tags):
+                reason = reason or project_skip.get(tag)
             project_results[check.id] = (
                 not_applicable(reason) if reason else check.run(repo)
             )

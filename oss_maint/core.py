@@ -15,7 +15,7 @@ from typing import TYPE_CHECKING, Any
 import yaml
 
 if TYPE_CHECKING:
-    from collections.abc import Callable, Iterator
+    from collections.abc import Callable, Iterable, Iterator
     from pathlib import Path
 
     CheckFunc = Callable[["Repo"], "Result"]
@@ -87,6 +87,9 @@ class Check:
     #: Whether the check reports a fact (yes or no) rather than passing or
     #: failing.
     informational: bool = False
+    tags: frozenset[str] = frozenset()
+    """IDs that select or skip the check along with others sharing them, e.g.
+    ``released`` for checks that only apply to released projects."""
 
     def run(self, repo: Repo) -> Result:
         try:
@@ -117,19 +120,29 @@ class Group:
 
     id: str
     title: str
+    tags: frozenset[str] = frozenset()
+    """Tags of every check in the group."""
     checks: list[Check] = field(default_factory=list)
     facts: list[Fact] = field(default_factory=list)
 
-    def check(self, statement: str) -> Callable[[CheckFunc], CheckFunc]:
+    def check(
+        self, statement: str, *, tags: Iterable[str] = ()
+    ) -> Callable[[CheckFunc], CheckFunc]:
         """Decorator that adds a check function to the group."""
 
         def decorator(func: CheckFunc) -> CheckFunc:
-            self.checks.append(Check(_check_id(func), statement, func))
+            self.checks.append(
+                Check(
+                    _check_id(func), statement, func, tags=self.tags | frozenset(tags)
+                )
+            )
             return func
 
         return decorator
 
-    def info(self, statement: str) -> Callable[[InfoFunc], InfoFunc]:
+    def info(
+        self, statement: str, *, tags: Iterable[str] = ()
+    ) -> Callable[[InfoFunc], InfoFunc]:
         """Decorator that adds an informational check function to the group.
         The function returns whether *statement* is true, or a value that
         *statement* describes, None if there is none."""
@@ -142,7 +155,13 @@ class Group:
                 return Result(Status.YES if value else Status.NO)
 
             self.checks.append(
-                Check(_check_id(func), statement, run, informational=True)
+                Check(
+                    _check_id(func),
+                    statement,
+                    run,
+                    informational=True,
+                    tags=self.tags | frozenset(tags),
+                )
             )
             return func
 

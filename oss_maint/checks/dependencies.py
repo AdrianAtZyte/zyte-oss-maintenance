@@ -6,7 +6,7 @@ from packaging.requirements import Requirement
 
 from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
-group = Group("dependencies", "Dependencies")
+group = Group("dependencies", "Dependencies", frozenset({"python"}))
 
 LOWER_BOUND_OPERATORS = {">=", ">", "==", "~=", "==="}
 # Names of tox environments that test minimum dependency versions, e.g. "min",
@@ -14,7 +14,7 @@ LOWER_BOUND_OPERATORS = {">=", ">", "==", "~=", "==="}
 MIN_ENV_RE = re.compile(r"\b(min|minimum|lowest|pinned)\b")
 
 
-@group.check("Every runtime dependency has a lower bound.")
+@group.check("Every runtime dependency has a lower bound.", tags={"released"})
 def dependency_lower_bounds(repo: Repo) -> Result:
     if not repo.project:
         return not_applicable("No [project] table in pyproject.toml.")
@@ -34,7 +34,8 @@ def dependency_lower_bounds(repo: Repo) -> Result:
 
 @group.check(
     "A tox environment tests the minimum versions of dependencies (its name has "
-    "min, minimum, lowest or pinned in it)."
+    "min, minimum, lowest or pinned in it).",
+    tags={"released"},
 )
 def min_deps_env(repo: Repo) -> Result:
     if repo.project and not (

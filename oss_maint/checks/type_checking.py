@@ -4,7 +4,7 @@ import re
 
 from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
-group = Group("typing", "Typing")
+group = Group("typing", "Typing", frozenset({"python"}))
 
 MYPY_RE = re.compile(r"\bmypy\b")
 MYPY_STRICT_RE = re.compile(r"\bmypy\b.*\s--strict(?![\w-])")
@@ -19,13 +19,14 @@ def _ships_py_typed(repo: Repo) -> bool:
     )
 
 
-@group.check("The package ships type hints (a py.typed marker).")
+@group.check("The package ships type hints (a py.typed marker).", tags={"released"})
 def py_typed(repo: Repo) -> Result:
     return passed() if _ships_py_typed(repo) else failed("no py.typed file")
 
 
 @group.check(
-    f"A package with a py.typed marker has the '{TYPED_CLASSIFIER}' classifier."
+    f"A package with a py.typed marker has the '{TYPED_CLASSIFIER}' classifier.",
+    tags={"released"},
 )
 def typed_classifier(repo: Repo) -> Result:
     if not _ships_py_typed(repo):

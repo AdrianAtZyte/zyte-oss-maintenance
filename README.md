@@ -22,7 +22,7 @@ Requires [uv](https://docs.astral.sh/uv/) and git.
 ```sh
 uv run oss-maint report        # update checkouts, run everything, write the reports
 uv run oss-maint checks        # list groups, checks and their statements
-uv run oss-maint run -c python -c ruff -p parsel -p w3lib   # print results for a subset
+uv run oss-maint run -c python-versions -c ruff -p parsel -p w3lib   # print results for a subset
 uv run oss-maint sync          # only update checkouts
 ```
 
@@ -49,6 +49,10 @@ which the report shows as "not applicable":
 py-typed = "Sphinx extension, has no public Python API."
 ```
 
+`python` exempts a project from every check that only applies to Python code,
+and `released` from every check that only applies to released projects;
+`uv run oss-maint checks` lists checks with their tags.
+
 ## Adding a check
 
 Add a function to the module of the relevant group in `oss_maint/checks/`,
@@ -64,6 +68,10 @@ def mypy_strict(repo: Repo) -> Result:
         return failed("no strict = true in [tool.mypy]")
     return passed()
 ```
+
+Pass `tags={"released"}` to `check()` if the check only applies to released
+projects, and `tags={"python"}` if it only applies to Python code, unless its
+group already sets that tag (`Group(..., frozenset({"python"}))`).
 
 `Repo` gives access to the checkout (`read_text()`, `exists()`, `glob()`) and
 parsed metadata (`pyproject`, `project`, `dist_name`, `requires_python`,

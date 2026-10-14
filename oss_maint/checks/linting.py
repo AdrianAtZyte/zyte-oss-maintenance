@@ -36,7 +36,8 @@ def _require_hooks(repo: Repo, *hook_ids: str) -> Result:
 
 
 @group.check(
-    "ruff-check and ruff-format are used, instead of tools that ruff replaces."
+    "ruff-check and ruff-format are used, instead of tools that ruff replaces.",
+    tags={"python"},
 )
 def ruff(repo: Repo) -> Result:
     if repo.pre_commit_hook_ids is None:
@@ -63,7 +64,10 @@ def _ruff_config(repo: Repo) -> dict[str, Any] | None:
     return (repo.pyproject or {}).get("tool", {}).get("ruff")
 
 
-@group.check("ruff enables rules beyond its defaults, with select or extend-select.")
+@group.check(
+    "ruff enables rules beyond its defaults, with select or extend-select.",
+    tags={"python"},
+)
 def ruff_rules(repo: Repo) -> Result:
     config = _ruff_config(repo)
     if config is None and not (repo.pre_commit_hook_ids or set()) & {
@@ -80,7 +84,7 @@ def ruff_rules(repo: Repo) -> Result:
     return passed()
 
 
-@group.info("A tox environment runs pylint.")
+@group.info("A tox environment runs pylint.", tags={"python"})
 def pylint(repo: Repo) -> bool:
     return any(re.search(r"\bpylint\b", s) for s in repo.tox_strings)
 

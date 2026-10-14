@@ -7,7 +7,7 @@ from pathlib import Path
 
 from oss_maint.checks import ALL_IDS, GROUPS, select_groups
 from oss_maint.config import ConfigError, load_config
-from oss_maint.core import Status, tally
+from oss_maint.core import Check, Status, tally
 from oss_maint.report import (
     PROJECTS_FILE,
     REPORT_FILE,
@@ -98,7 +98,7 @@ def main(argv: list[str] | None = None) -> int:
         for group in groups:
             print(f"{group.id}: {group.title}")
             for check in group.checks:
-                print(f"  {check.id}: {check.statement}")
+                print(f"  {check.id}{_tags(check)}: {check.statement}")
     elif args.command == "sync":
         errors = sync_repos(repos, args.cache_dir)
         for name, error in errors.items():
@@ -138,6 +138,10 @@ def main(argv: list[str] | None = None) -> int:
             )
             print(f"Wrote {path}")
     return 0
+
+
+def _tags(check: Check) -> str:
+    return f" ({', '.join(sorted(check.tags))})" if check.tags else ""
 
 
 def _add_project_arg(parser: argparse.ArgumentParser) -> None:

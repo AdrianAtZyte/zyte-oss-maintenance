@@ -13,7 +13,7 @@ from oss_maint.core import (
     passed,
 )
 
-group = Group("python", "Python versions")
+group = Group("python-versions", "Python versions", frozenset({"python"}))
 
 
 @group.fact("Latest Python")
@@ -101,7 +101,8 @@ def unreleased_python(repo: Repo) -> Result:
 
 @group.check(
     "Python version classifiers match requires-python: there is one for every "
-    "supported Python version it allows, and none for versions it excludes."
+    "supported Python version it allows, and none for versions it excludes.",
+    tags={"released"},
 )
 def python_classifiers(repo: Repo) -> Result:
     requires_python = repo.requires_python

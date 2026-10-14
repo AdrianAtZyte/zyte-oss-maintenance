@@ -52,7 +52,7 @@ def _triggers(workflow: dict[Any, Any]) -> dict[str, Any]:
     return triggers
 
 
-@group.info("The latest release on PyPI, with its date.")
+@group.info("The latest release on PyPI, with its date.", tags={"python", "released"})
 def latest_release(repo: Repo) -> str | None:
     if repo.dist_name is None or not (releases := pypi.releases(repo.dist_name)):
         return None
@@ -61,7 +61,8 @@ def latest_release(repo: Repo) -> str | None:
 
 @group.check(
     "Releases are published to PyPI from GitHub Actions through trusted publishing, "
-    "in a job with a GitHub environment."
+    "in a job with a GitHub environment.",
+    tags={"python", "released"},
 )
 def trusted_publishing(repo: Repo) -> Result:
     jobs = _publish_jobs(repo)
@@ -91,7 +92,8 @@ def _has_id_token(permissions: object) -> bool:
 
 
 @group.check(
-    "Publishing is triggered by pushing a tag, not by creating a GitHub release."
+    "Publishing is triggered by pushing a tag, not by creating a GitHub release.",
+    tags={"python", "released"},
 )
 def publish_on_tag(repo: Repo) -> Result:
     jobs = _publish_jobs(repo)
@@ -109,7 +111,8 @@ def publish_on_tag(repo: Repo) -> Result:
 
 @group.check(
     "The publish workflow builds distributions in a separate job from the one "
-    "that publishes them."
+    "that publishes them.",
+    tags={"python", "released"},
 )
 def separate_build_job(repo: Repo) -> Result:
     jobs = _publish_jobs(repo)
@@ -123,7 +126,10 @@ def separate_build_job(repo: Repo) -> Result:
     return failed("; ".join(problems)) if problems else passed()
 
 
-@group.check("bump-my-version is configured, in pyproject.toml or .bumpversion.toml.")
+@group.check(
+    "bump-my-version is configured, in pyproject.toml or .bumpversion.toml.",
+    tags={"released"},
+)
 def bump_my_version(repo: Repo) -> Result:
     if "bumpversion" in (repo.pyproject or {}).get("tool", {}):
         return passed()

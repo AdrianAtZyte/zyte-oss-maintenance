@@ -60,8 +60,8 @@ def test_fact_error() -> None:
 
 
 def test_select_groups() -> None:
-    groups = select_groups(["python", "ruff"])
-    assert [g.id for g in groups] == ["python", "linting"]
+    groups = select_groups(["python-versions", "ruff"])
+    assert [g.id for g in groups] == ["python-versions", "linting"]
     assert [c.id for c in groups[0].checks] == [c.id for c in GROUPS[0].checks]
     assert [c.id for c in groups[1].checks] == ["ruff"]
     with pytest.raises(ValueError, match="unknown checks: foo"):

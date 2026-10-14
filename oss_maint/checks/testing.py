@@ -9,7 +9,7 @@ from packaging.utils import canonicalize_name
 
 from oss_maint.core import Group, Repo, Result, Status, failed, not_applicable, passed
 
-group = Group("tests", "Tests and coverage")
+group = Group("tests", "Tests and coverage", frozenset({"python"}))
 
 
 def _codecov_report_types(repo: Repo) -> set[str]:
