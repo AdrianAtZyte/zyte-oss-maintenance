@@ -4,7 +4,10 @@ import configparser
 import re
 from typing import Any
 
-from oss_maint.core import Group, Repo, Result, failed, passed
+from packaging.requirements import Requirement
+from packaging.utils import canonicalize_name
+
+from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
 group = Group("tests", "Tests and coverage")
 
@@ -98,3 +101,48 @@ def warnings_as_errors(repo: Repo) -> Result:
     ):
         return passed()
     return failed('no "error" in pytest filterwarnings, and no -W error')
+
+
+# Installs of Scrapy from its master branch: a GitHub URL without a ref or with
+# @master, or a master branch archive.
+SCRAPY_MASTER_RE = re.compile(
+    r"github\.com/scrapy/scrapy(\.git)?"
+    r"(@master|/archive/(refs/heads/)?master\.\w+(\.\w+)?)?(?![\w./@-])"
+)
+# Scrapy in the install_requires of setup.py.
+SETUP_PY_SCRAPY_RE = re.compile(r"[\"'][Ss]crapy\s*[\[<>=~!;\"']")
+
+
+def _depends_on_scrapy(repo: Repo) -> bool:
+    if not repo.project:
+        return bool(SETUP_PY_SCRAPY_RE.search(repo.read_text("setup.py") or ""))
+    requirements = [
+        *repo.project.get("dependencies", []),
+        *(
+            r
+            for extra in repo.project.get("optional-dependencies", {}).values()
+            for r in extra
+        ),
+    ]
+    return any(canonicalize_name(Requirement(r).name) == "scrapy" for r in requirements)
+
+
+@group.check("CI tests against Scrapy installed from its master branch.")
+def scrapy_master(repo: Repo) -> Result:
+    if not _depends_on_scrapy(repo):
+        return not_applicable("Does not depend on Scrapy.")
+    if any(SCRAPY_MASTER_RE.search(s) for s in repo.workflow_strings):
+        return passed()
+    envs = [
+        name
+        for name, strings in repo.tox_envs.items()
+        if any(SCRAPY_MASTER_RE.search(s) for s in strings)
+    ]
+    if any(repo.tox_env_in_ci(env) for env in envs):
+        return passed()
+    if envs:
+        return failed(
+            "tox environments that install Scrapy master are not run in CI: "
+            + ", ".join(envs)
+        )
+    return failed("no CI workflow or tox environment installs Scrapy master")

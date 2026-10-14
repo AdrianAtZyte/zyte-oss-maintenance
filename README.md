@@ -70,8 +70,8 @@ parsed metadata (`pyproject`, `project`, `dist_name`, `requires_python`,
 `classifiers`, `has_sphinx_docs`, `supports_pypy`, `pre_commit_hooks`,
 `workflows`, `workflow_steps()`; `workflow_strings` and `tox_strings` with all
 strings from workflows and tox config, without comments, and `tox_envs` with
-those of each tox environment; and `ci_python_versions` and `ci_pypy_versions`
-mentioned there).
+those of each tox environment; `tox_env_in_ci()` to tell if workflows run a tox
+environment; and `ci_python_versions` and `ci_pypy_versions` mentioned there).
 Return `failed()` with a short reason, `passed()` (optionally with a note worth
 reading), or `not_applicable()` with a reason, e.g. for docs checks on
 projects without docs. Exceptions are reported as check errors.

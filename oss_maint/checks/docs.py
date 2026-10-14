@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import re
 from functools import cache
+from pathlib import PurePath
+from urllib.parse import urlsplit
 
 from oss_maint import pythons
 from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
@@ -105,3 +107,93 @@ def sphinx_scrapy_latest(repo: Repo) -> Result:
     if outdated := sorted(pins - {latest}):
         return failed(f"pinned to {', '.join(outdated)}, latest is {latest}")
     return passed()
+
+
+@group.check(
+    "Sphinx docs are built on Read the Docs (.readthedocs.yml), and the README "
+    "links to them."
+)
+def readthedocs(repo: Repo) -> Result:
+    if not repo.has_sphinx_docs:
+        return not_applicable("No Sphinx docs.")
+    problems = []
+    if not repo.exists(".readthedocs.yml") and not repo.exists(".readthedocs.yaml"):
+        problems.append("no .readthedocs.yml")
+    hosts = _docs_hosts(repo)
+    readme = "".join(repo.read_text(path) or "" for path in repo.glob("README*"))
+    if not any(f"//{host}" in readme for host in hosts):
+        problems.append(f"the README does not link to {' or '.join(sorted(hosts))}")
+    return failed("; ".join(problems)) if problems else passed()
+
+
+def _docs_hosts(repo: Repo) -> set[str]:
+    """Hosts of the published docs: on Read the Docs under the repository
+    name, or of a documentation URL in [project.urls]."""
+    name = repo.name.split("/")[1]
+    hosts = {f"{name}.readthedocs.io", f"{name}.readthedocs.org"}
+    hosts.update(
+        urlsplit(url).netloc
+        for key, url in (repo.project.get("urls") or {}).items()
+        if key.lower().startswith("doc")
+    )
+    return hosts
+
+
+@group.check(
+    "Links to the docs in the README and in [project.urls] that name a version "
+    "use stable, which is built from the latest release."
+)
+def docs_stable_links(repo: Repo) -> Result:
+    if not repo.has_sphinx_docs:
+        return not_applicable("No Sphinx docs.")
+    # Read the Docs URLs have the language and the version first, e.g. /en/latest/.
+    version_re = re.compile(
+        rf"//(?:{'|'.join(map(re.escape, _docs_hosts(repo)))})"
+        r"/[a-z]{2}(?:-[a-z]+)?/([\w.-]+)"
+    )
+    texts = {path: repo.read_text(path) or "" for path in repo.glob("README*")}
+    texts["pyproject.toml"] = " ".join(
+        map(str, (repo.project.get("urls") or {}).values())
+    )
+    if problems := [
+        f"{', '.join(versions)} in {path}"
+        for path, text in texts.items()
+        if (versions := sorted(set(version_re.findall(text)) - {"stable"}))
+    ]:
+        return failed(f"links to {'; '.join(problems)}")
+    return passed()
+
+
+CHANGELOG_RE = re.compile(
+    r"(changes|changelog|news|history|release-notes)(\.\w+)?", re.IGNORECASE
+)
+
+
+@group.check(
+    "There is a changelog, e.g. CHANGES.rst, CHANGELOG.md, NEWS or docs/news.rst."
+)
+def changelog(repo: Repo) -> Result:
+    if any(
+        CHANGELOG_RE.fullmatch(PurePath(path).name)
+        for path in [*repo.glob("*"), *repo.glob("docs/*")]
+    ):
+        return passed()
+    return failed("no changelog file")
+
+
+@group.check(
+    "bump-my-version replaces (unreleased) in the changelog with the release date."
+)
+def changelog_date(repo: Repo) -> Result:
+    config = (repo.pyproject or {}).get("tool", {}).get("bumpversion") or (
+        repo.read_toml(".bumpversion.toml") or {}
+    ).get("tool", {}).get("bumpversion")
+    if config is None:
+        return not_applicable("Does not use bump-my-version.")
+    if any(
+        "unreleased" in str(file.get("search", "")).lower()
+        and "{now:" in str(file.get("replace", ""))
+        for file in config.get("files") or []
+    ):
+        return passed()
+    return failed("no file replacement of (unreleased) with {now:%Y-%m-%d}")

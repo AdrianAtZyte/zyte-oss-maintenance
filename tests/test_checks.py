@@ -546,7 +546,25 @@ def test_project_urls(make_repo: MakeRepo) -> None:
     repo = make_repo({"pyproject.toml": '[project]\nname = "x"\n'})
     assert run("project-urls", repo).status is Status.FAIL
     repo = make_repo({"pyproject.toml": '[project.urls]\nSource = "https://x"\n'})
+    assert run("project-urls", repo) == Result(
+        Status.FAIL, "missing URLs: issues, changelog"
+    )
+    repo = make_repo(
+        {
+            "pyproject.toml": (
+                "[project.urls]\n"
+                'Homepage = "https://github.com/owner/name/"\n'
+                'Tracker = "https://github.com/owner/name/issues"\n'
+                '"Release notes" = "https://x/news.html"\n'
+            )
+        }
+    )
     assert run("project-urls", repo).status is Status.PASS
+    (repo.path / "docs").mkdir()
+    (repo.path / "docs/conf.py").write_text("")
+    assert run("project-urls", repo) == Result(
+        Status.FAIL, "missing URLs: documentation"
+    )
 
 
 @pytest.mark.parametrize(
@@ -924,3 +942,294 @@ def test_latest_release(make_repo: MakeRepo, files: dict[str, str], value: str) 
     result = run("latest-release", make_repo(files))
     assert result.value == value
     assert result.status is (Status.YES if value else Status.NO)
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        ({}, Result(Status.NA, "No .pre-commit-config.yaml.")),
+        (
+            {"tox.ini": "[testenv:lint]\ncommands = pre-commit run -a\n"},
+            Result(Status.PASS),
+        ),
+        (
+            {
+                "tox.toml": (
+                    '[env.pre-commit]\ncommands = [["pre-commit", "run", '
+                    '{ replace = "posargs", default = ["--all-files"] }]]\n'
+                )
+            },
+            Result(Status.PASS),
+        ),
+        (
+            {"tox.ini": "[testenv:lint]\ncommands = pre-commit run {posargs}\n"},
+            Result(Status.FAIL, "no tox environment runs pre-commit run --all-files"),
+        ),
+    ],
+)
+def test_pre_commit_tox(
+    make_repo: MakeRepo, files: dict[str, str], result: Result
+) -> None:
+    if files:
+        files[".pre-commit-config.yaml"] = "repos: []\n"
+    assert run("pre-commit-tox", make_repo(files)) == result
+
+
+def test_pre_commit_in_ci_pre_commit_ci(make_repo: MakeRepo) -> None:
+    repo = make_repo(
+        {".pre-commit-config.yaml": "ci:\n  autofix_prs: false\nrepos: []\n"}
+    )
+    assert run("pre-commit-in-ci", repo).status is Status.PASS
+
+
+def test_pre_commit_hooks(make_repo: MakeRepo) -> None:
+    assert run("pre-commit-hooks", make_repo({})).status is Status.NA
+    config = _pre_commit_config(("https://github.com/astral-sh/ruff-pre-commit", "v1"))
+    assert run("pre-commit-hooks", make_repo({".pre-commit-config.yaml": config})) == (
+        Result(
+            Status.FAIL,
+            "https://github.com/pre-commit/pre-commit-hooks is not used",
+        )
+    )
+    config = _pre_commit_config(
+        ("https://github.com/pre-commit/pre-commit-hooks.git", "v6.0.0")
+    )
+    repo = make_repo({".pre-commit-config.yaml": config})
+    assert run("pre-commit-hooks", repo).status is Status.PASS
+
+
+HATCHLING = '[build-system]\nbuild-backend = "hatchling.build"\n'
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        (
+            {
+                "pyproject.toml": '[build-system]\nbuild-backend = "flit_core.buildapi"\n'
+            },
+            Result(Status.NA, "The build backend is not hatchling."),
+        ),
+        (
+            {"pyproject.toml": HATCHLING},
+            Result(Status.FAIL, "no include in [tool.hatch.build.targets.sdist]"),
+        ),
+        (
+            {
+                "pyproject.toml": HATCHLING
+                + (
+                    "[tool.hatch.build.targets.sdist]\n"
+                    "include = ['/pkg', '/tests', 'docs/**', 'tox.ini']\n"
+                    "exclude = ['/docs/_build']\n"
+                ),
+                "tests/test_a.py": "",
+                "docs/conf.py": "",
+                "tox.ini": "",
+            },
+            Result(Status.PASS),
+        ),
+        (
+            {
+                "pyproject.toml": HATCHLING
+                + (
+                    "[tool.hatch.build.targets.sdist]\n"
+                    "only-include = ['/pkg', '/tests', '/docs']\n"
+                    "exclude = ['/docs']\n"
+                ),
+                "tests/test_a.py": "",
+                "docs/conf.py": "",
+                "tox.toml": "",
+            },
+            Result(Status.FAIL, "not included: docs, tox.toml"),
+        ),
+    ],
+)
+def test_sdist_contents(
+    make_repo: MakeRepo, files: dict[str, str], result: Result
+) -> None:
+    assert run("sdist-contents", make_repo(files)) == result
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        ({}, Result(Status.NA, "No Sphinx docs.")),
+        (
+            {
+                ".readthedocs.yaml": "",
+                "README.rst": "See https://name.readthedocs.io/en/latest/.\n",
+            },
+            Result(Status.PASS),
+        ),
+        (
+            {
+                "pyproject.toml": (
+                    "[project.urls]\nDocumentation = 'https://docs.example.org/'\n"
+                ),
+                "README.md": "[Docs](https://docs.example.org/en/latest/)\n",
+            },
+            Result(Status.FAIL, "no .readthedocs.yml"),
+        ),
+        (
+            {".readthedocs.yml": "", "README.rst": "https://other.readthedocs.io\n"},
+            Result(
+                Status.FAIL,
+                "the README does not link to name.readthedocs.io or "
+                "name.readthedocs.org",
+            ),
+        ),
+    ],
+)
+def test_readthedocs(
+    make_repo: MakeRepo, files: dict[str, str], result: Result
+) -> None:
+    if files:
+        files["docs/conf.py"] = ""
+    assert run("readthedocs", make_repo(files)) == result
+
+
+@pytest.mark.parametrize(
+    ("files", "status"),
+    [
+        ({"CHANGES.rst": ""}, Status.PASS),
+        ({"Changelog.md": ""}, Status.PASS),
+        ({"NEWS": ""}, Status.PASS),
+        ({"docs/release-notes.rst": ""}, Status.PASS),
+        ({"README.rst": "", "docs/index.rst": ""}, Status.FAIL),
+    ],
+)
+def test_changelog(make_repo: MakeRepo, files: dict[str, str], status: Status) -> None:
+    assert run("changelog", make_repo(files)).status is status
+
+
+@pytest.mark.parametrize(
+    ("files", "status"),
+    [
+        ({}, Status.NA),
+        (
+            {
+                "pyproject.toml": (
+                    "[tool.bumpversion]\n[[tool.bumpversion.files]]\n"
+                    "filename = 'CHANGES.rst'\nsearch = '\\\\(unreleased\\\\)$'\n"
+                    "replace = '({now:%Y-%m-%d})'\n"
+                )
+            },
+            Status.PASS,
+        ),
+        (
+            {
+                ".bumpversion.toml": (
+                    "[tool.bumpversion]\n[[tool.bumpversion.files]]\n"
+                    "filename = 'CHANGES'\nsearch = '^Unreleased.$'\n"
+                    "replace = 'Released on {now:%Y-%m-%d}.'\n"
+                )
+            },
+            Status.PASS,
+        ),
+        (
+            {
+                "pyproject.toml": (
+                    "[tool.bumpversion]\n[[tool.bumpversion.files]]\n"
+                    "filename = 'pkg/__init__.py'\n"
+                )
+            },
+            Status.FAIL,
+        ),
+    ],
+)
+def test_changelog_date(
+    make_repo: MakeRepo, files: dict[str, str], status: Status
+) -> None:
+    assert run("changelog-date", make_repo(files)).status is status
+
+
+SCRAPY_PROJECT = "[project]\ndependencies = ['scrapy>=2.13']\n"
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        (
+            {"pyproject.toml": "[project]\ndependencies = ['scrapy-poet']\n"},
+            Result(Status.NA, "Does not depend on Scrapy."),
+        ),
+        (
+            {
+                "pyproject.toml": (
+                    "[project]\n[project.optional-dependencies]\nx = ['Scrapy']\n"
+                ),
+                ".github/workflows/ci.yml": (
+                    "jobs: {c: {steps: [{run: "
+                    "'pip install https://github.com/scrapy/scrapy/archive/master.zip'"
+                    "}]}}\n"
+                ),
+            },
+            Result(Status.PASS),
+        ),
+        (
+            {
+                "setup.py": "setup(install_requires=['Scrapy>=2.0'])\n",
+                "tox.ini": (
+                    "[testenv:scrapy-master]\n"
+                    "deps = scrapy @ git+https://github.com/scrapy/scrapy@master\n"
+                ),
+                ".github/workflows/ci.yml": (
+                    "jobs: {c: {steps: [{run: tox -e scrapy-master}]}}\n"
+                ),
+            },
+            Result(Status.PASS),
+        ),
+        (
+            {
+                "pyproject.toml": SCRAPY_PROJECT,
+                "tox.ini": (
+                    "[testenv:vcs]\n"
+                    "commands_pre = pip install git+https://github.com/scrapy/scrapy\n"
+                ),
+            },
+            Result(
+                Status.FAIL,
+                "tox environments that install Scrapy master are not run in CI: vcs",
+            ),
+        ),
+        (
+            {
+                "pyproject.toml": SCRAPY_PROJECT,
+                "tox.ini": (
+                    "[testenv:old]\n"
+                    "deps = scrapy @ git+https://github.com/scrapy/scrapy@2.11\n"
+                ),
+            },
+            Result(
+                Status.FAIL, "no CI workflow or tox environment installs Scrapy master"
+            ),
+        ),
+    ],
+)
+def test_scrapy_master(
+    make_repo: MakeRepo, files: dict[str, str], result: Result
+) -> None:
+    assert run("scrapy-master", make_repo(files)) == result
+
+
+def test_docs_stable_links(make_repo: MakeRepo) -> None:
+    assert run("docs-stable-links", make_repo({})).status is Status.NA
+    files = {
+        "docs/conf.py": "",
+        "README.rst": (
+            "https://name.readthedocs.io/\n"
+            "https://name.readthedocs.io/en/stable/?badge=stable\n"
+            "https://other.readthedocs.io/en/latest/\n"
+        ),
+        "pyproject.toml": (
+            "[project.urls]\nDocs = 'https://docs.example.org/en/stable/'\n"
+        ),
+    }
+    assert run("docs-stable-links", make_repo(files)).status is Status.PASS
+    files["README.rst"] += "https://name.readthedocs.io/en/latest/usage.html\n"
+    files["pyproject.toml"] += (
+        "Changes = 'https://docs.example.org/pt-br/1.0/news.html'\n"
+    )
+    assert run("docs-stable-links", make_repo(files)) == Result(
+        Status.FAIL, "links to latest in README.rst; 1.0 in pyproject.toml"
+    )
