@@ -7,7 +7,7 @@ from packaging.licenses import InvalidLicenseExpression, canonicalize_license_ex
 
 from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
-group = Group("packaging", "Packaging")
+group = Group("packaging", "Packaging", frozenset({"python"}))
 
 NO_PROJECT_TABLE = "No [project] table in pyproject.toml."
 # Prefixes of setup.cfg sections with setuptools configuration, as opposed to
@@ -165,7 +165,8 @@ def _covers(patterns: list[str], path: str) -> bool:
 
 @group.check(
     "The sdist includes only listed files, which include the tests, the docs and "
-    "the tox configuration."
+    "the tox configuration.",
+    tags={"released"},
 )
 def sdist_contents(repo: Repo) -> Result:
     pyproject = repo.pyproject or {}
@@ -207,7 +208,8 @@ def _normalize_label(label: str) -> str:
 
 @group.check(
     "[project.urls] links to the source, the issue tracker, the changelog and, if "
-    "there are Sphinx docs, the documentation, with labels that PyPI recognizes."
+    "there are Sphinx docs, the documentation, with labels that PyPI recognizes.",
+    tags={"released"},
 )
 def project_urls(repo: Repo) -> Result:
     if not repo.project:
@@ -227,7 +229,9 @@ def project_urls(repo: Repo) -> Result:
     return passed()
 
 
-@group.check("`twine check` validates the built distributions in tox.")
+@group.check(
+    "`twine check` validates the built distributions in tox.", tags={"released"}
+)
 def twine_check(repo: Repo) -> Result:
     if any("twine check" in s for s in repo.tox_strings):
         return passed()

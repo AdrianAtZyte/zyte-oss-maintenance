@@ -31,7 +31,8 @@ def test_report(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
     config.write_text(
         '[[groups]]\ntitle = "Main"\nrepos = ["owner/good", "owner/missing"]\n'
         '[[groups]]\ntitle = "Others"\nrepos = ["owner/skipped"]\n'
-        '[skip."owner/skipped"]\npackaging = "Not a Python package."\n',
+        '[skip."owner/skipped"]\npackaging = "Not a Python package."\n'
+        'released = "Not released."\n',
         encoding="utf-8",
     )
 
@@ -64,6 +65,9 @@ def test_report(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
         "- ➖ Not a Python package. [owner/skipped](https://github.com/owner/skipped)"
         in report
     )
+    assert (
+        "- ➖ Not released. [owner/skipped](https://github.com/owner/skipped)" in report
+    )
 
     # Failing checks per project, linked from the summary.
     assert re.search(r"\| \[\d+\]\(PROJECTS\.md#ownergood\) \|", report)
@@ -83,6 +87,11 @@ def test_report(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
     out = capsys.readouterr().out
     assert "  ok     owner/good" in out
     assert "1/1 passing" in out
+
+    assert main([*args, "run", "--no-sync", "-c", "released", "-p", "good"]) == 0
+    out = capsys.readouterr().out
+    assert "\npy-typed: " in out
+    assert "\nhatchling: " not in out
 
 
 def test_prune(tmp_path: Path) -> None:

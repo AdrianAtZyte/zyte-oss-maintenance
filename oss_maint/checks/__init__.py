@@ -3,7 +3,7 @@
 A group module defines a :class:`~oss_maint.core.Group` and adds checks to it
 with its ``check`` decorator::
 
-    group = Group("python", "Python versions")
+    group = Group("python-versions", "Python versions")
 
 
     @group.check("Support for end-of-life Python versions is dropped.")
@@ -58,9 +58,12 @@ GROUPS: list[Group] = [
     releases.group,
 ]
 
-# Group and check IDs share a namespace, since both can be used to select or
-# skip checks.
-_ids = Counter([g.id for g in GROUPS] + [c.id for g in GROUPS for c in g.checks])
+# Group IDs, check IDs and check tags share a namespace, since all can be used
+# to select or skip checks.
+_tags = {t for g in GROUPS for c in g.checks for t in c.tags}
+_ids = Counter(
+    [*_tags, *(g.id for g in GROUPS), *(c.id for g in GROUPS for c in g.checks)]
+)
 if duplicates := sorted(i for i, n in _ids.items() if n > 1):
     raise RuntimeError(f"duplicate group or check IDs: {', '.join(duplicates)}")
 ALL_IDS = set(_ids)
@@ -68,12 +71,16 @@ ALL_IDS = set(_ids)
 
 def select_groups(ids: list[str]) -> list[Group]:
     """Return copies of :data:`GROUPS` limited to the checks matching *ids*,
-    which may be group or check IDs."""
+    which may be group IDs, check IDs or check tags."""
     if unknown := sorted(set(ids) - ALL_IDS):
         raise ValueError(f"unknown checks: {', '.join(unknown)}")
     groups = []
     for group in GROUPS:
-        checks = [c for c in group.checks if group.id in ids or c.id in ids]
+        checks = [
+            c
+            for c in group.checks
+            if group.id in ids or c.id in ids or not c.tags.isdisjoint(ids)
+        ]
         if checks:
             groups.append(replace(group, checks=checks))
     return groups

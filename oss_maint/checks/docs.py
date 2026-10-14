@@ -141,7 +141,8 @@ def _docs_hosts(repo: Repo) -> set[str]:
 
 @group.check(
     "Links to the docs in the README and in [project.urls] that name a version "
-    "use stable, which is built from the latest release."
+    "use stable, which is built from the latest release.",
+    tags={"released"},
 )
 def docs_stable_links(repo: Repo) -> Result:
     if not repo.has_sphinx_docs:
@@ -170,7 +171,8 @@ CHANGELOG_RE = re.compile(
 
 
 @group.check(
-    "There is a changelog, e.g. CHANGES.rst, CHANGELOG.md, NEWS or docs/news.rst."
+    "There is a changelog, e.g. CHANGES.rst, CHANGELOG.md, NEWS or docs/news.rst.",
+    tags={"released"},
 )
 def changelog(repo: Repo) -> Result:
     if any(
@@ -182,7 +184,8 @@ def changelog(repo: Repo) -> Result:
 
 
 @group.check(
-    "bump-my-version replaces (unreleased) in the changelog with the release date."
+    "bump-my-version replaces (unreleased) in the changelog with the release date.",
+    tags={"released"},
 )
 def changelog_date(repo: Repo) -> Result:
     config = (repo.pyproject or {}).get("tool", {}).get("bumpversion") or (
