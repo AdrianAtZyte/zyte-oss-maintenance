@@ -151,12 +151,79 @@ def hatchling(repo: Repo) -> Result:
     return passed()
 
 
-@group.check("Project URLs are declared in [project.urls].")
+# Paths that the sdist must include if they exist, to run the tests and build
+# the docs from it.
+SDIST_REQUIRED = ("tests", "docs", "tox.ini", "tox.toml")
+
+
+def _covers(patterns: list[str], path: str) -> bool:
+    """Whether hatch build *patterns*, all root paths ("/tests") or
+    directories ("tests/**"), cover the top-level *path*."""
+    roots = (pattern.removesuffix("/**").strip("/") for pattern in patterns)
+    return any(path == root or path.startswith(f"{root}/") for root in roots)
+
+
+@group.check(
+    "The sdist includes only listed files, which include the tests, the docs and "
+    "the tox configuration."
+)
+def sdist_contents(repo: Repo) -> Result:
+    pyproject = repo.pyproject or {}
+    if pyproject.get("build-system", {}).get("build-backend") != "hatchling.build":
+        return not_applicable("The build backend is not hatchling.")
+    sdist = (
+        pyproject.get("tool", {})
+        .get("hatch", {})
+        .get("build", {})
+        .get("targets", {})
+        .get("sdist", {})
+    )
+    include = [*sdist.get("include", []), *sdist.get("only-include", [])]
+    if not include:
+        return failed("no include in [tool.hatch.build.targets.sdist]")
+    exclude = sdist.get("exclude", [])
+    if missing := [
+        path
+        for path in SDIST_REQUIRED
+        if repo.exists(path) and (not _covers(include, path) or _covers(exclude, path))
+    ]:
+        return failed(f"not included: {', '.join(missing)}")
+    return passed()
+
+
+# Labels of [project.urls] that PyPI recognizes, normalized as in PEP 753, by
+# the kind of link they are.
+URL_LABELS = {
+    "source": {"source", "repository", "sourcecode", "github"},
+    "issues": {"issues", "bugs", "issue", "tracker", "issuetracker", "bugtracker"},
+    "changelog": {"changelog", "changes", "whatsnew", "history", "releasenotes"},
+    "documentation": {"documentation", "docs"},
+}
+
+
+def _normalize_label(label: str) -> str:
+    return "".join(c for c in label.lower() if c.isalnum())
+
+
+@group.check(
+    "[project.urls] links to the source, the issue tracker, the changelog and, if "
+    "there are Sphinx docs, the documentation, with labels that PyPI recognizes."
+)
 def project_urls(repo: Repo) -> Result:
     if not repo.project:
         return not_applicable(NO_PROJECT_TABLE)
-    if not repo.project.get("urls") and "urls" not in repo.project.get("dynamic", []):
+    if "urls" in repo.project.get("dynamic", []):
+        return passed("[project.urls] is dynamic")
+    urls = repo.project.get("urls") or {}
+    if not urls:
         return failed("no [project.urls] table")
+    labels = {_normalize_label(label) for label in urls}
+    # A homepage that is the repository is the source.
+    if repo.url in (str(url).rstrip("/").removesuffix(".git") for url in urls.values()):
+        labels.add("source")
+    kinds = [k for k in URL_LABELS if k != "documentation" or repo.has_sphinx_docs]
+    if missing := [k for k in kinds if not labels & URL_LABELS[k]]:
+        return failed(f"missing URLs: {', '.join(missing)}")
     return passed()
 
 

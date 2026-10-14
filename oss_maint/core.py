@@ -194,10 +194,21 @@ def _strings(data: Any) -> Iterator[str]:
         for value in data:
             yield from _strings(value)
         # Commands in TOML are lists of arguments.
-        if data and all(isinstance(value, str) for value in data):
-            yield " ".join(data)
+        if data and isinstance(data[0], str):
+            yield " ".join(_args(data))
     elif isinstance(data, str | int | float) and not isinstance(data, bool):
         yield str(data)
+
+
+def _args(command: list[Any]) -> Iterator[str]:
+    """Yield the string arguments of a TOML tox *command*, and the defaults
+    of its substitutions, e.g. ``{replace = "posargs", default = ["-x"]}``."""
+    for arg in command:
+        if isinstance(arg, str):
+            yield arg
+        elif isinstance(arg, dict):
+            default = arg.get("default") or []
+            yield from _args([default] if isinstance(default, str) else default)
 
 
 class Repo:
@@ -395,6 +406,12 @@ class Repo:
                     s for item in ini.items(section) for s in item
                 ]
         return envs
+
+    def tox_env_in_ci(self, env: str) -> bool:
+        """Whether GitHub Actions workflows mention the tox environment
+        *env*."""
+        env_re = re.compile(rf"(?<![\w-]){re.escape(env)}(?![\w-])")
+        return any(env_re.search(s) for s in self.workflow_strings)
 
     @cached_property
     def ci_strings(self) -> list[str]:

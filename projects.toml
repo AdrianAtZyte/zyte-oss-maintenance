@@ -82,6 +82,9 @@ repos = [
 # [skip."owner/name"]
 # check-id = "Reason."
 
+[skip."scrapy/scrapy"]
+docs-stable-links = "On docs.scrapy.org, latest is the latest release and master the default branch."
+
 [skip."scrapy/frostwork"]
 hatchling = "Rust extension, built with maturin."
 twine-check = "Wheels are built per platform by maturin in CI, where twine check runs on them."

@@ -89,10 +89,15 @@ PRE_COMMIT_RUN_RE = re.compile(r"\b(pre-commit|prek) run\b")
 PRE_COMMIT_ACTIONS = ("pre-commit/action@", "j178/prek-action@")
 
 
-@group.check("pre-commit runs in CI workflows, directly or through tox.")
+@group.check(
+    "pre-commit runs in CI workflows, directly or through tox, or in pre-commit.ci."
+)
 def pre_commit_in_ci(repo: Repo) -> Result:
-    if repo.pre_commit_hooks is None:
+    config = repo.read_yaml(".pre-commit-config.yaml")
+    if config is None:
         return not_applicable(NO_PRE_COMMIT)
+    if "ci" in config:
+        return passed()
     for _, step in repo.workflow_steps():
         if step.get("uses", "").startswith(PRE_COMMIT_ACTIONS) or (
             PRE_COMMIT_RUN_RE.search(step.get("run", ""))
@@ -103,15 +108,45 @@ def pre_commit_in_ci(repo: Repo) -> Result:
         for name, strings in repo.tox_envs.items()
         if any(PRE_COMMIT_RUN_RE.search(s) for s in strings)
     ]
-    for env in envs:
-        env_re = re.compile(rf"(?<![\w-]){re.escape(env)}(?![\w-])")
-        if any(env_re.search(s) for s in repo.workflow_strings):
-            return passed()
+    if any(repo.tox_env_in_ci(env) for env in envs):
+        return passed()
     if envs:
         return failed(
             f"tox environments that run pre-commit are not run in CI: {', '.join(envs)}"
         )
     return failed("not run in CI workflows or tox")
+
+
+PRE_COMMIT_ALL_FILES_RE = re.compile(r"\b(pre-commit|prek) run\b.*(--all-files|\s-a\b)")
+
+
+@group.check("A tox environment runs pre-commit on all files.")
+def pre_commit_tox(repo: Repo) -> Result:
+    if repo.pre_commit_hooks is None:
+        return not_applicable(NO_PRE_COMMIT)
+    if any(PRE_COMMIT_ALL_FILES_RE.search(s) for s in repo.tox_strings):
+        return passed()
+    return failed("no tox environment runs pre-commit run --all-files")
+
+
+PRE_COMMIT_HOOKS_REPO = "https://github.com/pre-commit/pre-commit-hooks"
+
+
+@group.check(f"The hooks of {PRE_COMMIT_HOOKS_REPO} are used.")
+def pre_commit_hooks(repo: Repo) -> Result:
+    config = repo.read_yaml(".pre-commit-config.yaml")
+    if config is None:
+        return not_applicable(NO_PRE_COMMIT)
+    if any(
+        _repo_url(hook_repo) == PRE_COMMIT_HOOKS_REPO
+        for hook_repo in config.get("repos") or []
+    ):
+        return passed()
+    return failed(f"{PRE_COMMIT_HOOKS_REPO} is not used")
+
+
+def _repo_url(hook_repo: dict[str, Any]) -> str:
+    return str(hook_repo.get("repo", "")).lower().rstrip("/").removesuffix(".git")
 
 
 HOOK_UPDATE_DAYS = 180
@@ -153,8 +188,7 @@ def pre_commit_updates(repo: Repo) -> Result:
     outdated: list[str] = []
     checked = False
     for hook_repo in config.get("repos") or []:
-        url = str(hook_repo.get("repo", "")).lower().rstrip("/").removesuffix(".git")
-        if (tool := HOOK_TOOLS.get(url)) is None:
+        if (tool := HOOK_TOOLS.get(_repo_url(hook_repo))) is None:
             continue
         rev = str(hook_repo.get("rev", ""))
         try:
