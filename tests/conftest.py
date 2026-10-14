@@ -5,7 +5,7 @@ from datetime import UTC, date, datetime, timedelta
 import pytest
 from packaging.version import Version
 
-from oss_maint import pypi, pythons
+from oss_maint import github, pypi, pythons
 from oss_maint.checks import docs
 
 
@@ -24,6 +24,12 @@ RELEASES = {
         _release("1.0", datetime(2025, 1, 2, tzinfo=UTC)),
         _release("1.1", datetime(2026, 3, 4, tzinfo=UTC)),
     ],
+}
+
+#: Public members of GitHub organizations.
+PUBLIC_MEMBERS = {
+    "owner": frozenset({"alice"}),
+    "org": frozenset({"bob"}),
 }
 
 
@@ -51,3 +57,4 @@ def fake_python_cycles(monkeypatch: pytest.MonkeyPatch) -> None:
     )
     monkeypatch.setattr(docs, "latest_sphinx_scrapy", lambda: "0.13.0")
     monkeypatch.setattr(pypi, "releases", RELEASES.get)
+    monkeypatch.setattr(github, "public_members", PUBLIC_MEMBERS.__getitem__)

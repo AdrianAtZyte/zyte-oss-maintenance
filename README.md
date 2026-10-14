@@ -98,7 +98,10 @@ candidates, and new releases that endoflife.date does not list yet) and
 [PyPy's `versions.json`](https://downloads.python.org/pypy/versions.json)
 (the Python versions of each PyPy release). Release data of projects and of
 the tools of pre-commit hooks (see `oss_maint/pypi.py`) comes from the
-[PyPI JSON API](https://docs.pypi.org/api/json/).
+[PyPI JSON API](https://docs.pypi.org/api/json/). Public members of GitHub
+organizations (see `oss_maint/github.py`) come from the
+[GitHub REST API](https://docs.github.com/en/rest/orgs/members#list-public-organization-members),
+unauthenticated.
 
 ## Development
 

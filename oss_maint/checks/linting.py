@@ -6,7 +6,7 @@ from typing import Any
 
 from packaging.version import InvalidVersion, Version
 
-from oss_maint import pypi
+from oss_maint import github, pypi
 from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
 group = Group("linting", "Linting")
@@ -236,6 +236,42 @@ def dependabot(repo: Repo) -> Result:
     updates = (repo.read_yaml(path) or {}).get("updates") or []
     if not any(u.get("package-ecosystem") == "github-actions" for u in updates):
         return failed(f"no github-actions updates in {path}")
+    return passed()
+
+
+PR_GUARD_ACTION = "scrapy/unattended-pr-guard@"
+
+
+def _split_logins(value: object) -> list[str]:
+    return [login.strip() for login in str(value).split(",") if login.strip()]
+
+
+@group.check(
+    "The trusted-users of scrapy/unattended-pr-guard include no public members of "
+    "its trusted-orgs, which it trusts already."
+)
+def pr_guard_trusted_users(repo: Repo) -> Result:
+    guards = [
+        step.get("with") or {}
+        for _, step in repo.workflow_steps()
+        if step.get("uses", "").startswith(PR_GUARD_ACTION)
+    ]
+    if not guards:
+        return not_applicable("Does not use scrapy/unattended-pr-guard.")
+    redundant = set()
+    for inputs in guards:
+        orgs = _split_logins(inputs.get("trusted-orgs", repo.name.split("/")[0]))
+        members = set().union(*(github.public_members(org) for org in orgs))
+        redundant.update(
+            user
+            for user in _split_logins(inputs.get("trusted-users", ""))
+            if user.lower() in members
+        )
+    if redundant:
+        return failed(
+            "public members of trusted orgs: "
+            + ", ".join(sorted(redundant, key=str.lower))
+        )
     return passed()
 
 
