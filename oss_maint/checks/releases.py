@@ -4,7 +4,7 @@ import re
 from typing import Any
 
 from oss_maint import pypi
-from oss_maint.core import Group, Repo, Result, failed, passed
+from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
 group = Group("releases", "Releases")
 
@@ -57,6 +57,13 @@ def latest_release(repo: Repo) -> str | None:
     if repo.dist_name is None or not (releases := pypi.releases(repo.dist_name)):
         return None
     return f"{releases[-1].version} ({releases[-1].uploaded.date()})"
+
+
+@group.info("The default branch has commits since the latest release on PyPI.")
+def unreleased_changes(repo: Repo) -> bool | Result:
+    if repo.dist_name is None or not (releases := pypi.releases(repo.dist_name)):
+        return not_applicable("Not on PyPI.")
+    return repo.committed > releases[-1].uploaded
 
 
 @group.check(

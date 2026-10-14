@@ -8,6 +8,7 @@ import subprocess
 import tomllib
 from collections import Counter
 from dataclasses import dataclass, field
+from datetime import datetime
 from enum import Enum
 from functools import cached_property
 from typing import TYPE_CHECKING, Any
@@ -19,7 +20,7 @@ if TYPE_CHECKING:
     from pathlib import Path
 
     CheckFunc = Callable[["Repo"], "Result"]
-    InfoFunc = Callable[["Repo"], bool | str | None]
+    InfoFunc = Callable[["Repo"], "bool | str | Result | None"]
     FactFunc = Callable[[], str]
 
 
@@ -131,12 +132,15 @@ class Group:
 
     def info(self, statement: str) -> Callable[[InfoFunc], InfoFunc]:
         """Decorator that adds an informational check function to the group.
-        The function returns whether *statement* is true, or a value that
-        *statement* describes, None if there is none."""
+        The function returns whether *statement* is true, a value that
+        *statement* describes, None if there is none, or a result, e.g. from
+        :func:`not_applicable`."""
 
         def decorator(func: InfoFunc) -> InfoFunc:
             def run(repo: Repo) -> Result:
                 value = func(repo)
+                if isinstance(value, Result):
+                    return value
                 if isinstance(value, str):
                     return Result(Status.YES, value=value)
                 return Result(Status.YES if value else Status.NO)
@@ -231,6 +235,18 @@ class Repo:
             capture_output=True,
             text=True,
         ).stdout.strip()
+
+    @cached_property
+    def committed(self) -> datetime:
+        """Committer date of the checked commit."""
+        return datetime.fromisoformat(
+            subprocess.run(
+                ["git", "-C", str(self.path), "log", "-1", "--format=%cI"],
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
+        )
 
     # Files
 
