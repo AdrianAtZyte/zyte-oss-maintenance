@@ -1,12 +1,12 @@
 # Maintenance report by project
 
-Generated on 2026-10-14 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
+Generated on 2026-10-15 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
 
 ## Scrapy and its deps
 
 ### scrapy/scrapy
 
-[Repository](https://github.com/scrapy/scrapy) · commit [`3f12941`](https://github.com/scrapy/scrapy/commit/3f129418859a0757fa6835f78a25d99bdc1f7bce) · 39/46 checks passing
+[Repository](https://github.com/scrapy/scrapy) · commit [`cb2f58b`](https://github.com/scrapy/scrapy/commit/cb2f58b4a004d1f0974bec74c2aded6b4204fd53) · 39/46 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes · latest-release: 2.19.0 (2026-09-10) · unreleased-changes: yes
 
@@ -76,7 +76,7 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no
 
 ### scrapy/itemadapter
 
-[Repository](https://github.com/scrapy/itemadapter) · commit [`d0565e1`](https://github.com/scrapy/itemadapter/commit/d0565e1c70618cbb36246358314fb38d16372f88) · 31/38 checks passing
+[Repository](https://github.com/scrapy/itemadapter) · commit [`94a7348`](https://github.com/scrapy/itemadapter/commit/94a73489383903631644f7beab0ee46614a80f36) · 31/38 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: no · latest-release: 0.13.1 (2026-01-08) · unreleased-changes: yes
 
@@ -317,15 +317,13 @@ supports-pypy: no · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: no
 
 ### scrapy-plugins/scrapy-spider-metadata
 
-[Repository](https://github.com/scrapy-plugins/scrapy-spider-metadata) · commit [`63b3991`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/63b3991dc8f181b2ef358e3b09aeda13261dd7c3) · 18/43 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-spider-metadata) · commit [`36de44b`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/36de44b8259e3480546a5c15600356519e1f3439) · 31/46 checks passing
 
 supports-pypy: yes · license: BSD License · pylint: no · has-sphinx-docs: yes · latest-release: 0.2.0 (2024-09-26) · unreleased-changes: yes
 
 **Python versions**
 
-- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.9' allows 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01); classifiers list 3.9, 3.10
-- ❌ [`latest-python`](REPORT.md#latest-python): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
-- ❌ [`python-classifiers`](REPORT.md#python-classifiers): no classifiers for 3.14, 3.15
+- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [`latest-pypy`](REPORT.md#latest-pypy): PyPy 3.12 not found in CI workflows or tox config
 
 **Packaging**
@@ -335,10 +333,6 @@ supports-pypy: yes · license: BSD License · pylint: no · has-sphinx-docs: yes
 - ❌ [`hatchling`](REPORT.md#hatchling): build backend is setuptools.build_meta
 - ❌ [`project-urls`](REPORT.md#project-urls): missing URLs: issues, changelog, documentation
 
-**Typing**
-
-- ❌ [`typed-classifier`](REPORT.md#typed-classifier): no 'Typing :: Typed' classifier
-
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
@@ -346,25 +340,15 @@ supports-pypy: yes · license: BSD License · pylint: no · has-sphinx-docs: yes
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 - ❌ [`scrapy-master`](REPORT.md#scrapy-master): no CI workflow or tox environment installs Scrapy master
 
-**Linting**
-
-- ❌ [`pre-commit-hooks`](REPORT.md#pre-commit-hooks): https://github.com/pre-commit/pre-commit-hooks is not used
-- ❌ [`pre-commit-updates`](REPORT.md#pre-commit-updates): outdated: ruff v0.11.2 (0.15.11 or later expected)
-- ❌ [`actionlint`](REPORT.md#actionlint): missing pre-commit hooks: actionlint
-- ❌ [`zizmor`](REPORT.md#zizmor): missing pre-commit hooks: zizmor
-- ❌ [`blacken-docs`](REPORT.md#blacken-docs): missing pre-commit hooks: blacken-docs
-- ❌ [`sphinx-lint`](REPORT.md#sphinx-lint): missing pre-commit hooks: sphinx-lint
-
 **Documentation**
 
-- ❌ [`docs-requirements-in`](REPORT.md#docs-requirements-in): no docs/requirements.in
-- ❌ [`sphinx-scrapy`](REPORT.md#sphinx-scrapy): sphinx_scrapy not in docs/conf.py or docs/requirements.in
+- ❌ [`sphinx-scrapy-latest`](REPORT.md#sphinx-scrapy-latest): pinned to 0.13.0, latest is 0.14.0
 - ❌ [`docs-stable-links`](REPORT.md#docs-stable-links): links to latest in README.rst
 - ❌ [`changelog-date`](REPORT.md#changelog-date): no file replacement of (unreleased) with {now:%Y-%m-%d}
 
 **Releases**
 
-- ❌ [`trusted-publishing`](REPORT.md#trusted-publishing): .github/workflows/publish.yml: job 'deploy' has no environment; .github/workflows/publish.yml uses an API token; .github/workflows/publish.yml lacks the id-token: write permission
+- ❌ [`trusted-publishing`](REPORT.md#trusted-publishing): .github/workflows/publish.yml: job 'deploy' has no environment
 - ❌ [`separate-build-job`](REPORT.md#separate-build-job): .github/workflows/publish.yml: job 'deploy' builds and publishes
 
 ### zytedata/duplicate-url-discarder
@@ -2335,7 +2319,7 @@ has-sphinx-docs: no
 
 ### zytedata/zyte-oss-maintenance
 
-[Repository](https://github.com/zytedata/zyte-oss-maintenance) · commit [`23e650e`](https://github.com/zytedata/zyte-oss-maintenance/commit/23e650ea1131a05a10c22f83b67d7c533ea93844) · 14/20 checks passing
+[Repository](https://github.com/zytedata/zyte-oss-maintenance) · commit [`c008564`](https://github.com/zytedata/zyte-oss-maintenance/commit/c008564c3a69408c965957de6c9819f025ac5e47) · 14/20 checks passing
 
 supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: no
 
