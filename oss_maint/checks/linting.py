@@ -7,7 +7,15 @@ from typing import Any
 from packaging.version import InvalidVersion, Version
 
 from oss_maint import github, pypi
-from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
+from oss_maint.core import (
+    Group,
+    Repo,
+    Result,
+    failed,
+    not_applicable,
+    passed,
+    workflow_triggers,
+)
 
 group = Group("linting", "Linting")
 
@@ -240,6 +248,43 @@ def dependabot(repo: Repo) -> Result:
     updates = (repo.read_yaml(path) or {}).get("updates") or []
     if not any(u.get("package-ecosystem") == "github-actions" for u in updates):
         return failed(f"no github-actions updates in {path}")
+    return passed()
+
+
+def _runs_on_branches(workflow: dict[Any, Any]) -> bool:
+    triggers = workflow_triggers(workflow)
+    if "pull_request" in triggers:
+        return True
+    if "push" not in triggers:
+        return False
+    # Push filters on tags alone exclude branches.
+    push = triggers["push"] or {}
+    return not ({"tags", "tags-ignore"} & push.keys()) or bool(
+        {"branches", "branches-ignore"} & push.keys()
+    )
+
+
+@group.check(
+    "Workflows triggered by pull requests or branch pushes cancel superseded runs "
+    "(a top-level concurrency with cancel-in-progress), unless they set "
+    "cancel-in-progress: false."
+)
+def workflow_concurrency(repo: Repo) -> Result:
+    workflows = {
+        path: workflow
+        for path, workflow in repo.workflows.items()
+        if _runs_on_branches(workflow)
+    }
+    if not workflows:
+        return not_applicable("No workflows triggered by pull requests or pushes.")
+    missing = [
+        path
+        for path, workflow in workflows.items()
+        if not isinstance(concurrency := workflow.get("concurrency"), dict)
+        or "cancel-in-progress" not in concurrency
+    ]
+    if missing:
+        return failed(f"no cancel-in-progress: {', '.join(missing)}")
     return passed()
 
 

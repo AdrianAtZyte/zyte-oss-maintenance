@@ -207,6 +207,18 @@ _CI_PYPY_RES = [
 _CI_ANY_PYPY_RE = re.compile(r"\bpypy-?3")
 
 
+def workflow_triggers(workflow: dict[Any, Any]) -> dict[str, Any]:
+    """Events that trigger a parsed GitHub Actions *workflow*, with their
+    configuration."""
+    # YAML 1.1 parses the "on" key as True.
+    triggers = workflow.get("on", workflow.get(True)) or {}
+    if isinstance(triggers, str):
+        return {triggers: None}
+    if isinstance(triggers, list):
+        return dict.fromkeys(triggers)
+    return triggers
+
+
 def _strings(data: Any) -> Iterator[str]:
     """Yield all keys and scalar values in parsed YAML or TOML *data*."""
     if isinstance(data, dict):

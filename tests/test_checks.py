@@ -910,6 +910,34 @@ def test_dependabot(make_repo: MakeRepo) -> None:
 
 
 @pytest.mark.parametrize(
+    ("workflow", "status"),
+    [
+        ("on: release\n", Status.NA),
+        ("on:\n  push:\n    tags: [v*]\n", Status.NA),
+        ("on: [push]\n", Status.FAIL),
+        ("on:\n  push:\n    branches: [main]\n    tags: [v*]\n", Status.FAIL),
+        ("on: pull_request\nconcurrency: ci-${{ github.ref }}\n", Status.FAIL),
+        (
+            "on: pull_request\nconcurrency: {group: x, cancel-in-progress: true}\n",
+            Status.PASS,
+        ),
+        (
+            "on: pull_request\nconcurrency: {group: x, cancel-in-progress: false}\n",
+            Status.PASS,
+        ),
+    ],
+)
+def test_workflow_concurrency(
+    make_repo: MakeRepo, workflow: str, status: Status
+) -> None:
+    repo = make_repo({".github/workflows/ci.yml": workflow})
+    result = run("workflow-concurrency", repo)
+    assert result.status is status
+    if status is Status.FAIL:
+        assert result.detail == "no cancel-in-progress: .github/workflows/ci.yml"
+
+
+@pytest.mark.parametrize(
     ("files", "detail"),
     [
         ({"pyproject.toml": "[tool.coverage.run]\nbranch = true\n"}, ""),
