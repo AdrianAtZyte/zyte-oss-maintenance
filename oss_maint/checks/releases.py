@@ -4,7 +4,15 @@ import re
 from typing import Any
 
 from oss_maint import pypi
-from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
+from oss_maint.core import (
+    Group,
+    Repo,
+    Result,
+    failed,
+    not_applicable,
+    passed,
+    workflow_triggers,
+)
 
 group = Group("releases", "Releases")
 
@@ -40,16 +48,6 @@ def _builds(step: dict[str, Any]) -> bool:
         return True
     uses = step.get("uses", "")
     return bool(BUILD_ACTION_RE.search(uses)) and not uses.startswith("actions/")
-
-
-def _triggers(workflow: dict[Any, Any]) -> dict[str, Any]:
-    # YAML 1.1 parses the "on" key as True.
-    triggers = workflow.get("on", workflow.get(True)) or {}
-    if isinstance(triggers, str):
-        return {triggers: None}
-    if isinstance(triggers, list):
-        return dict.fromkeys(triggers)
-    return triggers
 
 
 @group.info("The latest release on PyPI, with its date.", tags={"python", "released"})
@@ -108,7 +106,7 @@ def publish_on_tag(repo: Repo) -> Result:
         return failed(NO_PUBLISHING)
     problems = []
     for path in sorted({path for path, _, _, _ in jobs}):
-        triggers = _triggers(repo.workflows[path])
+        triggers = workflow_triggers(repo.workflows[path])
         if "release" in triggers:
             problems.append(f"{path} is triggered by GitHub releases")
         elif "tags" not in (triggers.get("push") or {}):
