@@ -1,12 +1,12 @@
 # Maintenance report by project
 
-Generated on 2026-10-19 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
+Generated on 2026-10-21 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
 
 ## Scrapy and its deps
 
 ### scrapy/scrapy
 
-[Repository](https://github.com/scrapy/scrapy) · commit [`c7ec9ea`](https://github.com/scrapy/scrapy/commit/c7ec9ea9136927ae9c37647a677e1fa074d47dc9) · 39/45 checks passing
+[Repository](https://github.com/scrapy/scrapy) · commit [`708bc4c`](https://github.com/scrapy/scrapy/commit/708bc4c3a22b17b1abe00e20bdb573aa227e9795) · 39/45 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes · latest-release: 2.19.0 (2026-09-10) · unreleased-changes: yes
 
@@ -33,7 +33,7 @@ supports-pypy: no · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: ye
 
 ### scrapy/cssselect
 
-[Repository](https://github.com/scrapy/cssselect) · commit [`ec61e4b`](https://github.com/scrapy/cssselect/commit/ec61e4b5deed6494431f4054bb6161f7b80e4dbf) · 34/43 checks passing
+[Repository](https://github.com/scrapy/cssselect) · commit [`3069b6d`](https://github.com/scrapy/cssselect/commit/3069b6da75e1adf27939ca541dcc9fb9b961abc6) · 34/43 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes · latest-release: 1.6.0 (2026-10-09) · unreleased-changes: yes
 
@@ -76,7 +76,7 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no
 
 ### scrapy/itemadapter
 
-[Repository](https://github.com/scrapy/itemadapter) · commit [`01cac64`](https://github.com/scrapy/itemadapter/commit/01cac645712c992acfc5c9dcba754b1ea0bbe11a) · 31/39 checks passing
+[Repository](https://github.com/scrapy/itemadapter) · commit [`03fea94`](https://github.com/scrapy/itemadapter/commit/03fea94d9a035589d5f6428f138813628b8b3488) · 31/39 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: no · latest-release: 0.13.1 (2026-01-08) · unreleased-changes: yes
 
@@ -142,7 +142,7 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: y
 
 ### scrapy/parsel
 
-[Repository](https://github.com/scrapy/parsel) · commit [`4932123`](https://github.com/scrapy/parsel/commit/49321235a2e448c49f23ee068c9cdfc2d35a4317) · 43/48 checks passing
+[Repository](https://github.com/scrapy/parsel) · commit [`599897f`](https://github.com/scrapy/parsel/commit/599897f486ccc066555dacbd5014812ee640eec2) · 43/48 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes · latest-release: 1.12.1 (2026-09-28) · unreleased-changes: yes
 
@@ -165,18 +165,13 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: y
 
 ### scrapy/protego
 
-[Repository](https://github.com/scrapy/protego) · commit [`53d6df8`](https://github.com/scrapy/protego/commit/53d6df88ea74a29561d4c415d45ee77ddc86c1af) · 32/37 checks passing
+[Repository](https://github.com/scrapy/protego) · commit [`2ffbb5f`](https://github.com/scrapy/protego/commit/2ffbb5fd8dfe31454cdc0e7852d1f77cc63d8b9d) · 34/37 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no · latest-release: 0.7.0 (2026-09-21) · unreleased-changes: yes
 
 **Python versions**
 
-- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [`latest-pypy`](REPORT.md#latest-pypy): PyPy 3.12 not found in CI workflows or tox config
-
-**Typing**
-
-- ❌ [`typed-classifier`](REPORT.md#typed-classifier): no 'Typing :: Typed' classifier
 
 **Tests and coverage**
 
@@ -188,7 +183,7 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no
 
 ### scrapy/queuelib
 
-[Repository](https://github.com/scrapy/queuelib) · commit [`2f900bd`](https://github.com/scrapy/queuelib/commit/2f900bdc0bbb18f99c20ca53d3477f5fc27ef30f) · 30/37 checks passing
+[Repository](https://github.com/scrapy/queuelib) · commit [`d4ed6ab`](https://github.com/scrapy/queuelib/commit/d4ed6abbce003f953cc6a1163d2ea396243417e5) · 30/37 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: no · latest-release: 1.10.0 (2026-08-24) · unreleased-changes: yes
 
@@ -216,7 +211,7 @@ supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: n
 
 ### scrapy/w3lib
 
-[Repository](https://github.com/scrapy/w3lib) · commit [`9ded4ea`](https://github.com/scrapy/w3lib/commit/9ded4ea3137a6db9dc04e32d3186f61007f3cb4d) · 35/44 checks passing
+[Repository](https://github.com/scrapy/w3lib) · commit [`5f50405`](https://github.com/scrapy/w3lib/commit/5f50405946524286e3dbc689f88eaf545417bba0) · 35/44 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes · latest-release: 2.5.0 (2026-09-30) · unreleased-changes: yes
 
@@ -294,7 +289,7 @@ supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no 
 
 ### scrapy-plugins/scrapy-playwright
 
-[Repository](https://github.com/scrapy-plugins/scrapy-playwright) · commit [`390f452`](https://github.com/scrapy-plugins/scrapy-playwright/commit/390f452b0b30afcfa0f6c714b12f4a083f56b161) · 17/43 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-playwright) · commit [`2658f86`](https://github.com/scrapy-plugins/scrapy-playwright/commit/2658f86a4771b918dbe1d32c345ca70e34d43648) · 17/43 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · pylint: yes · has-sphinx-docs: yes · latest-release: 0.0.48 (2026-07-10) · unreleased-changes: yes
 
@@ -712,21 +707,20 @@ supports-pypy: no · license: no · pylint: no · has-sphinx-docs: no · latest-
 
 ### scrapy-plugins/scrapy-feedexporter-google-drive
 
-[Repository](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) · commit [`ee13d9d`](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive/commit/ee13d9dfc0ef378cfa68fba15e33a1df6078677b) · 2/24 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) · commit [`369598d`](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive/commit/369598d8205938ba851af91fed913335bfd12cd9) · 15/34 checks passing
 
-supports-pypy: no · license: no · pylint: no · has-sphinx-docs: no · latest-release: no
+supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no · latest-release: 0.1.0 (2026-10-21) · unreleased-changes: no
 
 **Python versions**
 
-- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.8' allows 3.8 (EOL 2024-10-07), 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01)
+- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.9' allows 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01); classifiers list 3.9, 3.10
 - ❌ [`latest-python`](REPORT.md#latest-python): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
-- ❌ [`python-classifiers`](REPORT.md#python-classifiers): no Python version classifiers
+- ❌ [`python-classifiers`](REPORT.md#python-classifiers): no classifiers for 3.15
 
 **Packaging**
 
-- ❌ [`pep639-license`](REPORT.md#pep639-license): no license field
 - ❌ [`hatchling`](REPORT.md#hatchling): build backend is setuptools.build_meta
-- ❌ [`project-urls`](REPORT.md#project-urls): no [project.urls] table
+- ❌ [`project-urls`](REPORT.md#project-urls): missing URLs: issues
 - ❌ [`twine-check`](REPORT.md#twine-check): no twine check in tox config
 
 **Dependencies**
@@ -749,18 +743,13 @@ supports-pypy: no · license: no · pylint: no · has-sphinx-docs: no · latest-
 
 **Linting**
 
-- ❌ [`ruff`](REPORT.md#ruff): no .pre-commit-config.yaml
-
-**Documentation**
-
-- ❌ [`changelog`](REPORT.md#changelog): no changelog file
+- ❌ [`pre-commit-hooks`](REPORT.md#pre-commit-hooks): https://github.com/pre-commit/pre-commit-hooks is not used
+- ❌ [`actionlint`](REPORT.md#actionlint): missing pre-commit hooks: actionlint
+- ❌ [`workflow-concurrency`](REPORT.md#workflow-concurrency): no cancel-in-progress: .github/workflows/test.yml
 
 **Releases**
 
-- ❌ [`trusted-publishing`](REPORT.md#trusted-publishing): no workflow publishes to PyPI
-- ❌ [`publish-on-tag`](REPORT.md#publish-on-tag): no workflow publishes to PyPI
-- ❌ [`separate-build-job`](REPORT.md#separate-build-job): no workflow publishes to PyPI
-- ❌ [`bump-my-version`](REPORT.md#bump-my-version): no [tool.bumpversion] in pyproject.toml or .bumpversion.toml
+- ❌ [`separate-build-job`](REPORT.md#separate-build-job): .github/workflows/publish.yml: job 'publish' builds and publishes
 
 ### scrapy-plugins/scrapy-feedexporter-google-sheets
 
@@ -814,24 +803,26 @@ supports-pypy: no · license: no · pylint: no · has-sphinx-docs: no · latest-
 
 ### scrapy-plugins/scrapy-feedexporter-onedrive
 
-[Repository](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) · commit [`9b5fdd6`](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive/commit/9b5fdd62704aa1c666419f3d6ea201ce3f534132) · 1/21 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) · commit [`b97aab3`](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive/commit/b97aab3d3a50e7d7fe829285a7e53fd7f80ea758) · 12/33 checks passing
 
-supports-pypy: no · license: no · pylint: no · has-sphinx-docs: no · latest-release: no
+supports-pypy: no · license: BSD License · pylint: no · has-sphinx-docs: no · latest-release: 0.1.0 (2026-10-21) · unreleased-changes: no
 
 **Python versions**
 
-- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.8' allows 3.8 (EOL 2024-10-07), 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01)
+- ❌ [`no-eol-python`](REPORT.md#no-eol-python): requires-python '>=3.8' allows 3.8 (EOL 2024-10-07), 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01); classifiers list 3.8, 3.9, 3.10
 - ❌ [`latest-python`](REPORT.md#latest-python): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
-- ❌ [`python-classifiers`](REPORT.md#python-classifiers): no Python version classifiers
+- ❌ [`python-classifiers`](REPORT.md#python-classifiers): no classifiers for 3.14, 3.15
 
 **Packaging**
 
-- ❌ [`pyproject-metadata`](REPORT.md#pyproject-metadata): no [project] table in pyproject.toml; setup.py exists
-- ❌ [`hatchling`](REPORT.md#hatchling): no pyproject.toml
+- ❌ [`pep639-license`](REPORT.md#pep639-license): license is a table, not an SPDX expression; has license classifiers: License :: OSI Approved :: BSD License
+- ❌ [`hatchling`](REPORT.md#hatchling): build backend is setuptools.build_meta
+- ❌ [`project-urls`](REPORT.md#project-urls): missing URLs: issues, changelog
 - ❌ [`twine-check`](REPORT.md#twine-check): no twine check in tox config
 
 **Dependencies**
 
+- ❌ [`dependency-lower-bounds`](REPORT.md#dependency-lower-bounds): no lower bound: requests
 - ❌ [`min-deps-env`](REPORT.md#min-deps-env): no tox environment for minimum dependency versions
 
 **Typing**
@@ -849,18 +840,14 @@ supports-pypy: no · license: no · pylint: no · has-sphinx-docs: no · latest-
 
 **Linting**
 
-- ❌ [`ruff`](REPORT.md#ruff): no .pre-commit-config.yaml
-
-**Documentation**
-
-- ❌ [`changelog`](REPORT.md#changelog): no changelog file
+- ❌ [`pre-commit-in-ci`](REPORT.md#pre-commit-in-ci): not run in CI workflows or tox
+- ❌ [`pre-commit-tox`](REPORT.md#pre-commit-tox): no tox environment runs pre-commit run --all-files
+- ❌ [`pre-commit-hooks`](REPORT.md#pre-commit-hooks): https://github.com/pre-commit/pre-commit-hooks is not used
+- ❌ [`actionlint`](REPORT.md#actionlint): missing pre-commit hooks: actionlint
 
 **Releases**
 
-- ❌ [`trusted-publishing`](REPORT.md#trusted-publishing): no workflow publishes to PyPI
-- ❌ [`publish-on-tag`](REPORT.md#publish-on-tag): no workflow publishes to PyPI
-- ❌ [`separate-build-job`](REPORT.md#separate-build-job): no workflow publishes to PyPI
-- ❌ [`bump-my-version`](REPORT.md#bump-my-version): no [tool.bumpversion] in pyproject.toml or .bumpversion.toml
+- ❌ [`separate-build-job`](REPORT.md#separate-build-job): .github/workflows/publish.yml: job 'publish' builds and publishes
 
 ### scrapy-plugins/scrapy-feedexporter-sftp
 
@@ -910,7 +897,7 @@ supports-pypy: no · license: BSD License · pylint: no · has-sphinx-docs: no �
 
 ### scrapinghub/scrapy-poet
 
-[Repository](https://github.com/scrapinghub/scrapy-poet) · commit [`e87c2d0`](https://github.com/scrapinghub/scrapy-poet/commit/e87c2d01f60855652bd756c918cf11c93256d283) · 31/45 checks passing
+[Repository](https://github.com/scrapinghub/scrapy-poet) · commit [`f06d684`](https://github.com/scrapinghub/scrapy-poet/commit/f06d684b6b1a40625eb846680225cb00a67bf7ec) · 32/45 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: yes · latest-release: 0.27.2 (2026-04-28) · unreleased-changes: yes
 
@@ -927,7 +914,6 @@ supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: yes
 **Typing**
 
 - ❌ [`typed-classifier`](REPORT.md#typed-classifier): no 'Typing :: Typed' classifier
-- ❌ [`mypy-strict`](REPORT.md#mypy-strict): no strict = true in mypy config, and no --strict
 
 **Tests and coverage**
 
@@ -1043,7 +1029,7 @@ supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: yes �
 
 ### scrapy/frostwork
 
-[Repository](https://github.com/scrapy/frostwork) · commit [`eaf5cff`](https://github.com/scrapy/frostwork/commit/eaf5cffc3727568d2651273502c2852b660e3738) · 18/30 checks passing
+[Repository](https://github.com/scrapy/frostwork) · commit [`d1e2d5c`](https://github.com/scrapy/frostwork/commit/d1e2d5c27f4b2664a923e37bc5e0fdf53fd42c02) · 18/30 checks passing
 
 supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: no · latest-release: 0.1.6 (2026-09-23) · unreleased-changes: yes
 
@@ -1110,7 +1096,7 @@ supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: yes
 
 ### zytedata/python-zyte-api
 
-[Repository](https://github.com/zytedata/python-zyte-api) · commit [`efc4fdc`](https://github.com/zytedata/python-zyte-api/commit/efc4fdc6cebf36de26a946d0e665d539cafbecf9) · 31/44 checks passing
+[Repository](https://github.com/zytedata/python-zyte-api) · commit [`f728f1d`](https://github.com/zytedata/python-zyte-api/commit/f728f1d4163450b455f4e5296c2be7b4846b8d15) · 31/44 checks passing
 
 supports-pypy: no · license: BSD License · pylint: no · has-sphinx-docs: yes · latest-release: 0.11.0 (2026-07-23) · unreleased-changes: yes
 
@@ -1381,9 +1367,9 @@ supports-pypy: no · license: BSD License · pylint: no · has-sphinx-docs: no �
 
 ### scrapinghub/shub-workflow
 
-[Repository](https://github.com/scrapinghub/shub-workflow) · commit [`237107e`](https://github.com/scrapinghub/shub-workflow/commit/237107e06250247a00bfd04368af3b0ed26468b6) · 3/24 checks passing
+[Repository](https://github.com/scrapinghub/shub-workflow) · commit [`bfffd16`](https://github.com/scrapinghub/shub-workflow/commit/bfffd161cb6d2d562f0fb4f5492dca9374bf4cfe) · 3/24 checks passing
 
-supports-pypy: no · license: Apache Software License · pylint: no · has-sphinx-docs: no · latest-release: 1.14.43 (2026-10-13) · unreleased-changes: no
+supports-pypy: no · license: Apache Software License · pylint: no · has-sphinx-docs: no · latest-release: 1.14.44.1 (2026-10-19) · unreleased-changes: yes
 
 **Python versions**
 
@@ -1718,7 +1704,7 @@ supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: no 
 
 ### scrapinghub/dateparser
 
-[Repository](https://github.com/scrapinghub/dateparser) · commit [`07b40b2`](https://github.com/scrapinghub/dateparser/commit/07b40b2f01773d830321538ac9d2d6219edbe10e) · 21/42 checks passing
+[Repository](https://github.com/scrapinghub/dateparser) · commit [`2f87862`](https://github.com/scrapinghub/dateparser/commit/2f87862cc1f485f4219624a2f688986bc30bfa22) · 21/42 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · pylint: no · has-sphinx-docs: yes · latest-release: 1.4.3 (2026-09-03) · unreleased-changes: yes
 
@@ -2186,9 +2172,9 @@ supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: no ·
 
 ### zytedata/agent-exam
 
-[Repository](https://github.com/zytedata/agent-exam) · commit [`c88fec1`](https://github.com/zytedata/agent-exam/commit/c88fec170ff9683dad9d769601206088fdbaeb7d) · 26/42 checks passing
+[Repository](https://github.com/zytedata/agent-exam) · commit [`e25c638`](https://github.com/zytedata/agent-exam/commit/e25c6380c59e5386caa7085795af12d2dbd2931c) · 29/43 checks passing
 
-supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: yes · latest-release: 0.2.0 (2026-08-17) · unreleased-changes: yes
+supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: yes · latest-release: 0.3.0 (2026-10-20) · unreleased-changes: yes
 
 **Python versions**
 
@@ -2209,9 +2195,7 @@ supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: yes �
 
 **Tests and coverage**
 
-- ❌ [`codecov`](REPORT.md#codecov): no codecov/codecov-action step for coverage
-- ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
-- ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
+- ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
 **Linting**
@@ -2407,7 +2391,7 @@ has-sphinx-docs: no
 
 ### zytedata/zyte-oss-maintenance
 
-[Repository](https://github.com/zytedata/zyte-oss-maintenance) · commit [`1bc82c6`](https://github.com/zytedata/zyte-oss-maintenance/commit/1bc82c664c1dc1bf7d9657bac088cccd34350c0c) · 15/21 checks passing
+[Repository](https://github.com/zytedata/zyte-oss-maintenance) · commit [`369aa69`](https://github.com/zytedata/zyte-oss-maintenance/commit/369aa69224a48d3cf93a1c1086f40b33a281bfcb) · 15/21 checks passing
 
 supports-pypy: no · license: Apache-2.0 · pylint: no · has-sphinx-docs: no
 
