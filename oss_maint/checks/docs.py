@@ -5,7 +5,7 @@ from functools import cache
 from pathlib import PurePath
 from urllib.parse import urlsplit
 
-from oss_maint import pythons
+from oss_maint import github, pythons
 from oss_maint.core import Group, Repo, Result, failed, not_applicable, passed
 
 group = Group("docs", "Documentation")
@@ -57,6 +57,38 @@ def _sphinx_scrapy_pins(repo: Repo) -> dict[str, str | None]:
         "docs/requirements.in": _pin([repo.read_text("docs/requirements.in") or ""]),
         ".pre-commit-config.yaml": rev,
     }
+
+
+@group.check(
+    "The documentation is a Sphinx project in docs/, written in reStructuredText.",
+    tags={"python", "released"},
+)
+def sphinx_docs(repo: Repo) -> Result:
+    problems = []
+    if not repo.has_sphinx_docs:
+        problems.append("no docs/conf.py")
+    if markdown := repo.glob("docs/**/*.md"):
+        problems.append(f"Markdown files: {', '.join(markdown)}")
+    return failed("; ".join(problems)) if problems else passed()
+
+
+def _readmes(repo: Repo) -> list[str]:
+    return [path for path in repo.glob("*") if path.lower().startswith("readme")]
+
+
+@group.check("The README is in reStructuredText, as README.rst.")
+def readme_rst(repo: Repo) -> Result:
+    readmes = _readmes(repo)
+    if "README.rst" in readmes:
+        return passed()
+    return failed(f"{', '.join(readmes)} instead" if readmes else "no README")
+
+
+@group.check("The GitHub wiki has no pages.")
+def no_wiki(repo: Repo) -> Result:
+    if github.has_wiki(repo.name):
+        return failed(f"{repo.url}/wiki has pages")
+    return passed()
 
 
 @group.check("Sphinx docs requirements are defined in docs/requirements.in.")
@@ -120,7 +152,7 @@ def readthedocs(repo: Repo) -> Result:
     if not repo.exists(".readthedocs.yml") and not repo.exists(".readthedocs.yaml"):
         problems.append("no .readthedocs.yml")
     hosts = _docs_hosts(repo)
-    readme = "".join(repo.read_text(path) or "" for path in repo.glob("README*"))
+    readme = "".join(repo.read_text(path) or "" for path in _readmes(repo))
     if not any(f"//{host}" in readme for host in hosts):
         problems.append(f"the README does not link to {' or '.join(sorted(hosts))}")
     return failed("; ".join(problems)) if problems else passed()
@@ -152,7 +184,7 @@ def docs_stable_links(repo: Repo) -> Result:
         rf"//(?:{'|'.join(map(re.escape, _docs_hosts(repo)))})"
         r"/[a-z]{2}(?:-[a-z]+)?/([\w.-]+)"
     )
-    texts = {path: repo.read_text(path) or "" for path in repo.glob("README*")}
+    texts = {path: repo.read_text(path) or "" for path in _readmes(repo)}
     texts["pyproject.toml"] = " ".join(
         map(str, (repo.project.get("urls") or {}).values())
     )

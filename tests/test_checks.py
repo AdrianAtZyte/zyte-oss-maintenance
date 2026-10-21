@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 
 import pytest
 
-from oss_maint import pythons
+from oss_maint import github, pythons
 from oss_maint.checks import GROUPS, select_groups
 from oss_maint.core import PYPY_CLASSIFIER, Fact, Repo, Result, Status, tally
 
@@ -1174,6 +1174,44 @@ def test_readthedocs(
     if files:
         files["docs/conf.py"] = ""
     assert run("readthedocs", make_repo(files)) == result
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        ({"README.rst": ""}, Result(Status.FAIL, "no docs/conf.py")),
+        ({"docs/conf.py": "", "docs/index.rst": ""}, Result(Status.PASS)),
+        (
+            {"docs/source/conf.py": "", "docs/guide/intro.md": ""},
+            Result(Status.FAIL, "no docs/conf.py; Markdown files: docs/guide/intro.md"),
+        ),
+    ],
+)
+def test_sphinx_docs(
+    make_repo: MakeRepo, files: dict[str, str], result: Result
+) -> None:
+    assert run("sphinx-docs", make_repo(files)) == result
+
+
+@pytest.mark.parametrize(
+    ("files", "result"),
+    [
+        ({"README.rst": "", "README.md": ""}, Result(Status.PASS)),
+        ({"readme.md": ""}, Result(Status.FAIL, "readme.md instead")),
+        ({}, Result(Status.FAIL, "no README")),
+    ],
+)
+def test_readme_rst(make_repo: MakeRepo, files: dict[str, str], result: Result) -> None:
+    assert run("readme-rst", make_repo(files)) == result
+
+
+def test_no_wiki(make_repo: MakeRepo, monkeypatch: pytest.MonkeyPatch) -> None:
+    repo = make_repo({})
+    assert run("no-wiki", repo).status is Status.PASS
+    monkeypatch.setattr(github, "has_wiki", {"owner/name"}.__contains__)
+    assert run("no-wiki", repo) == Result(
+        Status.FAIL, "https://github.com/owner/name/wiki has pages"
+    )
 
 
 @pytest.mark.parametrize(

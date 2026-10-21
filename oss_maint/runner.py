@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import suppress
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
+from oss_maint import github
 from oss_maint.core import Repo, Result, Status, not_applicable
 from oss_maint.sync import sync_repos
 
@@ -37,6 +40,8 @@ def run_checks(
     reason} for checks that do not apply to them."""
     checks = [(g, c) for g in groups for c in g.checks]
     errors = sync_repos(repos, cache_dir) if sync else {}
+    if any(c.id == "no-wiki" for _, c in checks):
+        _prefetch_wikis(repos)
     results = []
     for name in repos:
         path = cache_dir / name
@@ -58,3 +63,15 @@ def run_checks(
             )
         results.append(ProjectResults(name, repo.sha, project_results))
     return results
+
+
+def _prefetch_wikis(repos: list[str], jobs: int = 8) -> None:
+    """Fill the :func:`github.has_wiki` cache for *repos* in parallel."""
+
+    def prefetch(name: str) -> None:
+        # Errors are not cached, so the check gets them again and reports them.
+        with suppress(Exception):
+            github.has_wiki(name)
+
+    with ThreadPoolExecutor(jobs) as executor:
+        list(executor.map(prefetch, repos))

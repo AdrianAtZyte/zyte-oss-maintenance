@@ -35,7 +35,7 @@ PUBLIC_MEMBERS = {
 
 @pytest.fixture(autouse=True)
 def fake_python_cycles(monkeypatch: pytest.MonkeyPatch) -> None:
-    """Replace Python, PyPy and PyPI release data, which is otherwise fetched
+    """Replace Python, PyPy, PyPI and GitHub data, which is otherwise fetched
     over the network, with fixed data."""
 
     def no_network(url: str) -> None:
@@ -58,3 +58,4 @@ def fake_python_cycles(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(docs, "latest_sphinx_scrapy", lambda: "0.13.0")
     monkeypatch.setattr(pypi, "releases", RELEASES.get)
     monkeypatch.setattr(github, "public_members", PUBLIC_MEMBERS.__getitem__)
+    monkeypatch.setattr(github, "has_wiki", frozenset().__contains__)
