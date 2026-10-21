@@ -13,7 +13,7 @@ Values that checks compare projects against.
 - Supported Python versions, with EOL dates: 3.11 (2027-10-31), 3.12 (2028-10-31), 3.13 (2029-10-31), 3.14 (2030-10-31), 3.15 (2031-10-31)
 - Python versions of the latest PyPy release: 3.11, 3.12
 - End-of-life PyPy Python versions: 3.6, 3.7, 3.8, 3.9, 3.10
-- Minimum pre-commit hook versions, the newest releases at least 180 days old: ruff 0.15.11, zizmor 1.24.1
+- Minimum pre-commit hook versions, the newest releases at least 180 days old: ruff 0.15.12, zizmor 1.24.1
 - Latest sphinx-scrapy: 0.14.0
 
 ## Summary
@@ -23,79 +23,79 @@ Checks passing per group.
 | Project | [Python versions](#python-versions) | [Packaging](#packaging) | [Dependencies](#dependencies) | [Typing](#typing) | [Tests and coverage](#tests-and-coverage) | [Linting](#linting) | [Documentation](#documentation) | [Releases](#releases) | Failing | Commit |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | --- |
 | **Scrapy and its deps** | | | | | | | | | | |
-| [scrapy/scrapy](https://github.com/scrapy/scrapy) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 6/7](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyscrapy) | [`708bc4c`](https://github.com/scrapy/scrapy/commit/708bc4c3a22b17b1abe00e20bdb573aa227e9795) |
-| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌ 4/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 4/6](#documentation) | [✅ 4/4](#releases) | [9](PROJECTS.md#scrapycssselect) | [`3069b6d`](https://github.com/scrapy/cssselect/commit/3069b6da75e1adf27939ca541dcc9fb9b961abc6) |
-| [scrapy/formerly](https://github.com/scrapy/formerly) | [✅ 5/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [✅ 10/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [1](PROJECTS.md#scrapyformerly) | [`7a6e30b`](https://github.com/scrapy/formerly/commit/7a6e30b1f9821e90c26e0e81cecfd5f560c19d84) |
-| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 1/1](#dependencies) | [❌ 3/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 9/10](#linting) | [✅ 2/2](#documentation) | [❌ 3/4](#releases) | [8](PROJECTS.md#scrapyitemadapter) | [`03fea94`](https://github.com/scrapy/itemadapter/commit/03fea94d9a035589d5f6428f138813628b8b3488) |
-| [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | [❌ 1/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 12/13](#linting) | [❌ 3/6](#documentation) | [❌ 2/4](#releases) | [13](PROJECTS.md#scrapyitemloaders) | [`cb6f387`](https://github.com/scrapy/itemloaders/commit/cb6f38739aade299f6c2468b0dfa96812fa5bbb3) |
-| [scrapy/parsel](https://github.com/scrapy/parsel) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 12/13](#linting) | [❌ 6/8](#documentation) | [✅ 4/4](#releases) | [5](PROJECTS.md#scrapyparsel) | [`599897f`](https://github.com/scrapy/parsel/commit/599897f486ccc066555dacbd5014812ee640eec2) |
-| [scrapy/protego](https://github.com/scrapy/protego) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 9/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [3](PROJECTS.md#scrapyprotego) | [`2ffbb5f`](https://github.com/scrapy/protego/commit/2ffbb5fd8dfe31454cdc0e7852d1f77cc63d8b9d) |
-| [scrapy/queuelib](https://github.com/scrapy/queuelib) | [❌ 3/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [7](PROJECTS.md#scrapyqueuelib) | [`d4ed6ab`](https://github.com/scrapy/queuelib/commit/d4ed6abbce003f953cc6a1163d2ea396243417e5) |
-| [scrapy/w3lib](https://github.com/scrapy/w3lib) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 3/6](#documentation) | [✅ 4/4](#releases) | [9](PROJECTS.md#scrapyw3lib) | [`5f50405`](https://github.com/scrapy/w3lib/commit/5f50405946524286e3dbc689f88eaf545417bba0) |
-| [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌ 1/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 8/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [12](PROJECTS.md#scrapyxtractmime) | [`9d50fcb`](https://github.com/scrapy/xtractmime/commit/9d50fcb0d7abd7a96f7dee746d9285faba4af6db) |
+| [scrapy/scrapy](https://github.com/scrapy/scrapy) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [✅ 5/5](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 8/10](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyscrapy) | [`b8b81a2`](https://github.com/scrapy/scrapy/commit/b8b81a262d02fd58d5d268971770863807c5f231) |
+| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌ 4/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/9](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#scrapycssselect) | [`3069b6d`](https://github.com/scrapy/cssselect/commit/3069b6da75e1adf27939ca541dcc9fb9b961abc6) |
+| [scrapy/formerly](https://github.com/scrapy/formerly) | [✅ 5/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [3](PROJECTS.md#scrapyformerly) | [`7a6e30b`](https://github.com/scrapy/formerly/commit/7a6e30b1f9821e90c26e0e81cecfd5f560c19d84) |
+| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 1/1](#dependencies) | [❌ 3/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 2/5](#documentation) | [❌ 3/4](#releases) | [11](PROJECTS.md#scrapyitemadapter) | [`03fea94`](https://github.com/scrapy/itemadapter/commit/03fea94d9a035589d5f6428f138813628b8b3488) |
+| [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | [❌ 1/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 12/13](#linting) | [❌ 5/9](#documentation) | [❌ 2/4](#releases) | [14](PROJECTS.md#scrapyitemloaders) | [`cb6f387`](https://github.com/scrapy/itemloaders/commit/cb6f38739aade299f6c2468b0dfa96812fa5bbb3) |
+| [scrapy/parsel](https://github.com/scrapy/parsel) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 12/13](#linting) | [❌ 8/11](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyparsel) | [`599897f`](https://github.com/scrapy/parsel/commit/599897f486ccc066555dacbd5014812ee640eec2) |
+| [scrapy/protego](https://github.com/scrapy/protego) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [5](PROJECTS.md#scrapyprotego) | [`2ffbb5f`](https://github.com/scrapy/protego/commit/2ffbb5fd8dfe31454cdc0e7852d1f77cc63d8b9d) |
+| [scrapy/queuelib](https://github.com/scrapy/queuelib) | [❌ 3/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [9](PROJECTS.md#scrapyqueuelib) | [`d4ed6ab`](https://github.com/scrapy/queuelib/commit/d4ed6abbce003f953cc6a1163d2ea396243417e5) |
+| [scrapy/w3lib](https://github.com/scrapy/w3lib) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#scrapyw3lib) | [`5f50405`](https://github.com/scrapy/w3lib/commit/5f50405946524286e3dbc689f88eaf545417bba0) |
+| [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌ 1/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 8/10](#linting) | [❌ 2/5](#documentation) | [✅ 4/4](#releases) | [15](PROJECTS.md#scrapyxtractmime) | [`9d50fcb`](https://github.com/scrapy/xtractmime/commit/9d50fcb0d7abd7a96f7dee746d9285faba4af6db) |
 | **Scrapy plugins** | | | | | | | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [✅ 10/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [4](PROJECTS.md#scrapy-pluginsscrapy-download-handlers-incubator) | [`f585f8d`](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator/commit/f585f8da60d14ec804c4b3b7d105c4ce55d5238b) |
-| [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 4/11](#linting) | [❌ 6/8](#documentation) | [❌ 1/4](#releases) | [26](PROJECTS.md#scrapy-pluginsscrapy-playwright) | [`2658f86`](https://github.com/scrapy-plugins/scrapy-playwright/commit/2658f86a4771b918dbe1d32c345ca70e34d43648) |
-| [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | [❌ 4/5](#python-versions) | [❌ 3/6](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/8](#documentation) | [❌ 2/4](#releases) | [11](PROJECTS.md#scrapy-pluginsscrapy-spider-metadata) | [`bde680a`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/bde680ab6865e920b06b970417125ace5c03ce71) |
-| [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 2/7](#linting) | [✅ 1/1](#documentation) | [❌ 1/4](#releases) | [21](PROJECTS.md#zytedataduplicate-url-discarder) | [`8db08b3`](https://github.com/zytedata/duplicate-url-discarder/commit/8db08b3edf638f34ee6ad7393612f579b5bfb90f) |
-| [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 2/7](#linting) | [✅ 1/1](#documentation) | [❌ 1/4](#releases) | [20](PROJECTS.md#zytedataduplicate-url-discarder-rules) | [`7281048`](https://github.com/zytedata/duplicate-url-discarder-rules/commit/7281048b2cfa0538c0b355e8f91185f27367649d) |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapy-pluginsscrapy-download-handlers-incubator) | [`f585f8d`](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator/commit/f585f8da60d14ec804c4b3b7d105c4ce55d5238b) |
+| [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 4/11](#linting) | [❌ 8/11](#documentation) | [❌ 1/4](#releases) | [27](PROJECTS.md#scrapy-pluginsscrapy-playwright) | [`2658f86`](https://github.com/scrapy-plugins/scrapy-playwright/commit/2658f86a4771b918dbe1d32c345ca70e34d43648) |
+| [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | [❌ 4/5](#python-versions) | [❌ 3/6](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 8/11](#documentation) | [❌ 2/4](#releases) | [12](PROJECTS.md#scrapy-pluginsscrapy-spider-metadata) | [`bde680a`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/bde680ab6865e920b06b970417125ace5c03ce71) |
+| [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 2/7](#linting) | [❌ 2/4](#documentation) | [❌ 1/4](#releases) | [23](PROJECTS.md#zytedataduplicate-url-discarder) | [`8db08b3`](https://github.com/zytedata/duplicate-url-discarder/commit/8db08b3edf638f34ee6ad7393612f579b5bfb90f) |
+| [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 2/7](#linting) | [❌ 2/4](#documentation) | [❌ 1/4](#releases) | [22](PROJECTS.md#zytedataduplicate-url-discarder-rules) | [`7281048`](https://github.com/zytedata/duplicate-url-discarder-rules/commit/7281048b2cfa0538c0b355e8f91185f27367649d) |
 | **Scrapy tools** | | | | | | | | | | |
-| [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 10/12](#linting) | [❌ 5/8](#documentation) | [❌ 3/4](#releases) | [14](PROJECTS.md#scrapyscrapy-lint) | [`30a3872`](https://github.com/scrapy/scrapy-lint/commit/30a387279f0be38a48237d31725b1d52a2bcf297) |
-| [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 7/11](#linting) | [❌ 4/8](#documentation) | [❌ 2/4](#releases) | [19](PROJECTS.md#scrapinghubscrapyrt) | [`066cdaf`](https://github.com/scrapinghub/scrapyrt/commit/066cdafb9dc5e864f3e1dd19cb7fafec7fefb7fe) |
+| [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 10/12](#linting) | [❌ 7/11](#documentation) | [❌ 3/4](#releases) | [15](PROJECTS.md#scrapyscrapy-lint) | [`30a3872`](https://github.com/scrapy/scrapy-lint/commit/30a387279f0be38a48237d31725b1d52a2bcf297) |
+| [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 7/11](#linting) | [❌ 6/11](#documentation) | [❌ 2/4](#releases) | [20](PROJECTS.md#scrapinghubscrapyrt) | [`066cdaf`](https://github.com/scrapinghub/scrapyrt/commit/066cdafb9dc5e864f3e1dd19cb7fafec7fefb7fe) |
 | **Feed exporters** | | | | | | | | | | |
-| [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 4/9](#linting) | [❌ 0/1](#documentation) | [❌ 1/4](#releases) | [24](PROJECTS.md#scrapy-pluginsscrapy-feedexport-warc) | [`ad7956f`](https://github.com/scrapy-plugins/scrapy-feedexport-warc/commit/ad7956f4825fa2c4671c1849a8ad7a4eb2cc34d1) |
-| [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 0/1](#linting) | [❌ 0/1](#documentation) | [❌ 0/4](#releases) | [20](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-azure-storage) | [`4f36ff8`](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage/commit/4f36ff805239bace39bacc8c1e02cc8c876013b4) |
-| [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 0/1](#linting) | [❌ 0/1](#documentation) | [❌ 0/4](#releases) | [19](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-dropbox) | [`4e4cca6`](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox/commit/4e4cca6f5240d790708219c0344b812eb76a854f) |
-| [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) | [❌ 0/3](#python-versions) | [❌ 3/6](#packaging) | [❌ 0/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 7/10](#linting) | [✅ 2/2](#documentation) | [❌ 3/4](#releases) | [19](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-google-drive) | [`369598d`](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive/commit/369598d8205938ba851af91fed913335bfd12cd9) |
-| [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 0/1](#linting) | [❌ 0/1](#documentation) | [❌ 0/4](#releases) | [20](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-google-sheets) | [`25f2a8c`](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets/commit/25f2a8c6079e85823c7e640b17eea2ad5ed8f767) |
-| [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [❌ 0/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 5/9](#linting) | [✅ 2/2](#documentation) | [❌ 3/4](#releases) | [21](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-onedrive) | [`b97aab3`](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive/commit/b97aab3d3a50e7d7fe829285a7e53fd7f80ea758) |
-| [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 4/9](#linting) | [✅ 2/2](#documentation) | [❌ 3/4](#releases) | [20](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-sftp) | [`38c9e5b`](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp/commit/38c9e5b244bfa363de9ede92f7069ae7bcbce469) |
+| [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 4/9](#linting) | [❌ 0/4](#documentation) | [❌ 1/4](#releases) | [27](PROJECTS.md#scrapy-pluginsscrapy-feedexport-warc) | [`ad7956f`](https://github.com/scrapy-plugins/scrapy-feedexport-warc/commit/ad7956f4825fa2c4671c1849a8ad7a4eb2cc34d1) |
+| [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 0/1](#linting) | [❌ 0/4](#documentation) | [❌ 0/4](#releases) | [23](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-azure-storage) | [`4f36ff8`](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage/commit/4f36ff805239bace39bacc8c1e02cc8c876013b4) |
+| [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 0/1](#linting) | [❌ 0/4](#documentation) | [❌ 0/4](#releases) | [22](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-dropbox) | [`4e4cca6`](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox/commit/4e4cca6f5240d790708219c0344b812eb76a854f) |
+| [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) | [❌ 0/3](#python-versions) | [❌ 3/6](#packaging) | [❌ 0/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 7/10](#linting) | [❌ 3/5](#documentation) | [❌ 3/4](#releases) | [21](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-google-drive) | [`369598d`](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive/commit/369598d8205938ba851af91fed913335bfd12cd9) |
+| [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 0/1](#linting) | [❌ 0/4](#documentation) | [❌ 0/4](#releases) | [23](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-google-sheets) | [`25f2a8c`](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets/commit/25f2a8c6079e85823c7e640b17eea2ad5ed8f767) |
+| [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [❌ 0/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/5](#tests-and-coverage) | [❌ 5/9](#linting) | [❌ 2/5](#documentation) | [❌ 3/4](#releases) | [24](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-onedrive) | [`b97aab3`](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive/commit/b97aab3d3a50e7d7fe829285a7e53fd7f80ea758) |
+| [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 4/9](#linting) | [❌ 3/5](#documentation) | [❌ 3/4](#releases) | [22](PROJECTS.md#scrapy-pluginsscrapy-feedexporter-sftp) | [`38c9e5b`](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp/commit/38c9e5b244bfa363de9ede92f7069ae7bcbce469) |
 | **scrapy-poet and its deps** | | | | | | | | | | |
-| [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet) | [❌ 1/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 8/11](#linting) | [❌ 7/8](#documentation) | [❌ 3/4](#releases) | [13](PROJECTS.md#scrapinghubscrapy-poet) | [`f06d684`](https://github.com/scrapinghub/scrapy-poet/commit/f06d684b6b1a40625eb846680225cb00a67bf7ec) |
-| [scrapinghub/andi](https://github.com/scrapinghub/andi) | [❌ 2/3](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapinghubandi) | [`7a07b33`](https://github.com/scrapinghub/andi/commit/7a07b339ca1cc5e3c6495635b02eb01b5c483ebd) |
-| [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 10/12](#linting) | [❌ 7/8](#documentation) | [❌ 3/4](#releases) | [15](PROJECTS.md#scrapinghubweb-poet) | [`b3cc347`](https://github.com/scrapinghub/web-poet/commit/b3cc347952b9bc6cf534e44543b789d2f5f2fafb) |
-| [zytedata/url-matcher](https://github.com/zytedata/url-matcher) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/8](#documentation) | [✅ 4/4](#releases) | [5](PROJECTS.md#zytedataurl-matcher) | [`f3805d7`](https://github.com/zytedata/url-matcher/commit/f3805d78f101a0594cdfe1fcbf9b7789a0680aae) |
-| [scrapy/frostwork](https://github.com/scrapy/frostwork) | [❌ 2/3](#python-versions) | [✅ 4/4](#packaging) | [❌ 1/2](#dependencies) | [❌ 1/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 4/9](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [12](PROJECTS.md#scrapyfrostwork) | [`d1e2d5c`](https://github.com/scrapy/frostwork/commit/d1e2d5c27f4b2664a923e37bc5e0fdf53fd42c02) |
+| [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet) | [❌ 1/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 8/11](#linting) | [❌ 9/11](#documentation) | [❌ 3/4](#releases) | [14](PROJECTS.md#scrapinghubscrapy-poet) | [`f06d684`](https://github.com/scrapinghub/scrapy-poet/commit/f06d684b6b1a40625eb846680225cb00a67bf7ec) |
+| [scrapinghub/andi](https://github.com/scrapinghub/andi) | [❌ 2/3](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [8](PROJECTS.md#scrapinghubandi) | [`7a07b33`](https://github.com/scrapinghub/andi/commit/7a07b339ca1cc5e3c6495635b02eb01b5c483ebd) |
+| [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 10/12](#linting) | [❌ 9/11](#documentation) | [❌ 3/4](#releases) | [16](PROJECTS.md#scrapinghubweb-poet) | [`b3cc347`](https://github.com/scrapinghub/web-poet/commit/b3cc347952b9bc6cf534e44543b789d2f5f2fafb) |
+| [zytedata/url-matcher](https://github.com/zytedata/url-matcher) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 8/11](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#zytedataurl-matcher) | [`f3805d7`](https://github.com/zytedata/url-matcher/commit/f3805d78f101a0594cdfe1fcbf9b7789a0680aae) |
+| [scrapy/frostwork](https://github.com/scrapy/frostwork) | [❌ 2/3](#python-versions) | [✅ 4/4](#packaging) | [❌ 1/2](#dependencies) | [❌ 1/3](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 4/9](#linting) | [❌ 2/5](#documentation) | [✅ 4/4](#releases) | [16](PROJECTS.md#scrapyfrostwork) | [`d1e2d5c`](https://github.com/scrapy/frostwork/commit/d1e2d5c27f4b2664a923e37bc5e0fdf53fd42c02) |
 | **Zyte API** | | | | | | | | | | |
-| [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 5/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/8](#documentation) | [❌ 3/4](#releases) | [8](PROJECTS.md#scrapy-pluginsscrapy-zyte-api) | [`681d145`](https://github.com/scrapy-plugins/scrapy-zyte-api/commit/681d14500b804f291a09306cc2cb9378f0203217) |
-| [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api) | [✅ 3/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 7/11](#linting) | [❌ 7/8](#documentation) | [❌ 3/4](#releases) | [13](PROJECTS.md#zytedatapython-zyte-api) | [`f728f1d`](https://github.com/zytedata/python-zyte-api/commit/f728f1d4163450b455f4e5296c2be7b4846b8d15) |
-| [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 1/3](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 4/6](#documentation) | [❌ 3/4](#releases) | [23](PROJECTS.md#scrapy-pluginsscrapy-zyte-smartproxy) | [`debd444`](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy/commit/debd4445343d0c3a1eba9fa0ce269613bb3b9d5c) |
-| [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 4/8](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#zytedatazyte-common-items) | [`297cb86`](https://github.com/zytedata/zyte-common-items/commit/297cb86af88b26106899eb231d50c7b96d164f78) |
+| [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 5/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 8/11](#documentation) | [❌ 3/4](#releases) | [9](PROJECTS.md#scrapy-pluginsscrapy-zyte-api) | [`681d145`](https://github.com/scrapy-plugins/scrapy-zyte-api/commit/681d14500b804f291a09306cc2cb9378f0203217) |
+| [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api) | [✅ 3/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 7/11](#linting) | [❌ 9/11](#documentation) | [❌ 3/4](#releases) | [14](PROJECTS.md#zytedatapython-zyte-api) | [`f728f1d`](https://github.com/zytedata/python-zyte-api/commit/f728f1d4163450b455f4e5296c2be7b4846b8d15) |
+| [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 1/3](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 6/9](#documentation) | [❌ 3/4](#releases) | [24](PROJECTS.md#scrapy-pluginsscrapy-zyte-smartproxy) | [`debd444`](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy/commit/debd4445343d0c3a1eba9fa0ce269613bb3b9d5c) |
+| [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/11](#documentation) | [✅ 4/4](#releases) | [11](PROJECTS.md#zytedatazyte-common-items) | [`297cb86`](https://github.com/zytedata/zyte-common-items/commit/297cb86af88b26106899eb231d50c7b96d164f78) |
 | **Scrapy Cloud** | | | | | | | | | | |
-| [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | [❌ 1/5](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/9](#linting) | [❌ 7/8](#documentation) | [✅ 4/4](#releases) | [25](PROJECTS.md#scrapinghubpython-scrapinghub) | [`d0d7b29`](https://github.com/scrapinghub/python-scrapinghub/commit/d0d7b29153e40bbb0f9c56ab23caab86393f853e) |
-| [scrapinghub/shub](https://github.com/scrapinghub/shub) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 5/11](#linting) | [❌ 7/8](#documentation) | [❌ 2/4](#releases) | [22](PROJECTS.md#scrapinghubshub) | [`4facd31`](https://github.com/scrapinghub/shub/commit/4facd31c84dfc1ef78fac43710a592a87753fcc5) |
-| [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 0/4](#linting) | [✅ 2/2](#documentation) | [❌ 2/4](#releases) | [20](PROJECTS.md#scrapinghubscrapinghub-entrypoint-scrapy) | [`bf9632c`](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy/commit/bf9632c78355b545126363ce557106c1b9c3bb54) |
-| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [✅ 1/1](#documentation) | [❌ 0/4](#releases) | [21](PROJECTS.md#scrapinghubshub-workflow) | [`bfffd16`](https://github.com/scrapinghub/shub-workflow/commit/bfffd161cb6d2d562f0fb4f5492dca9374bf4cfe) |
-| [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [❌ 0/3](#python-versions) | [❌ 0/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 3/9](#linting) | [✅ 2/2](#documentation) | [❌ 2/4](#releases) | [22](PROJECTS.md#scrapinghubscrapy-frontera) | [`56ea2e1`](https://github.com/scrapinghub/scrapy-frontera/commit/56ea2e1ef39a174eac61da2edcdb21d1f1ecf5e5) |
-| [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 0/1](#documentation) | [❌ 1/4](#releases) | [21](PROJECTS.md#scrapinghubfrontera) | [`c94beae`](https://github.com/scrapinghub/frontera/commit/c94beae2f438492139d24759729d0201779ccf1c) |
-| [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 3/9](#linting) | [✅ 2/2](#documentation) | [❌ 2/4](#releases) | [20](PROJECTS.md#scrapinghubhcf-backend) | [`bbdc50c`](https://github.com/scrapinghub/hcf-backend/commit/bbdc50cd1d250742234aacc2d5da10c4fe4d9508) |
+| [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | [❌ 1/5](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/9](#linting) | [❌ 9/11](#documentation) | [✅ 4/4](#releases) | [26](PROJECTS.md#scrapinghubpython-scrapinghub) | [`d0d7b29`](https://github.com/scrapinghub/python-scrapinghub/commit/d0d7b29153e40bbb0f9c56ab23caab86393f853e) |
+| [scrapinghub/shub](https://github.com/scrapinghub/shub) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 5/11](#linting) | [❌ 9/11](#documentation) | [❌ 2/4](#releases) | [23](PROJECTS.md#scrapinghubshub) | [`4facd31`](https://github.com/scrapinghub/shub/commit/4facd31c84dfc1ef78fac43710a592a87753fcc5) |
+| [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 2/5](#documentation) | [❌ 2/4](#releases) | [23](PROJECTS.md#scrapinghubscrapinghub-entrypoint-scrapy) | [`bf9632c`](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy/commit/bf9632c78355b545126363ce557106c1b9c3bb54) |
+| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 1/4](#documentation) | [❌ 0/4](#releases) | [24](PROJECTS.md#scrapinghubshub-workflow) | [`a6aaa81`](https://github.com/scrapinghub/shub-workflow/commit/a6aaa8121218cbda9accf4c9f3f1e05e5aee5d68) |
+| [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [❌ 0/3](#python-versions) | [❌ 0/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 3/9](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [24](PROJECTS.md#scrapinghubscrapy-frontera) | [`56ea2e1`](https://github.com/scrapinghub/scrapy-frontera/commit/56ea2e1ef39a174eac61da2edcdb21d1f1ecf5e5) |
+| [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 0/4](#documentation) | [❌ 1/4](#releases) | [24](PROJECTS.md#scrapinghubfrontera) | [`c94beae`](https://github.com/scrapinghub/frontera/commit/c94beae2f438492139d24759729d0201779ccf1c) |
+| [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 3/9](#linting) | [❌ 2/5](#documentation) | [❌ 2/4](#releases) | [23](PROJECTS.md#scrapinghubhcf-backend) | [`bbdc50c`](https://github.com/scrapinghub/hcf-backend/commit/bbdc50cd1d250742234aacc2d5da10c4fe4d9508) |
 | **Data extraction** | | | | | | | | | | |
-| [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 3/6](#documentation) | [✅ 4/4](#releases) | [12](PROJECTS.md#zytedatazyte-parsers) | [`4f5d08d`](https://github.com/zytedata/zyte-parsers/commit/4f5d08d1be951fa438f0aedd598d61a61c360ea0) |
-| [zytedata/clear-html](https://github.com/zytedata/clear-html) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [7](PROJECTS.md#zytedataclear-html) | [`6b820b1`](https://github.com/zytedata/clear-html/commit/6b820b13221145ceb0814e47e9583e5574d28865) |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 5/9](#linting) | [✅ 2/2](#documentation) | [❌ 2/4](#releases) | [16](PROJECTS.md#zytedatahtml-text) | [`2dc4e94`](https://github.com/zytedata/html-text/commit/2dc4e94dd92a8b15476a237f0a1693b051f53d6f) |
-| [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 8/11](#linting) | [✅ 2/2](#documentation) | [❌ 2/4](#releases) | [15](PROJECTS.md#scrapinghubprice-parser) | [`6718bfe`](https://github.com/scrapinghub/price-parser/commit/6718bfe8447f2de17ecc152d3ad2a4c51520c755) |
-| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/3](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 7/13](#linting) | [❌ 3/6](#documentation) | [❌ 3/4](#releases) | [21](PROJECTS.md#scrapinghubdateparser) | [`2f87862`](https://github.com/scrapinghub/dateparser/commit/2f87862cc1f485f4219624a2f688986bc30bfa22) |
-| [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/7](#linting) | [✅ 1/1](#documentation) | [❌ 1/4](#releases) | [20](PROJECTS.md#scrapinghubextruct) | [`d24f541`](https://github.com/scrapinghub/extruct/commit/d24f5414fd32c874989492ebd04cb1deb6d7d04e) |
-| [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 4/9](#linting) | [✅ 1/1](#documentation) | [❌ 0/4](#releases) | [21](PROJECTS.md#scrapinghubnumber-parser) | [`a126357`](https://github.com/scrapinghub/number-parser/commit/a1263578628a7743054879095e50532fba1cdb67) |
+| [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [13](PROJECTS.md#zytedatazyte-parsers) | [`4f5d08d`](https://github.com/zytedata/zyte-parsers/commit/4f5d08d1be951fa438f0aedd598d61a61c360ea0) |
+| [zytedata/clear-html](https://github.com/zytedata/clear-html) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [9](PROJECTS.md#zytedataclear-html) | [`6b820b1`](https://github.com/zytedata/clear-html/commit/6b820b13221145ceb0814e47e9583e5574d28865) |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 5/9](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [18](PROJECTS.md#zytedatahtml-text) | [`2dc4e94`](https://github.com/zytedata/html-text/commit/2dc4e94dd92a8b15476a237f0a1693b051f53d6f) |
+| [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 8/11](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [17](PROJECTS.md#scrapinghubprice-parser) | [`6718bfe`](https://github.com/scrapinghub/price-parser/commit/6718bfe8447f2de17ecc152d3ad2a4c51520c755) |
+| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/3](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 7/13](#linting) | [❌ 5/9](#documentation) | [❌ 3/4](#releases) | [22](PROJECTS.md#scrapinghubdateparser) | [`a3d3b89`](https://github.com/scrapinghub/dateparser/commit/a3d3b893bfc5efb5841aa0287521d78fbede075a) |
+| [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/7](#linting) | [❌ 2/4](#documentation) | [❌ 1/4](#releases) | [22](PROJECTS.md#scrapinghubextruct) | [`d24f541`](https://github.com/scrapinghub/extruct/commit/d24f5414fd32c874989492ebd04cb1deb6d7d04e) |
+| [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 4/9](#linting) | [❌ 2/4](#documentation) | [❌ 0/4](#releases) | [23](PROJECTS.md#scrapinghubnumber-parser) | [`a126357`](https://github.com/scrapinghub/number-parser/commit/a1263578628a7743054879095e50532fba1cdb67) |
 | **Forms** | | | | | | | | | | |
-| [scrapy/form2request](https://github.com/scrapy/form2request) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 3/6](#documentation) | [✅ 4/4](#releases) | [12](PROJECTS.md#scrapyform2request) | [`a251597`](https://github.com/scrapy/form2request/commit/a251597d9fa44cbd03736ec1da37f85593dfe820) |
-| [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 2/6](#documentation) | [❌ 2/4](#releases) | [24](PROJECTS.md#scrapinghubformasaurus) | [`4bb46a9`](https://github.com/scrapinghub/Formasaurus/commit/4bb46a95c7851622bb63ca7459d4d6d2587297ab) |
-| [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 1/5](#documentation) | [❌ 1/4](#releases) | [24](PROJECTS.md#scrapinghubsklearn-crfsuite) | [`e18a02a`](https://github.com/scrapinghub/sklearn-crfsuite/commit/e18a02ae11b61f703c0ec460c44cfdd90db00591) |
-| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌ 0/3](#python-versions) | [❌ 0/6](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 0/6](#linting) | [❌ 3/6](#documentation) | [❌ 2/4](#releases) | [27](PROJECTS.md#scrapinghubpython-crfsuite) | [`c2eee32`](https://github.com/scrapinghub/python-crfsuite/commit/c2eee3267750c585d3ef5eebaf632d3ee7855249) |
+| [scrapy/form2request](https://github.com/scrapy/form2request) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [13](PROJECTS.md#scrapyform2request) | [`a251597`](https://github.com/scrapy/form2request/commit/a251597d9fa44cbd03736ec1da37f85593dfe820) |
+| [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 4/9](#documentation) | [❌ 2/4](#releases) | [25](PROJECTS.md#scrapinghubformasaurus) | [`4bb46a9`](https://github.com/scrapinghub/Formasaurus/commit/4bb46a95c7851622bb63ca7459d4d6d2587297ab) |
+| [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 3/8](#documentation) | [❌ 1/4](#releases) | [25](PROJECTS.md#scrapinghubsklearn-crfsuite) | [`e18a02a`](https://github.com/scrapinghub/sklearn-crfsuite/commit/e18a02ae11b61f703c0ec460c44cfdd90db00591) |
+| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌ 0/3](#python-versions) | [❌ 0/6](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 0/6](#linting) | [❌ 5/9](#documentation) | [❌ 2/4](#releases) | [28](PROJECTS.md#scrapinghubpython-crfsuite) | [`c2eee32`](https://github.com/scrapinghub/python-crfsuite/commit/c2eee3267750c585d3ef5eebaf632d3ee7855249) |
 | **Monitoring** | | | | | | | | | | |
-| [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 9/11](#linting) | [❌ 3/6](#documentation) | [❌ 3/4](#releases) | [15](PROJECTS.md#scrapinghubspidermon) | [`5bac6dd`](https://github.com/scrapinghub/spidermon/commit/5bac6dd768463ece308ca67dc9fd18525364c940) |
-| [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 0/1](#documentation) | [❌ 0/4](#releases) | [21](PROJECTS.md#scrapy-pluginszyte-spidermon) | [`8186fbe`](https://github.com/scrapy-plugins/zyte-spidermon/commit/8186fbe6d1c9233dc576ec725d3b2e046de032dd) |
+| [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 9/11](#linting) | [❌ 5/9](#documentation) | [❌ 3/4](#releases) | [16](PROJECTS.md#scrapinghubspidermon) | [`5bac6dd`](https://github.com/scrapinghub/spidermon/commit/5bac6dd768463ece308ca67dc9fd18525364c940) |
+| [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 0/4](#documentation) | [❌ 0/4](#releases) | [24](PROJECTS.md#scrapy-pluginszyte-spidermon) | [`8186fbe`](https://github.com/scrapy-plugins/zyte-spidermon/commit/8186fbe6d1c9233dc576ec725d3b2e046de032dd) |
 | **AI agents** | | | | | | | | | | |
-| [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#python-versions) | [➖](#packaging) | [➖](#dependencies) | [➖](#typing) | [➖](#tests-and-coverage) | [➖](#linting) | [✅ 2/2](#documentation) | [✅ 1/1](#releases) | [0](PROJECTS.md#scrapyscrapy-agent-plugin) | [`d424e42`](https://github.com/scrapy/scrapy-agent-plugin/commit/d424e42a35116c108e986614b75ec7cd9cf9909e) |
-| [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | [❌ 2/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [5](PROJECTS.md#scrapyscrapy-mcp-official) | [`5530c67`](https://github.com/scrapy/scrapy-mcp-official/commit/5530c671a7078f4f06479422c623d10b846d3db9) |
-| [zytedata/agent-exam](https://github.com/zytedata/agent-exam) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 0/2](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 10/12](#linting) | [❌ 7/8](#documentation) | [❌ 3/4](#releases) | [14](PROJECTS.md#zytedataagent-exam) | [`e25c638`](https://github.com/zytedata/agent-exam/commit/e25c6380c59e5386caa7085795af12d2dbd2931c) |
-| [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 7/10](#linting) | [✅ 2/2](#documentation) | [✅ 4/4](#releases) | [16](PROJECTS.md#zytedataclaude-measure-usage) | [`6b4310a`](https://github.com/zytedata/claude-measure-usage/commit/6b4310afeaf2e9c81acd861f8d9bd62006357bf7) |
-| [zytedata/harness-run](https://github.com/zytedata/harness-run) | [❌ 1/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 1/5](#linting) | [✅ 1/1](#documentation) | [❌ 3/4](#releases) | [17](PROJECTS.md#zytedataharness-run) | [`4028849`](https://github.com/zytedata/harness-run/commit/4028849faf48ac448b1634140cfe3a9cac8f2749) |
-| [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly) | [❌ 2/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 2/3](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 8/10](#linting) | [✅ 2/2](#documentation) | [❌ 3/4](#releases) | [12](PROJECTS.md#scrapysphinx-llm-friendly) | [`2f5b77c`](https://github.com/scrapy/sphinx-llm-friendly/commit/2f5b77c315d5230429761063b475c7c1b015ca79) |
+| [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#python-versions) | [➖](#packaging) | [➖](#dependencies) | [➖](#typing) | [➖](#tests-and-coverage) | [➖](#linting) | [⚠️ 3/4](#documentation) | [✅ 1/1](#releases) | [1](PROJECTS.md#scrapyscrapy-agent-plugin) | [`d424e42`](https://github.com/scrapy/scrapy-agent-plugin/commit/d424e42a35116c108e986614b75ec7cd9cf9909e) |
+| [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | [❌ 2/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 2/5](#documentation) | [✅ 4/4](#releases) | [8](PROJECTS.md#scrapyscrapy-mcp-official) | [`5530c67`](https://github.com/scrapy/scrapy-mcp-official/commit/5530c671a7078f4f06479422c623d10b846d3db9) |
+| [zytedata/agent-exam](https://github.com/zytedata/agent-exam) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 0/2](#typing) | [❌ 3/5](#tests-and-coverage) | [❌ 10/12](#linting) | [❌ 8/11](#documentation) | [❌ 3/4](#releases) | [16](PROJECTS.md#zytedataagent-exam) | [`e25c638`](https://github.com/zytedata/agent-exam/commit/e25c6380c59e5386caa7085795af12d2dbd2931c) |
+| [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 7/10](#linting) | [❌ 2/5](#documentation) | [✅ 4/4](#releases) | [19](PROJECTS.md#zytedataclaude-measure-usage) | [`6b4310a`](https://github.com/zytedata/claude-measure-usage/commit/6b4310afeaf2e9c81acd861f8d9bd62006357bf7) |
+| [zytedata/harness-run](https://github.com/zytedata/harness-run) | [❌ 1/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 1/5](#linting) | [❌ 1/4](#documentation) | [❌ 3/4](#releases) | [20](PROJECTS.md#zytedataharness-run) | [`4028849`](https://github.com/zytedata/harness-run/commit/4028849faf48ac448b1634140cfe3a9cac8f2749) |
+| [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly) | [❌ 2/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 2/3](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 8/10](#linting) | [❌ 3/5](#documentation) | [❌ 3/4](#releases) | [14](PROJECTS.md#scrapysphinx-llm-friendly) | [`2f5b77c`](https://github.com/scrapy/sphinx-llm-friendly/commit/2f5b77c315d5230429761063b475c7c1b015ca79) |
 | **Maintenance** | | | | | | | | | | |
-| [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 2/3](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 8/10](#linting) | [✅ 2/2](#documentation) | [❌ 3/4](#releases) | [15](PROJECTS.md#scrapysphinx-scrapy) | [`9231605`](https://github.com/scrapy/sphinx-scrapy/commit/9231605ac5f164edf053998ed9ba4b61b385f691) |
-| [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#python-versions) | [➖](#packaging) | [➖](#dependencies) | [➖](#typing) | [➖](#tests-and-coverage) | [❌ 6/8](#linting) | [✅ 2/2](#documentation) | [✅ 1/1](#releases) | [2](PROJECTS.md#scrapyunattended-pr-guard) | [`1e3c311`](https://github.com/scrapy/unattended-pr-guard/commit/1e3c31134253813934af43f3505d4492eee26c2a) |
-| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [❌ 1/2](#python-versions) | [✅ 4/4](#packaging) | [➖](#dependencies) | [❌ 0/1](#typing) | [❌ 0/4](#tests-and-coverage) | [✅ 10/10](#linting) | [➖](#documentation) | [➖](#releases) | [6](PROJECTS.md#zytedatazyte-oss-maintenance) | [`369aa69`](https://github.com/zytedata/zyte-oss-maintenance/commit/369aa69224a48d3cf93a1c1086f40b33a281bfcb) |
+| [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 2/3](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 8/10](#linting) | [❌ 3/5](#documentation) | [❌ 3/4](#releases) | [17](PROJECTS.md#scrapysphinx-scrapy) | [`9231605`](https://github.com/scrapy/sphinx-scrapy/commit/9231605ac5f164edf053998ed9ba4b61b385f691) |
+| [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#python-versions) | [➖](#packaging) | [➖](#dependencies) | [➖](#typing) | [➖](#tests-and-coverage) | [❌ 6/8](#linting) | [❌ 2/4](#documentation) | [✅ 1/1](#releases) | [4](PROJECTS.md#scrapyunattended-pr-guard) | [`1e3c311`](https://github.com/scrapy/unattended-pr-guard/commit/1e3c31134253813934af43f3505d4492eee26c2a) |
+| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [❌ 1/2](#python-versions) | [✅ 4/4](#packaging) | [➖](#dependencies) | [✅ 1/1](#typing) | [❌ 0/4](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 0/2](#documentation) | [➖](#releases) | [7](PROJECTS.md#zytedatazyte-oss-maintenance) | [`381dee8`](https://github.com/zytedata/zyte-oss-maintenance/commit/381dee866e5add78415e8755eaf30df749ef330e) |
 
 ## Release candidates
 
@@ -838,85 +838,87 @@ A tox environment tests the minimum versions of dependencies (its name has min, 
 | --- | --- | --- |
 | [`py-typed`](#py-typed) | The package ships type hints (a py.typed marker). | 28/59 passing |
 | [`typed-classifier`](#typed-classifier) | A package with a py.typed marker has the 'Typing :: Typed' classifier. | 5/28 passing |
-| [`mypy`](#mypy) | mypy runs in tox, CI workflows or pre-commit. | 38/59 passing |
+| [`type-checker`](#type-checker) | A type checker (mypy or pyrefly) runs in tox, CI workflows or pre-commit. | 39/60 passing |
+| [`mypy`](#mypy) | mypy runs in tox, CI workflows or pre-commit. | 38/59 yes |
+| [`pyrefly`](#pyrefly) | pyrefly runs in tox, CI workflows or pre-commit. | 1/60 yes |
 | [`mypy-strict`](#mypy-strict) | mypy runs in strict mode: strict = true in its config, or --strict. | 24/38 passing |
 
-| Project | [py-typed](#py-typed) | [typed-classifier](#typed-classifier) | [mypy](#mypy) | [mypy-strict](#mypy-strict) |
-| --- | :---: | :---: | :---: | :---: |
-| **Scrapy and its deps** | | | | |
-| [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy/cssselect](https://github.com/scrapy/cssselect) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy/formerly](https://github.com/scrapy/formerly) | ✅ | ✅ | ✅ | ✅ |
-| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy/parsel](https://github.com/scrapy/parsel) | ✅ | ✅ | ✅ | ✅ |
-| [scrapy/protego](https://github.com/scrapy/protego) | ✅ | ✅ | ✅ | ✅ |
-| [scrapy/queuelib](https://github.com/scrapy/queuelib) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy/w3lib](https://github.com/scrapy/w3lib) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| **Scrapy plugins** | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | ✅ | ✅ | ✅ | ✅ |
-| [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | ✅ | [❌](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| **Scrapy tools** | | | | |
-| [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| **Feed exporters** | | | | |
-| [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| **scrapy-poet and its deps** | | | | |
-| [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapinghub/andi](https://github.com/scrapinghub/andi) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet) | ✅ | [❌](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [zytedata/url-matcher](https://github.com/zytedata/url-matcher) | ✅ | ✅ | ✅ | ✅ |
-| [scrapy/frostwork](https://github.com/scrapy/frostwork) | ✅ | [❌](#typed-classifier) | [➖](#mypy) | [➖](#mypy-strict) |
-| **Zyte API** | | | | |
-| [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api) | ✅ | [❌](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api) | ✅ | [❌](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items) | ✅ | [❌](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| **Scrapy Cloud** | | | | |
-| [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/shub](https://github.com/scrapinghub/shub) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | ✅ | [❌](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| **Data extraction** | | | | |
-| [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [zytedata/clear-html](https://github.com/zytedata/clear-html) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | ✅ |
-| [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| **Forms** | | | | |
-| [scrapy/form2request](https://github.com/scrapy/form2request) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| **Monitoring** | | | | |
-| [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | [❌](#mypy-strict) |
-| [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| **AI agents** | | | | |
-| [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#py-typed) | [➖](#typed-classifier) | [➖](#mypy) | [➖](#mypy-strict) |
-| [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | ✅ | [❌](#typed-classifier) | ✅ | ✅ |
-| [zytedata/agent-exam](https://github.com/zytedata/agent-exam) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [zytedata/harness-run](https://github.com/zytedata/harness-run) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
-| [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | ✅ |
-| **Maintenance** | | | | |
-| [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | ✅ |
-| [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#py-typed) | [➖](#typed-classifier) | [➖](#mypy) | [➖](#mypy-strict) |
-| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [➖](#py-typed) | [➖](#typed-classifier) | [❌](#mypy) | [➖](#mypy-strict) |
+| Project | [py-typed](#py-typed) | [typed-classifier](#typed-classifier) | [type-checker](#type-checker) | [mypy](#mypy) | [pyrefly](#pyrefly) | [mypy-strict](#mypy-strict) |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Scrapy and its deps** | | | | | | |
+| [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/cssselect](https://github.com/scrapy/cssselect) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/formerly](https://github.com/scrapy/formerly) | ✅ | ✅ | ✅ | yes | no | ✅ |
+| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/parsel](https://github.com/scrapy/parsel) | ✅ | ✅ | ✅ | yes | no | ✅ |
+| [scrapy/protego](https://github.com/scrapy/protego) | ✅ | ✅ | ✅ | yes | no | ✅ |
+| [scrapy/queuelib](https://github.com/scrapy/queuelib) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/w3lib](https://github.com/scrapy/w3lib) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| **Scrapy plugins** | | | | | | |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | ✅ | ✅ | ✅ | yes | no | ✅ |
+| [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| **Scrapy tools** | | | | | | |
+| [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| **Feed exporters** | | | | | | |
+| [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| **scrapy-poet and its deps** | | | | | | |
+| [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapinghub/andi](https://github.com/scrapinghub/andi) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [zytedata/url-matcher](https://github.com/zytedata/url-matcher) | ✅ | ✅ | ✅ | yes | no | ✅ |
+| [scrapy/frostwork](https://github.com/scrapy/frostwork) | ✅ | [❌](#typed-classifier) | [❌](#type-checker) | [➖](#mypy) | no | [➖](#mypy-strict) |
+| **Zyte API** | | | | | | |
+| [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| **Scrapy Cloud** | | | | | | |
+| [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/shub](https://github.com/scrapinghub/shub) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | ✅ | [❌](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| **Data extraction** | | | | | | |
+| [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [zytedata/clear-html](https://github.com/zytedata/clear-html) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| **Forms** | | | | | | |
+| [scrapy/form2request](https://github.com/scrapy/form2request) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| **Monitoring** | | | | | | |
+| [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
+| [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| **AI agents** | | | | | | |
+| [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#py-typed) | [➖](#typed-classifier) | [➖](#type-checker) | [➖](#mypy) | [➖](#pyrefly) | [➖](#mypy-strict) |
+| [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [zytedata/agent-exam](https://github.com/zytedata/agent-exam) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [zytedata/harness-run](https://github.com/zytedata/harness-run) | [❌](#py-typed) | [➖](#typed-classifier) | [❌](#type-checker) | no | no | [➖](#mypy-strict) |
+| [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | ✅ |
+| **Maintenance** | | | | | | |
+| [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#py-typed) | [➖](#typed-classifier) | [➖](#type-checker) | [➖](#mypy) | [➖](#pyrefly) | [➖](#mypy-strict) |
+| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [➖](#py-typed) | [➖](#typed-classifier) | ✅ | no | yes | [➖](#mypy-strict) |
 
 ### py-typed
 
@@ -989,32 +991,46 @@ A package with a py.typed marker has the 'Typing :: Typed' classifier.
 - ➖ GitHub Action. [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard)
 - ➖ Internal tool. [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance)
 
+### type-checker
+
+A type checker (mypy or pyrefly) runs in tox, CI workflows or pre-commit.
+
+- ❌ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): no type checker found
+- ❌ [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox): no type checker found
+- ❌ [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive): no type checker found
+- ❌ [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets): no type checker found
+- ❌ [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive): no type checker found
+- ❌ [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp): no type checker found
+- ❌ [scrapy/frostwork](https://github.com/scrapy/frostwork): no type checker found
+- ❌ [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub): no type checker found
+- ❌ [scrapinghub/shub](https://github.com/scrapinghub/shub): no type checker found
+- ❌ [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy): no type checker found
+- ❌ [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow): no type checker found
+- ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): no type checker found
+- ❌ [scrapinghub/frontera](https://github.com/scrapinghub/frontera): no type checker found
+- ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): no type checker found
+- ❌ [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus): no type checker found
+- ❌ [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite): no type checker found
+- ❌ [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite): no type checker found
+- ❌ [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon): no type checker found
+- ❌ [zytedata/agent-exam](https://github.com/zytedata/agent-exam): no type checker found
+- ❌ [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage): no type checker found
+- ❌ [zytedata/harness-run](https://github.com/zytedata/harness-run): no type checker found
+- ➖ Agent plugin. [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin)
+- ➖ GitHub Action. [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard)
+
 ### mypy
 
 mypy runs in tox, CI workflows or pre-commit.
 
-- ❌ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): mypy not found
-- ❌ [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox): mypy not found
-- ❌ [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive): mypy not found
-- ❌ [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets): mypy not found
-- ❌ [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive): mypy not found
-- ❌ [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp): mypy not found
-- ❌ [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub): mypy not found
-- ❌ [scrapinghub/shub](https://github.com/scrapinghub/shub): mypy not found
-- ❌ [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy): mypy not found
-- ❌ [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow): mypy not found
-- ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): mypy not found
-- ❌ [scrapinghub/frontera](https://github.com/scrapinghub/frontera): mypy not found
-- ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): mypy not found
-- ❌ [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus): mypy not found
-- ❌ [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite): mypy not found
-- ❌ [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite): mypy not found
-- ❌ [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon): mypy not found
-- ❌ [zytedata/agent-exam](https://github.com/zytedata/agent-exam): mypy not found
-- ❌ [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage): mypy not found
-- ❌ [zytedata/harness-run](https://github.com/zytedata/harness-run): mypy not found
-- ❌ [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance): mypy not found
 - ➖ Runs mypy through make py, in CI. [scrapy/frostwork](https://github.com/scrapy/frostwork)
+- ➖ Agent plugin. [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin)
+- ➖ GitHub Action. [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard)
+
+### pyrefly
+
+pyrefly runs in tox, CI workflows or pre-commit.
+
 - ➖ Agent plugin. [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin)
 - ➖ GitHub Action. [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard)
 
@@ -1046,7 +1062,7 @@ mypy runs in strict mode: strict = true in its config, or --strict.
 | --- | --- | --- |
 | [`codecov`](#codecov) | Test coverage is uploaded to Codecov in CI workflows. | 45/60 passing |
 | [`codecov-test-results`](#codecov-test-results) | Test results are uploaded to Codecov in CI workflows (codecov/codecov-action with report_type: test_results). | 16/60 passing |
-| [`codecov-status`](#codecov-status) | The Codecov config disables the patch status and sets a 100% target for the project status. | 7/45 passing |
+| [`codecov-status`](#codecov-status) | The Codecov config disables the patch status and sets a 100% target for the project status. | 8/45 passing |
 | [`branch-coverage`](#branch-coverage) | Branch coverage is enabled. | 32/60 passing |
 | [`warnings-as-errors`](#warnings-as-errors) | pytest turns warnings into errors: "error" in filterwarnings, or -W error. | 8/60 passing |
 | [`scrapy-master`](#scrapy-master) | CI tests against Scrapy installed from its master branch. | 2/21 passing |
@@ -1054,7 +1070,7 @@ mypy runs in strict mode: strict = true in its config, or --strict.
 | Project | [codecov](#codecov) | [codecov-test-results](#codecov-test-results) | [codecov-status](#codecov-status) | [branch-coverage](#branch-coverage) | [warnings-as-errors](#warnings-as-errors) | [scrapy-master](#scrapy-master) |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Scrapy and its deps** | | | | | | |
-| [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | ✅ | [❌](#codecov-status) | ✅ | ✅ | [➖](#scrapy-master) |
+| [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | ✅ | ✅ | ✅ | ✅ | [➖](#scrapy-master) |
 | [scrapy/cssselect](https://github.com/scrapy/cssselect) | ✅ | [❌](#codecov-test-results) | [❌](#codecov-status) | ✅ | [❌](#warnings-as-errors) | [➖](#scrapy-master) |
 | [scrapy/formerly](https://github.com/scrapy/formerly) | ✅ | ✅ | [❌](#codecov-status) | ✅ | ✅ | [➖](#scrapy-master) |
 | [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | ✅ | [❌](#codecov-test-results) | [❌](#codecov-status) | ✅ | [❌](#warnings-as-errors) | [❌](#scrapy-master) |
@@ -1205,7 +1221,6 @@ Test results are uploaded to Codecov in CI workflows (codecov/codecov-action wit
 
 The Codecov config disables the patch status and sets a 100% target for the project status.
 
-- ❌ [scrapy/scrapy](https://github.com/scrapy/scrapy): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [scrapy/cssselect](https://github.com/scrapy/cssselect): no Codecov config
 - ❌ [scrapy/formerly](https://github.com/scrapy/formerly): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [scrapy/itemadapter](https://github.com/scrapy/itemadapter): no Codecov config
@@ -1565,16 +1580,16 @@ The hooks of https://github.com/pre-commit/pre-commit-hooks are used.
 
 The ruff and zizmor pre-commit hooks are updated within 180 days of a new release.
 
-- ❌ [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt): outdated: ruff v0.12.5 (0.15.11 or later expected)
-- ❌ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): outdated: ruff v0.8.4 (0.15.11 or later expected)
-- ❌ [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp): outdated: ruff v0.9.3 (0.15.11 or later expected)
-- ❌ [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet): outdated: ruff v0.15.6 (0.15.11 or later expected)
-- ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): outdated: ruff v0.9.4 (0.15.11 or later expected)
-- ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): outdated: ruff v0.11.12 (0.15.11 or later expected)
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): outdated: ruff v0.13.2 (0.15.11 or later expected)
-- ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): outdated: ruff v0.13.2 (0.15.11 or later expected)
-- ❌ [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly): outdated: ruff v0.11.13 (0.15.11 or later expected)
-- ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): outdated: ruff v0.11.13 (0.15.11 or later expected)
+- ❌ [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt): outdated: ruff v0.12.5 (0.15.12 or later expected)
+- ❌ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): outdated: ruff v0.8.4 (0.15.12 or later expected)
+- ❌ [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp): outdated: ruff v0.9.3 (0.15.12 or later expected)
+- ❌ [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet): outdated: ruff v0.15.6 (0.15.12 or later expected)
+- ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): outdated: ruff v0.9.4 (0.15.12 or later expected)
+- ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): outdated: ruff v0.11.12 (0.15.12 or later expected)
+- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): outdated: ruff v0.13.2 (0.15.12 or later expected)
+- ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): outdated: ruff v0.13.2 (0.15.12 or later expected)
+- ❌ [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly): outdated: ruff v0.11.13 (0.15.12 or later expected)
+- ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): outdated: ruff v0.11.13 (0.15.12 or later expected)
 - ➖ No checked hooks. [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder), [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules), [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy), [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub), [scrapinghub/extruct](https://github.com/scrapinghub/extruct), [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus), [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite)
 - ➖ No .pre-commit-config.yaml. [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage), [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox), [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets), [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy), [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow), [scrapinghub/frontera](https://github.com/scrapinghub/frontera), [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite), [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon), [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin), [zytedata/harness-run](https://github.com/zytedata/harness-run)
 
@@ -1753,6 +1768,9 @@ The docs are linted with sphinx-lint.
 
 | Check | Statement | Results |
 | --- | --- | --- |
+| [`sphinx-docs`](#sphinx-docs) | The documentation is a Sphinx project in docs/, written in reStructuredText. | 26/59 passing |
+| [`readme-rst`](#readme-rst) | The README is in reStructuredText, as README.rst. | 43/62 passing |
+| [`no-wiki`](#no-wiki) | The GitHub wiki has no pages. | 0/62 passing |
 | [`docs-requirements-in`](#docs-requirements-in) | Sphinx docs requirements are defined in docs/requirements.in. | 12/26 passing |
 | [`sphinx-scrapy`](#sphinx-scrapy) | Sphinx docs use sphinx-scrapy. | 15/26 passing |
 | [`sphinx-scrapy-pins`](#sphinx-scrapy-pins) | sphinx-scrapy is pinned to the same version in the tox requires, the docs requirements and the pre-commit hook rev. | 12/15 passing |
@@ -1762,82 +1780,214 @@ The docs are linted with sphinx-lint.
 | [`changelog`](#changelog) | There is a changelog, e.g. CHANGES.rst, CHANGELOG.md, NEWS or docs/news.rst. | 55/61 passing |
 | [`changelog-date`](#changelog-date) | bump-my-version replaces (unreleased) in the changelog with the release date. | 46/48 passing |
 
-| Project | [docs-requirements-in](#docs-requirements-in) | [sphinx-scrapy](#sphinx-scrapy) | [sphinx-scrapy-pins](#sphinx-scrapy-pins) | [sphinx-scrapy-latest](#sphinx-scrapy-latest) | [readthedocs](#readthedocs) | [docs-stable-links](#docs-stable-links) | [changelog](#changelog) | [changelog-date](#changelog-date) |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Scrapy and its deps** | | | | | | | | |
-| [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [scrapy/formerly](https://github.com/scrapy/formerly) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/parsel](https://github.com/scrapy/parsel) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/protego](https://github.com/scrapy/protego) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/queuelib](https://github.com/scrapy/queuelib) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/w3lib](https://github.com/scrapy/w3lib) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| **Scrapy plugins** | | | | | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| **Scrapy tools** | | | | | | | | |
-| [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | [❌](#docs-requirements-in) | ✅ | [❌](#sphinx-scrapy-pins) | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt) | [❌](#docs-requirements-in) | ✅ | [❌](#sphinx-scrapy-pins) | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| **Feed exporters** | | | | | | | | |
-| [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
-| [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
-| [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
-| [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
-| [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| **scrapy-poet and its deps** | | | | | | | | |
-| [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [scrapinghub/andi](https://github.com/scrapinghub/andi) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [zytedata/url-matcher](https://github.com/zytedata/url-matcher) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | [❌](#changelog-date) |
-| [scrapy/frostwork](https://github.com/scrapy/frostwork) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| **Zyte API** | | | | | | | | |
-| [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items) | [❌](#docs-requirements-in) | ✅ | [❌](#sphinx-scrapy-pins) | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| **Scrapy Cloud** | | | | | | | | |
-| [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [scrapinghub/shub](https://github.com/scrapinghub/shub) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
-| [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| **Data extraction** | | | | | | | | |
-| [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/clear-html](https://github.com/zytedata/clear-html) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| **Forms** | | | | | | | | |
-| [scrapy/form2request](https://github.com/scrapy/form2request) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [❌](#readthedocs) | ✅ | ✅ | [❌](#changelog-date) |
-| [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [❌](#readthedocs) | [❌](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [❌](#readthedocs) | ✅ | ✅ | ✅ |
-| **Monitoring** | | | | | | | | |
-| [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
-| [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
-| **AI agents** | | | | | | | | |
-| [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/agent-exam](https://github.com/zytedata/agent-exam) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
-| [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/harness-run](https://github.com/zytedata/harness-run) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
-| [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| **Maintenance** | | | | | | | | |
-| [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
-| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [➖](#changelog) | [➖](#changelog-date) |
+| Project | [sphinx-docs](#sphinx-docs) | [readme-rst](#readme-rst) | [no-wiki](#no-wiki) | [docs-requirements-in](#docs-requirements-in) | [sphinx-scrapy](#sphinx-scrapy) | [sphinx-scrapy-pins](#sphinx-scrapy-pins) | [sphinx-scrapy-latest](#sphinx-scrapy-latest) | [readthedocs](#readthedocs) | [docs-stable-links](#docs-stable-links) | [changelog](#changelog) | [changelog-date](#changelog-date) |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Scrapy and its deps** | | | | | | | | | | | |
+| [scrapy/scrapy](https://github.com/scrapy/scrapy) | ✅ | ✅ | [❌](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/cssselect](https://github.com/scrapy/cssselect) | ✅ | ✅ | [❌](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [scrapy/formerly](https://github.com/scrapy/formerly) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌](#sphinx-docs) | [❌](#readme-rst) | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | ✅ | ✅ | [❌](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/parsel](https://github.com/scrapy/parsel) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/protego](https://github.com/scrapy/protego) | [❌](#sphinx-docs) | ✅ | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/queuelib](https://github.com/scrapy/queuelib) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/w3lib](https://github.com/scrapy/w3lib) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| **Scrapy plugins** | | | | | | | | | | | |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| **Scrapy tools** | | | | | | | | | | | |
+| [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | ✅ | [❌](#sphinx-scrapy-pins) | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt) | ✅ | ✅ | [❌](#no-wiki) | [❌](#docs-requirements-in) | ✅ | [❌](#sphinx-scrapy-pins) | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| **Feed exporters** | | | | | | | | | | | |
+| [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
+| [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
+| [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
+| [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
+| [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| **scrapy-poet and its deps** | | | | | | | | | | | |
+| [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [scrapinghub/andi](https://github.com/scrapinghub/andi) | [❌](#sphinx-docs) | ✅ | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [zytedata/url-matcher](https://github.com/zytedata/url-matcher) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | [❌](#changelog-date) |
+| [scrapy/frostwork](https://github.com/scrapy/frostwork) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| **Zyte API** | | | | | | | | | | | |
+| [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | ✅ | [❌](#sphinx-scrapy-pins) | [❌](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| **Scrapy Cloud** | | | | | | | | | | | |
+| [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | ✅ | ✅ | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [scrapinghub/shub](https://github.com/scrapinghub/shub) | ✅ | ✅ | [❌](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | [❌](#sphinx-docs) | [❌](#readme-rst) | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [❌](#sphinx-docs) | [❌](#readme-rst) | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
+| [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| **Data extraction** | | | | | | | | | | | |
+| [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/clear-html](https://github.com/zytedata/clear-html) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | [❌](#sphinx-docs) | ✅ | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌](#sphinx-docs) | ✅ | [❌](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| **Forms** | | | | | | | | | | | |
+| [scrapy/form2request](https://github.com/scrapy/form2request) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [❌](#readthedocs) | ✅ | ✅ | [❌](#changelog-date) |
+| [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [❌](#readthedocs) | [❌](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [❌](#readthedocs) | ✅ | ✅ | ✅ |
+| **Monitoring** | | | | | | | | | | | |
+| [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | ✅ | ✅ | [⚠️](#no-wiki) | [❌](#docs-requirements-in) | [❌](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | ✅ | [❌](#docs-stable-links) | ✅ | ✅ |
+| [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [❌](#changelog) | [➖](#changelog-date) |
+| **AI agents** | | | | | | | | | | | |
+| [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin) | [➖](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/agent-exam](https://github.com/zytedata/agent-exam) | ✅ | [❌](#readme-rst) | [⚠️](#no-wiki) | ✅ | ✅ | ✅ | [❌](#sphinx-scrapy-latest) | ✅ | ✅ | ✅ | ✅ |
+| [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/harness-run](https://github.com/zytedata/harness-run) | [❌](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | [➖](#changelog-date) |
+| [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| **Maintenance** | | | | | | | | | | | |
+| [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [❌](#sphinx-docs) | ✅ | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | ✅ | ✅ |
+| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [➖](#sphinx-docs) | [❌](#readme-rst) | [⚠️](#no-wiki) | [➖](#docs-requirements-in) | [➖](#sphinx-scrapy) | [➖](#sphinx-scrapy-pins) | [➖](#sphinx-scrapy-latest) | [➖](#readthedocs) | [➖](#docs-stable-links) | [➖](#changelog) | [➖](#changelog-date) |
+
+### sphinx-docs
+
+The documentation is a Sphinx project in docs/, written in reStructuredText.
+
+- ❌ [scrapy/formerly](https://github.com/scrapy/formerly): no docs/conf.py
+- ❌ [scrapy/itemadapter](https://github.com/scrapy/itemadapter): no docs/conf.py
+- ❌ [scrapy/protego](https://github.com/scrapy/protego): no docs/conf.py
+- ❌ [scrapy/queuelib](https://github.com/scrapy/queuelib): no docs/conf.py
+- ❌ [scrapy/xtractmime](https://github.com/scrapy/xtractmime): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator): no docs/conf.py
+- ❌ [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder): no docs/conf.py
+- ❌ [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive): no docs/conf.py
+- ❌ [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp): no docs/conf.py
+- ❌ [scrapinghub/andi](https://github.com/scrapinghub/andi): no docs/conf.py
+- ❌ [scrapy/frostwork](https://github.com/scrapy/frostwork): no docs/conf.py; Markdown files: docs/BENCHMARKS.md, docs/COMPATIBILITY.md, docs/DESIGN.md, docs/MIGRATION.md, docs/PYTHON.md, docs/RELEASING.md, docs/SUPPORT_SNAPSHOT.md, docs/TESTING.md, docs/WEBPOET_SURFACE.md
+- ❌ [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy): no docs/conf.py
+- ❌ [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow): no docs/conf.py
+- ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): no docs/conf.py
+- ❌ [scrapinghub/frontera](https://github.com/scrapinghub/frontera): no docs/conf.py
+- ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): no docs/conf.py
+- ❌ [zytedata/clear-html](https://github.com/zytedata/clear-html): no docs/conf.py
+- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): no docs/conf.py
+- ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): no docs/conf.py
+- ❌ [scrapinghub/extruct](https://github.com/scrapinghub/extruct): no docs/conf.py
+- ❌ [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser): no docs/conf.py
+- ❌ [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon): no docs/conf.py
+- ❌ [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official): no docs/conf.py
+- ❌ [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage): no docs/conf.py; Markdown files: docs/tui-ux.md
+- ❌ [zytedata/harness-run](https://github.com/zytedata/harness-run): no docs/conf.py; Markdown files: docs/configuration.md, docs/gcp-setup.md, docs/getting-started.md, docs/harnesses-and-models.md, docs/local-runtime.md, docs/observability.md, docs/openrouter.md, docs/runs-and-sessions.md, docs/sandbox-runtime.md, docs/secrets-and-security.md, docs/structured-output.md
+- ❌ [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly): no docs/conf.py
+- ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): no docs/conf.py
+- ➖ Agent plugin. [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin)
+- ➖ GitHub Action. [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard)
+- ➖ Internal tool. [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance)
+
+### readme-rst
+
+The README is in reStructuredText, as README.rst.
+
+- ❌ [scrapy/itemadapter](https://github.com/scrapy/itemadapter): README.md instead
+- ❌ [scrapy/xtractmime](https://github.com/scrapy/xtractmime): README.md instead
+- ❌ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): README.md instead
+- ❌ [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage): README.md instead
+- ❌ [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox): README.md instead
+- ❌ [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets): README.md instead
+- ❌ [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive): README.md instead
+- ❌ [scrapy/frostwork](https://github.com/scrapy/frostwork): README.md instead
+- ❌ [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy): README.md instead
+- ❌ [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow): README.md instead
+- ❌ [scrapinghub/frontera](https://github.com/scrapinghub/frontera): README.md instead
+- ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): README.md instead
+- ❌ [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon): README.md instead
+- ❌ [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official): README.md instead
+- ❌ [zytedata/agent-exam](https://github.com/zytedata/agent-exam): README.md instead
+- ❌ [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage): README.md instead
+- ❌ [zytedata/harness-run](https://github.com/zytedata/harness-run): README.md instead
+- ❌ [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard): README.md instead
+- ❌ [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance): README.md instead
+
+### no-wiki
+
+The GitHub wiki has no pages.
+
+- ❌ [scrapy/scrapy](https://github.com/scrapy/scrapy): https://github.com/scrapy/scrapy/wiki has pages
+- ❌ [scrapy/cssselect](https://github.com/scrapy/cssselect): https://github.com/scrapy/cssselect/wiki has pages
+- ❌ [scrapy/itemadapter](https://github.com/scrapy/itemadapter): https://github.com/scrapy/itemadapter/wiki has pages
+- ❌ [scrapy/itemloaders](https://github.com/scrapy/itemloaders): https://github.com/scrapy/itemloaders/wiki has pages
+- ❌ [scrapy/protego](https://github.com/scrapy/protego): https://github.com/scrapy/protego/wiki has pages
+- ❌ [scrapinghub/scrapyrt](https://github.com/scrapinghub/scrapyrt): https://github.com/scrapinghub/scrapyrt/wiki has pages
+- ❌ [scrapinghub/andi](https://github.com/scrapinghub/andi): https://github.com/scrapinghub/andi/wiki has pages
+- ❌ [scrapinghub/shub](https://github.com/scrapinghub/shub): https://github.com/scrapinghub/shub/wiki has pages
+- ❌ [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow): https://github.com/scrapinghub/shub-workflow/wiki has pages
+- ❌ [scrapinghub/frontera](https://github.com/scrapinghub/frontera): https://github.com/scrapinghub/frontera/wiki has pages
+- ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): https://github.com/scrapinghub/price-parser/wiki has pages
+- ❌ [scrapinghub/extruct](https://github.com/scrapinghub/extruct): https://github.com/scrapinghub/extruct/wiki has pages
+- ⚠️ [scrapy/formerly](https://github.com/scrapy/formerly): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/parsel](https://github.com/scrapy/parsel): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/queuelib](https://github.com/scrapy/queuelib): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/w3lib](https://github.com/scrapy/w3lib): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/xtractmime](https://github.com/scrapy/xtractmime): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexport-warc](https://github.com/scrapy-plugins/scrapy-feedexport-warc): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexporter-azure-storage](https://github.com/scrapy-plugins/scrapy-feedexporter-azure-storage): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexporter-dropbox](https://github.com/scrapy-plugins/scrapy-feedexporter-dropbox): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexporter-google-drive](https://github.com/scrapy-plugins/scrapy-feedexporter-google-drive): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexporter-google-sheets](https://github.com/scrapy-plugins/scrapy-feedexporter-google-sheets): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-feedexporter-sftp](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/web-poet](https://github.com/scrapinghub/web-poet): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/url-matcher](https://github.com/zytedata/url-matcher): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/frostwork](https://github.com/scrapy/frostwork): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-zyte-api](https://github.com/scrapy-plugins/scrapy-zyte-api): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/python-zyte-api](https://github.com/zytedata/python-zyte-api): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/scrapy-zyte-smartproxy](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/zyte-common-items](https://github.com/zytedata/zyte-common-items): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/clear-html](https://github.com/zytedata/clear-html): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/html-text](https://github.com/zytedata/html-text): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/form2request](https://github.com/scrapy/form2request): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/scrapy-agent-plugin](https://github.com/scrapy/scrapy-agent-plugin): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/agent-exam](https://github.com/zytedata/agent-exam): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/harness-run](https://github.com/zytedata/harness-run): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+- ⚠️ [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance): SyncError: fatal: could not read Username for 'https://github.com': terminal prompts disabled
 
 ### docs-requirements-in
 
