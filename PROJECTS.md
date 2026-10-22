@@ -1,12 +1,12 @@
 # Maintenance report by project
 
-Generated on 2026-10-21 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
+Generated on 2026-10-22 with `oss-maint report`. Do not edit by hand. Lists failing checks and notes for each project; see [REPORT.md](REPORT.md) for all results.
 
 ## Scrapy and its deps
 
 ### scrapy/scrapy
 
-[Repository](https://github.com/scrapy/scrapy) · commit [`b8b81a2`](https://github.com/scrapy/scrapy/commit/b8b81a262d02fd58d5d268971770863807c5f231) · 42/48 checks passing
+[Repository](https://github.com/scrapy/scrapy) · commit [`4d372f0`](https://github.com/scrapy/scrapy/commit/4d372f0275c315dd7b0eb2fc9c514951c0085e0a) · 43/49 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 2.19.0 (2026-09-10) · unreleased-changes: yes
 
@@ -30,7 +30,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapy/cssselect
 
-[Repository](https://github.com/scrapy/cssselect) · commit [`3069b6d`](https://github.com/scrapy/cssselect/commit/3069b6da75e1adf27939ca541dcc9fb9b961abc6) · 36/46 checks passing
+[Repository](https://github.com/scrapy/cssselect) · commit [`3069b6d`](https://github.com/scrapy/cssselect/commit/3069b6da75e1adf27939ca541dcc9fb9b961abc6) · 37/47 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 1.6.0 (2026-10-09) · unreleased-changes: yes
 
@@ -64,7 +64,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/formerly
 
-[Repository](https://github.com/scrapy/formerly) · commit [`7a6e30b`](https://github.com/scrapy/formerly/commit/7a6e30b1f9821e90c26e0e81cecfd5f560c19d84) · 37/40 checks passing
+[Repository](https://github.com/scrapy/formerly) · commit [`7a6e30b`](https://github.com/scrapy/formerly/commit/7a6e30b1f9821e90c26e0e81cecfd5f560c19d84) · 38/41 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.1.0 (2026-08-05) · unreleased-changes: yes
 
@@ -79,7 +79,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/itemadapter
 
-[Repository](https://github.com/scrapy/itemadapter) · commit [`03fea94`](https://github.com/scrapy/itemadapter/commit/03fea94d9a035589d5f6428f138813628b8b3488) · 31/42 checks passing
+[Repository](https://github.com/scrapy/itemadapter) · commit [`03fea94`](https://github.com/scrapy/itemadapter/commit/03fea94d9a035589d5f6428f138813628b8b3488) · 32/43 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: no · latest-release: 0.13.1 (2026-01-08) · unreleased-changes: yes
 
@@ -114,7 +114,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/itemloaders
 
-[Repository](https://github.com/scrapy/itemloaders) · commit [`cb6f387`](https://github.com/scrapy/itemloaders/commit/cb6f38739aade299f6c2468b0dfa96812fa5bbb3) · 35/49 checks passing
+[Repository](https://github.com/scrapy/itemloaders) · commit [`cb6f387`](https://github.com/scrapy/itemloaders/commit/cb6f38739aade299f6c2468b0dfa96812fa5bbb3) · 36/50 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 1.5.0 (2026-09-29) · unreleased-changes: yes
 
@@ -152,7 +152,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/parsel
 
-[Repository](https://github.com/scrapy/parsel) · commit [`599897f`](https://github.com/scrapy/parsel/commit/599897f486ccc066555dacbd5014812ee640eec2) · 45/51 checks passing
+[Repository](https://github.com/scrapy/parsel) · commit [`599897f`](https://github.com/scrapy/parsel/commit/599897f486ccc066555dacbd5014812ee640eec2) · 46/52 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 1.12.1 (2026-09-28) · unreleased-changes: yes
 
@@ -176,7 +176,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/protego
 
-[Repository](https://github.com/scrapy/protego) · commit [`2ffbb5f`](https://github.com/scrapy/protego/commit/2ffbb5fd8dfe31454cdc0e7852d1f77cc63d8b9d) · 35/40 checks passing
+[Repository](https://github.com/scrapy/protego) · commit [`2ffbb5f`](https://github.com/scrapy/protego/commit/2ffbb5fd8dfe31454cdc0e7852d1f77cc63d8b9d) · 36/41 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.7.0 (2026-09-21) · unreleased-changes: yes
 
@@ -199,7 +199,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/queuelib
 
-[Repository](https://github.com/scrapy/queuelib) · commit [`d4ed6ab`](https://github.com/scrapy/queuelib/commit/d4ed6abbce003f953cc6a1163d2ea396243417e5) · 31/40 checks passing
+[Repository](https://github.com/scrapy/queuelib) · commit [`d4ed6ab`](https://github.com/scrapy/queuelib/commit/d4ed6abbce003f953cc6a1163d2ea396243417e5) · 32/41 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: no · latest-release: 1.10.0 (2026-08-24) · unreleased-changes: yes
 
@@ -232,7 +232,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/w3lib
 
-[Repository](https://github.com/scrapy/w3lib) · commit [`5f50405`](https://github.com/scrapy/w3lib/commit/5f50405946524286e3dbc689f88eaf545417bba0) · 37/47 checks passing
+[Repository](https://github.com/scrapy/w3lib) · commit [`5f50405`](https://github.com/scrapy/w3lib/commit/5f50405946524286e3dbc689f88eaf545417bba0) · 38/48 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 2.5.0 (2026-09-30) · unreleased-changes: yes
 
@@ -263,7 +263,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy/xtractmime
 
-[Repository](https://github.com/scrapy/xtractmime) · commit [`9d50fcb`](https://github.com/scrapy/xtractmime/commit/9d50fcb0d7abd7a96f7dee746d9285faba4af6db) · 24/39 checks passing
+[Repository](https://github.com/scrapy/xtractmime) · commit [`9d50fcb`](https://github.com/scrapy/xtractmime/commit/9d50fcb0d7abd7a96f7dee746d9285faba4af6db) · 25/40 checks passing
 
 supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.2.1 (2024-01-16) · unreleased-changes: yes
 
@@ -301,7 +301,7 @@ supports-pypy: yes · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylin
 
 ### scrapy-plugins/scrapy-download-handlers-incubator
 
-[Repository](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) · commit [`f585f8d`](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator/commit/f585f8da60d14ec804c4b3b7d105c4ce55d5238b) · 35/41 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) · commit [`f585f8d`](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator/commit/f585f8da60d14ec804c4b3b7d105c4ce55d5238b) · 36/42 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.5.1 (2026-09-11) · unreleased-changes: yes
 
@@ -322,7 +322,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapy-plugins/scrapy-playwright
 
-[Repository](https://github.com/scrapy-plugins/scrapy-playwright) · commit [`2658f86`](https://github.com/scrapy-plugins/scrapy-playwright/commit/2658f86a4771b918dbe1d32c345ca70e34d43648) · 19/46 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-playwright) · commit [`2658f86`](https://github.com/scrapy-plugins/scrapy-playwright/commit/2658f86a4771b918dbe1d32c345ca70e34d43648) · 19/47 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 0.0.48 (2026-07-10) · unreleased-changes: yes
 
@@ -347,6 +347,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/tests.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -376,7 +377,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapy-plugins/scrapy-spider-metadata
 
-[Repository](https://github.com/scrapy-plugins/scrapy-spider-metadata) · commit [`bde680a`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/bde680ab6865e920b06b970417125ace5c03ce71) · 38/50 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-spider-metadata) · commit [`bde680a`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/bde680ab6865e920b06b970417125ace5c03ce71) · 38/51 checks passing
 
 supports-pypy: yes · license: BSD License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.2.0 (2024-09-26) · unreleased-changes: yes
 
@@ -392,6 +393,7 @@ supports-pypy: yes · license: BSD License · mypy: yes · pyrefly: no · pylint
 
 **Tests and coverage**
 
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 - ❌ [`scrapy-master`](REPORT.md#scrapy-master): no CI workflow or tox environment installs Scrapy master
 
@@ -412,7 +414,7 @@ supports-pypy: yes · license: BSD License · mypy: yes · pyrefly: no · pylint
 
 ### zytedata/duplicate-url-discarder
 
-[Repository](https://github.com/zytedata/duplicate-url-discarder) · commit [`8db08b3`](https://github.com/zytedata/duplicate-url-discarder/commit/8db08b3edf638f34ee6ad7393612f579b5bfb90f) · 13/36 checks passing
+[Repository](https://github.com/zytedata/duplicate-url-discarder) · commit [`8db08b3`](https://github.com/zytedata/duplicate-url-discarder/commit/8db08b3edf638f34ee6ad7393612f579b5bfb90f) · 13/37 checks passing
 
 supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.3.0 (2024-12-30) · unreleased-changes: yes
 
@@ -437,6 +439,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 - ❌ [`scrapy-master`](REPORT.md#scrapy-master): no CI workflow or tox environment installs Scrapy master
@@ -462,7 +465,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 
 ### zytedata/duplicate-url-discarder-rules
 
-[Repository](https://github.com/zytedata/duplicate-url-discarder-rules) · commit [`7281048`](https://github.com/zytedata/duplicate-url-discarder-rules/commit/7281048b2cfa0538c0b355e8f91185f27367649d) · 11/33 checks passing
+[Repository](https://github.com/zytedata/duplicate-url-discarder-rules) · commit [`7281048`](https://github.com/zytedata/duplicate-url-discarder-rules/commit/7281048b2cfa0538c0b355e8f91185f27367649d) · 11/34 checks passing
 
 supports-pypy: no · license: MIT License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 2024.11.5 (2024-11-05) · unreleased-changes: yes
 
@@ -486,6 +489,7 @@ supports-pypy: no · license: MIT License · mypy: yes · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -513,7 +517,7 @@ supports-pypy: no · license: MIT License · mypy: yes · pyrefly: no · pylint:
 
 ### scrapy/scrapy-lint
 
-[Repository](https://github.com/scrapy/scrapy-lint) · commit [`30a3872`](https://github.com/scrapy/scrapy-lint/commit/30a387279f0be38a48237d31725b1d52a2bcf297) · 32/47 checks passing
+[Repository](https://github.com/scrapy/scrapy-lint) · commit [`30a3872`](https://github.com/scrapy/scrapy-lint/commit/30a387279f0be38a48237d31725b1d52a2bcf297) · 33/48 checks passing
 
 supports-pypy: no · license: MIT · mypy: yes · pyrefly: no · pylint: yes · has-sphinx-docs: yes · latest-release: 0.1.1 (2026-01-27) · unreleased-changes: yes
 
@@ -921,7 +925,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 
 ### scrapy-plugins/scrapy-feedexporter-sftp
 
-[Repository](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) · commit [`38c9e5b`](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp/commit/38c9e5b244bfa363de9ede92f7069ae7bcbce469) · 15/37 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp) · commit [`38c9e5b`](https://github.com/scrapy-plugins/scrapy-feedexporter-sftp/commit/38c9e5b244bfa363de9ede92f7069ae7bcbce469) · 16/38 checks passing
 
 supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 1.1.0 (2025-02-12) · unreleased-changes: no
 
@@ -972,7 +976,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 
 ### scrapinghub/scrapy-poet
 
-[Repository](https://github.com/scrapinghub/scrapy-poet) · commit [`f06d684`](https://github.com/scrapinghub/scrapy-poet/commit/f06d684b6b1a40625eb846680225cb00a67bf7ec) · 34/48 checks passing
+[Repository](https://github.com/scrapinghub/scrapy-poet) · commit [`f06d684`](https://github.com/scrapinghub/scrapy-poet/commit/f06d684b6b1a40625eb846680225cb00a67bf7ec) · 34/49 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.27.2 (2026-04-28) · unreleased-changes: yes
 
@@ -993,6 +997,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/scrapy-unreleased.yml, .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in .codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1013,7 +1018,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapinghub/andi
 
-[Repository](https://github.com/scrapinghub/andi) · commit [`7a07b33`](https://github.com/scrapinghub/andi/commit/7a07b339ca1cc5e3c6495635b02eb01b5c483ebd) · 30/38 checks passing
+[Repository](https://github.com/scrapinghub/andi) · commit [`7a07b33`](https://github.com/scrapinghub/andi/commit/7a07b339ca1cc5e3c6495635b02eb01b5c483ebd) · 31/39 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.9.0 (2026-09-17) · unreleased-changes: yes
 
@@ -1045,7 +1050,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 ### scrapinghub/web-poet
 
-[Repository](https://github.com/scrapinghub/web-poet) · commit [`b3cc347`](https://github.com/scrapinghub/web-poet/commit/b3cc347952b9bc6cf534e44543b789d2f5f2fafb) · 32/48 checks passing
+[Repository](https://github.com/scrapinghub/web-poet) · commit [`b3cc347`](https://github.com/scrapinghub/web-poet/commit/b3cc347952b9bc6cf534e44543b789d2f5f2fafb) · 32/49 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.24.1 (2026-04-28) · unreleased-changes: yes
 
@@ -1069,6 +1074,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/tests-ubuntu.yml, .github/workflows/tests-windows.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in .codecov.yml
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 
@@ -1088,7 +1094,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### zytedata/url-matcher
 
-[Repository](https://github.com/zytedata/url-matcher) · commit [`f3805d7`](https://github.com/zytedata/url-matcher/commit/f3805d78f101a0594cdfe1fcbf9b7789a0680aae) · 42/48 checks passing
+[Repository](https://github.com/zytedata/url-matcher) · commit [`f3805d7`](https://github.com/zytedata/url-matcher/commit/f3805d78f101a0594cdfe1fcbf9b7789a0680aae) · 42/49 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.6.0 (2025-02-14) · unreleased-changes: yes
 
@@ -1098,6 +1104,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 **Tests and coverage**
 
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
 **Linting**
@@ -1154,7 +1161,7 @@ supports-pypy: no · license: Apache-2.0 · pyrefly: no · pylint: no · has-sph
 
 ### scrapy-plugins/scrapy-zyte-api
 
-[Repository](https://github.com/scrapy-plugins/scrapy-zyte-api) · commit [`681d145`](https://github.com/scrapy-plugins/scrapy-zyte-api/commit/681d14500b804f291a09306cc2cb9378f0203217) · 40/49 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-zyte-api) · commit [`681d145`](https://github.com/scrapy-plugins/scrapy-zyte-api/commit/681d14500b804f291a09306cc2cb9378f0203217) · 40/50 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.36.0 (2026-08-20) · unreleased-changes: yes
 
@@ -1170,6 +1177,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 
 **Linting**
 
@@ -1187,7 +1195,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### zytedata/python-zyte-api
 
-[Repository](https://github.com/zytedata/python-zyte-api) · commit [`f728f1d`](https://github.com/zytedata/python-zyte-api/commit/f728f1d4163450b455f4e5296c2be7b4846b8d15) · 33/47 checks passing
+[Repository](https://github.com/zytedata/python-zyte-api) · commit [`f728f1d`](https://github.com/zytedata/python-zyte-api/commit/f728f1d4163450b455f4e5296c2be7b4846b8d15) · 33/48 checks passing
 
 supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.11.0 (2026-07-23) · unreleased-changes: yes
 
@@ -1204,6 +1212,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1225,7 +1234,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 
 ### scrapy-plugins/scrapy-zyte-smartproxy
 
-[Repository](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) · commit [`debd444`](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy/commit/debd4445343d0c3a1eba9fa0ce269613bb3b9d5c) · 15/39 checks passing
+[Repository](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy) · commit [`debd444`](https://github.com/scrapy-plugins/scrapy-zyte-smartproxy/commit/debd4445343d0c3a1eba9fa0ce269613bb3b9d5c) · 15/40 checks passing
 
 supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 2.4.1 (2025-03-24) · unreleased-changes: yes
 
@@ -1249,6 +1258,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/main.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -1276,7 +1286,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 
 ### zytedata/zyte-common-items
 
-[Repository](https://github.com/zytedata/zyte-common-items) · commit [`297cb86`](https://github.com/zytedata/zyte-common-items/commit/297cb86af88b26106899eb231d50c7b96d164f78) · 37/48 checks passing
+[Repository](https://github.com/zytedata/zyte-common-items) · commit [`297cb86`](https://github.com/zytedata/zyte-common-items/commit/297cb86af88b26106899eb231d50c7b96d164f78) · 37/49 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.31.0 (2026-10-16) · unreleased-changes: no
 
@@ -1291,6 +1301,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 **Tests and coverage**
 
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in .codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1310,7 +1321,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapinghub/python-scrapinghub
 
-[Repository](https://github.com/scrapinghub/python-scrapinghub) · commit [`d0d7b29`](https://github.com/scrapinghub/python-scrapinghub/commit/d0d7b29153e40bbb0f9c56ab23caab86393f853e) · 15/41 checks passing
+[Repository](https://github.com/scrapinghub/python-scrapinghub) · commit [`d0d7b29`](https://github.com/scrapinghub/python-scrapinghub/commit/d0d7b29153e40bbb0f9c56ab23caab86393f853e) · 15/42 checks passing
 
 supports-pypy: yes · license: BSD License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 2.9.0 (2026-08-12) · unreleased-changes: no
 
@@ -1340,6 +1351,7 @@ supports-pypy: yes · license: BSD License · mypy: no · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/main.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -1363,7 +1375,7 @@ supports-pypy: yes · license: BSD License · mypy: no · pyrefly: no · pylint:
 
 ### scrapinghub/shub
 
-[Repository](https://github.com/scrapinghub/shub) · commit [`4facd31`](https://github.com/scrapinghub/shub/commit/4facd31c84dfc1ef78fac43710a592a87753fcc5) · 22/45 checks passing
+[Repository](https://github.com/scrapinghub/shub) · commit [`8c1a5db`](https://github.com/scrapinghub/shub/commit/8c1a5db761c4e6ee40fe3122d8a33e461eef4edd) · 22/46 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 2.18.1 (2026-07-08) · unreleased-changes: yes
 
@@ -1391,6 +1403,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: no · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/tests.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -1416,7 +1429,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: no · pyrefly: no · pylint:
 
 ### scrapinghub/scrapinghub-entrypoint-scrapy
 
-[Repository](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) · commit [`bf9632c`](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy/commit/bf9632c78355b545126363ce557106c1b9c3bb54) · 6/29 checks passing
+[Repository](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) · commit [`bf9632c`](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy/commit/bf9632c78355b545126363ce557106c1b9c3bb54) · 6/30 checks passing
 
 supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.18.1 (2026-01-28) · unreleased-changes: yes
 
@@ -1444,6 +1457,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/tests.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -1469,9 +1483,9 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 
 ### scrapinghub/shub-workflow
 
-[Repository](https://github.com/scrapinghub/shub-workflow) · commit [`a6aaa81`](https://github.com/scrapinghub/shub-workflow/commit/a6aaa8121218cbda9accf4c9f3f1e05e5aee5d68) · 3/27 checks passing
+[Repository](https://github.com/scrapinghub/shub-workflow) · commit [`4696153`](https://github.com/scrapinghub/shub-workflow/commit/4696153f1eaada4cee923c183ca35b34569aafac) · 3/27 checks passing
 
-supports-pypy: no · license: Apache Software License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 1.14.44.1 (2026-10-19) · unreleased-changes: yes
+supports-pypy: no · license: Apache Software License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 1.14.44.2 (2026-10-22) · unreleased-changes: no
 
 **Python versions**
 
@@ -1523,7 +1537,7 @@ supports-pypy: no · license: Apache Software License · mypy: no · pyrefly: no
 
 ### scrapinghub/scrapy-frontera
 
-[Repository](https://github.com/scrapinghub/scrapy-frontera) · commit [`56ea2e1`](https://github.com/scrapinghub/scrapy-frontera/commit/56ea2e1ef39a174eac61da2edcdb21d1f1ecf5e5) · 10/34 checks passing
+[Repository](https://github.com/scrapinghub/scrapy-frontera) · commit [`56ea2e1`](https://github.com/scrapinghub/scrapy-frontera/commit/56ea2e1ef39a174eac61da2edcdb21d1f1ecf5e5) · 10/35 checks passing
 
 supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.3.0 (2025-06-06) · unreleased-changes: yes
 
@@ -1548,6 +1562,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/tests.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -1574,7 +1589,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 
 ### scrapinghub/frontera
 
-[Repository](https://github.com/scrapinghub/frontera) · commit [`c94beae`](https://github.com/scrapinghub/frontera/commit/c94beae2f438492139d24759729d0201779ccf1c) · 3/27 checks passing
+[Repository](https://github.com/scrapinghub/frontera) · commit [`c94beae`](https://github.com/scrapinghub/frontera/commit/c94beae2f438492139d24759729d0201779ccf1c) · 3/28 checks passing
 
 supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.8.1 (2019-04-05) · unreleased-changes: yes
 
@@ -1602,6 +1617,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 - ❌ [`scrapy-master`](REPORT.md#scrapy-master): no CI workflow or tox environment installs Scrapy master
@@ -1628,7 +1644,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 
 ### scrapinghub/hcf-backend
 
-[Repository](https://github.com/scrapinghub/hcf-backend) · commit [`bbdc50c`](https://github.com/scrapinghub/hcf-backend/commit/bbdc50cd1d250742234aacc2d5da10c4fe4d9508) · 9/32 checks passing
+[Repository](https://github.com/scrapinghub/hcf-backend) · commit [`bbdc50c`](https://github.com/scrapinghub/hcf-backend/commit/bbdc50cd1d250742234aacc2d5da10c4fe4d9508) · 9/33 checks passing
 
 supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.6.1 (2025-10-31) · unreleased-changes: no
 
@@ -1652,6 +1668,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
@@ -1680,7 +1697,7 @@ supports-pypy: no · license: BSD License · mypy: no · pyrefly: no · pylint: 
 
 ### zytedata/zyte-parsers
 
-[Repository](https://github.com/zytedata/zyte-parsers) · commit [`4f5d08d`](https://github.com/zytedata/zyte-parsers/commit/4f5d08d1be951fa438f0aedd598d61a61c360ea0) · 33/46 checks passing
+[Repository](https://github.com/zytedata/zyte-parsers) · commit [`4f5d08d`](https://github.com/zytedata/zyte-parsers/commit/4f5d08d1be951fa438f0aedd598d61a61c360ea0) · 33/47 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.6.0 (2025-10-24) · unreleased-changes: yes
 
@@ -1701,6 +1718,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 **Tests and coverage**
 
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1717,7 +1735,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 ### zytedata/clear-html
 
-[Repository](https://github.com/zytedata/clear-html) · commit [`6b820b1`](https://github.com/zytedata/clear-html/commit/6b820b13221145ceb0814e47e9583e5574d28865) · 31/40 checks passing
+[Repository](https://github.com/zytedata/clear-html) · commit [`6b820b1`](https://github.com/zytedata/clear-html/commit/6b820b13221145ceb0814e47e9583e5574d28865) · 31/41 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.5.0 (2025-10-24) · unreleased-changes: yes
 
@@ -1733,6 +1751,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 **Tests and coverage**
 
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1747,7 +1766,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 ### zytedata/html-text
 
-[Repository](https://github.com/zytedata/html-text) · commit [`2dc4e94`](https://github.com/zytedata/html-text/commit/2dc4e94dd92a8b15476a237f0a1693b051f53d6f) · 21/39 checks passing
+[Repository](https://github.com/zytedata/html-text) · commit [`2dc4e94`](https://github.com/zytedata/html-text/commit/2dc4e94dd92a8b15476a237f0a1693b051f53d6f) · 21/40 checks passing
 
 supports-pypy: no · license: MIT · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.7.1 (2025-10-06) · unreleased-changes: yes
 
@@ -1773,6 +1792,7 @@ supports-pypy: no · license: MIT · mypy: yes · pyrefly: no · pylint: no · h
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected tokenless, found token in .github/workflows/test.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1795,7 +1815,7 @@ supports-pypy: no · license: MIT · mypy: yes · pyrefly: no · pylint: no · h
 
 ### scrapinghub/price-parser
 
-[Repository](https://github.com/scrapinghub/price-parser) · commit [`6718bfe`](https://github.com/scrapinghub/price-parser/commit/6718bfe8447f2de17ecc152d3ad2a4c51520c755) · 24/41 checks passing
+[Repository](https://github.com/scrapinghub/price-parser) · commit [`6718bfe`](https://github.com/scrapinghub/price-parser/commit/6718bfe8447f2de17ecc152d3ad2a4c51520c755) · 24/42 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.5.1 (2026-03-19) · unreleased-changes: yes
 
@@ -1821,6 +1841,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/main.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1842,7 +1863,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapinghub/dateparser
 
-[Repository](https://github.com/scrapinghub/dateparser) · commit [`a3d3b89`](https://github.com/scrapinghub/dateparser/commit/a3d3b893bfc5efb5841aa0287521d78fbede075a) · 23/45 checks passing
+[Repository](https://github.com/scrapinghub/dateparser) · commit [`f858b9e`](https://github.com/scrapinghub/dateparser/commit/f858b9eabe7b3578007d77d42a2b8d2411da2a36) · 23/46 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 1.4.3 (2026-09-03) · unreleased-changes: yes
 
@@ -1866,6 +1887,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/main.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`branch-coverage`](REPORT.md#branch-coverage): no branch = true in coverage config, and no --cov-branch
 
@@ -1891,7 +1913,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapinghub/extruct
 
-[Repository](https://github.com/scrapinghub/extruct) · commit [`d24f541`](https://github.com/scrapinghub/extruct/commit/d24f5414fd32c874989492ebd04cb1deb6d7d04e) · 9/31 checks passing
+[Repository](https://github.com/scrapinghub/extruct) · commit [`d24f541`](https://github.com/scrapinghub/extruct/commit/d24f5414fd32c874989492ebd04cb1deb6d7d04e) · 9/32 checks passing
 
 supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.18.0 (2024-11-08) · unreleased-changes: yes
 
@@ -1919,6 +1941,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/python-package.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1943,7 +1966,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 
 ### scrapinghub/number-parser
 
-[Repository](https://github.com/scrapinghub/number-parser) · commit [`a126357`](https://github.com/scrapinghub/number-parser/commit/a1263578628a7743054879095e50532fba1cdb67) · 9/32 checks passing
+[Repository](https://github.com/scrapinghub/number-parser) · commit [`a126357`](https://github.com/scrapinghub/number-parser/commit/a1263578628a7743054879095e50532fba1cdb67) · 9/33 checks passing
 
 supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.3.2 (2023-03-28) · unreleased-changes: yes
 
@@ -1971,6 +1994,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found tokenless in .github/workflows/main.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): patch status not disabled, project status target not 100% in codecov.yml
 - ❌ [`warnings-as-errors`](REPORT.md#warnings-as-errors): no "error" in pytest filterwarnings, and no -W error
 
@@ -1998,7 +2022,7 @@ supports-pypy: no · license: BSD License · mypy: yes · pyrefly: no · pylint:
 
 ### scrapy/form2request
 
-[Repository](https://github.com/scrapy/form2request) · commit [`a251597`](https://github.com/scrapy/form2request/commit/a251597d9fa44cbd03736ec1da37f85593dfe820) · 33/46 checks passing
+[Repository](https://github.com/scrapy/form2request) · commit [`a251597`](https://github.com/scrapy/form2request/commit/a251597d9fa44cbd03736ec1da37f85593dfe820) · 34/47 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.2.0 (2024-07-15) · unreleased-changes: yes
 
@@ -2199,7 +2223,7 @@ supports-pypy: no · license: MIT License · mypy: no · pyrefly: no · pylint: 
 
 ### scrapinghub/spidermon
 
-[Repository](https://github.com/scrapinghub/spidermon) · commit [`5bac6dd`](https://github.com/scrapinghub/spidermon/commit/5bac6dd768463ece308ca67dc9fd18525364c940) · 29/45 checks passing
+[Repository](https://github.com/scrapinghub/spidermon) · commit [`5bac6dd`](https://github.com/scrapinghub/spidermon/commit/5bac6dd768463ece308ca67dc9fd18525364c940) · 29/46 checks passing
 
 supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 1.27.0 (2026-08-10) · unreleased-changes: yes
 
@@ -2221,6 +2245,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 **Tests and coverage**
 
 - ❌ [`codecov-test-results`](REPORT.md#codecov-test-results): no codecov/codecov-action step with report_type: test_results
+- ❌ [`codecov-auth`](REPORT.md#codecov-auth): expected OIDC, found token in .github/workflows/main.yml
 - ❌ [`codecov-status`](REPORT.md#codecov-status): no Codecov config
 - ❌ [`scrapy-master`](REPORT.md#scrapy-master): no CI workflow or tox environment installs Scrapy master
 
@@ -2308,7 +2333,7 @@ has-sphinx-docs: no
 
 ### scrapy/scrapy-mcp-official
 
-[Repository](https://github.com/scrapy/scrapy-mcp-official) · commit [`5530c67`](https://github.com/scrapy/scrapy-mcp-official/commit/5530c671a7078f4f06479422c623d10b846d3db9) · 32/40 checks passing
+[Repository](https://github.com/scrapy/scrapy-mcp-official) · commit [`5530c67`](https://github.com/scrapy/scrapy-mcp-official/commit/5530c671a7078f4f06479422c623d10b846d3db9) · 33/41 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.1.2 (2026-09-07) · unreleased-changes: yes
 
@@ -2337,7 +2362,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: yes · pyrefly: no · pylint: 
 
 ### zytedata/agent-exam
 
-[Repository](https://github.com/zytedata/agent-exam) · commit [`e25c638`](https://github.com/zytedata/agent-exam/commit/e25c6380c59e5386caa7085795af12d2dbd2931c) · 30/46 checks passing
+[Repository](https://github.com/zytedata/agent-exam) · commit [`e25c638`](https://github.com/zytedata/agent-exam/commit/e25c6380c59e5386caa7085795af12d2dbd2931c) · 31/47 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: yes · latest-release: 0.3.0 (2026-10-20) · unreleased-changes: yes
 
@@ -2426,7 +2451,7 @@ supports-pypy: no · license: Apache-2.0 · mypy: no · pyrefly: no · pylint: n
 
 ### zytedata/harness-run
 
-[Repository](https://github.com/zytedata/harness-run) · commit [`4028849`](https://github.com/zytedata/harness-run/commit/4028849faf48ac448b1634140cfe3a9cac8f2749) · 11/31 checks passing
+[Repository](https://github.com/zytedata/harness-run) · commit [`cc11c24`](https://github.com/zytedata/harness-run/commit/cc11c24d5494bdca045f3cf0f08d5d119918b77e) · 11/31 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: no · pyrefly: no · pylint: no · has-sphinx-docs: no · latest-release: 0.4.0 (2026-09-23) · unreleased-changes: yes
 
@@ -2569,7 +2594,7 @@ supports-pypy: no · license: BSD-3-Clause · mypy: yes · pyrefly: no · pylint
 
 ### scrapy/unattended-pr-guard
 
-[Repository](https://github.com/scrapy/unattended-pr-guard) · commit [`1e3c311`](https://github.com/scrapy/unattended-pr-guard/commit/1e3c31134253813934af43f3505d4492eee26c2a) · 9/13 checks passing
+[Repository](https://github.com/scrapy/unattended-pr-guard) · commit [`ccef11a`](https://github.com/scrapy/unattended-pr-guard/commit/ccef11ac919a3a50196cc4097fda79c25d705ff7) · 9/13 checks passing
 
 has-sphinx-docs: no
 
@@ -2585,7 +2610,7 @@ has-sphinx-docs: no
 
 ### zytedata/zyte-oss-maintenance
 
-[Repository](https://github.com/zytedata/zyte-oss-maintenance) · commit [`381dee8`](https://github.com/zytedata/zyte-oss-maintenance/commit/381dee866e5add78415e8755eaf30df749ef330e) · 16/23 checks passing
+[Repository](https://github.com/zytedata/zyte-oss-maintenance) · commit [`46a34dc`](https://github.com/zytedata/zyte-oss-maintenance/commit/46a34dc9b33a003afa14c095b633032830f8626c) · 16/23 checks passing
 
 supports-pypy: no · license: Apache-2.0 · mypy: no · pyrefly: yes · pylint: no · has-sphinx-docs: no
 
