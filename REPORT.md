@@ -1,6 +1,6 @@
 # Maintenance report
 
-Generated on 2026-10-22 with `oss-maint report`. Do not edit by hand. See [PROJECTS.md](PROJECTS.md) for what fails in each project.
+Generated on 2026-10-26 with `oss-maint report`. Do not edit by hand. See [PROJECTS.md](PROJECTS.md) for what fails in each project.
 
 ✅ passes · ❌ fails · ➖ not applicable · ⚠️ check error · yes/no or a value: result of an informational check. Click a symbol for details.
 
@@ -23,18 +23,18 @@ Checks passing per group.
 | Project | [Python versions](#python-versions) | [Packaging](#packaging) | [Dependencies](#dependencies) | [Typing](#typing) | [Tests and coverage](#tests-and-coverage) | [Linting](#linting) | [Documentation](#documentation) | [Releases](#releases) | Failing | Commit |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | --- |
 | **Scrapy and its deps** | | | | | | | | | | |
-| [scrapy/scrapy](https://github.com/scrapy/scrapy) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [✅ 6/6](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 8/10](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyscrapy) | [`4d372f0`](https://github.com/scrapy/scrapy/commit/4d372f0275c315dd7b0eb2fc9c514951c0085e0a) |
-| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌ 4/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/9](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#scrapycssselect) | [`3069b6d`](https://github.com/scrapy/cssselect/commit/3069b6da75e1adf27939ca541dcc9fb9b961abc6) |
+| [scrapy/scrapy](https://github.com/scrapy/scrapy) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [✅ 6/6](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 8/10](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyscrapy) | [`171ccbe`](https://github.com/scrapy/scrapy/commit/171ccbedb734c988fd86708fd5e0803029b6c730) |
+| [scrapy/cssselect](https://github.com/scrapy/cssselect) | [❌ 4/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 6/9](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#scrapycssselect) | [`6be624a`](https://github.com/scrapy/cssselect/commit/6be624a30e6f9a7d3b9e916ac5752d16fd73e009) |
 | [scrapy/formerly](https://github.com/scrapy/formerly) | [✅ 5/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [✅ 4/4](#typing) | [❌ 5/6](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [3](PROJECTS.md#scrapyformerly) | [`7a6e30b`](https://github.com/scrapy/formerly/commit/7a6e30b1f9821e90c26e0e81cecfd5f560c19d84) |
-| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 1/1](#dependencies) | [❌ 3/4](#typing) | [❌ 3/7](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 2/5](#documentation) | [❌ 3/4](#releases) | [11](PROJECTS.md#scrapyitemadapter) | [`03fea94`](https://github.com/scrapy/itemadapter/commit/03fea94d9a035589d5f6428f138813628b8b3488) |
+| [scrapy/itemadapter](https://github.com/scrapy/itemadapter) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 1/1](#dependencies) | [❌ 3/4](#typing) | [❌ 3/7](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 2/5](#documentation) | [❌ 3/4](#releases) | [11](PROJECTS.md#scrapyitemadapter) | [`6f91348`](https://github.com/scrapy/itemadapter/commit/6f913489f31f83a5ccd6f1861a46c5d6066ac74d) |
 | [scrapy/itemloaders](https://github.com/scrapy/itemloaders) | [❌ 1/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 12/13](#linting) | [❌ 5/9](#documentation) | [❌ 2/4](#releases) | [14](PROJECTS.md#scrapyitemloaders) | [`cb6f387`](https://github.com/scrapy/itemloaders/commit/cb6f38739aade299f6c2468b0dfa96812fa5bbb3) |
 | [scrapy/parsel](https://github.com/scrapy/parsel) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 5/6](#tests-and-coverage) | [❌ 12/13](#linting) | [❌ 8/11](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapyparsel) | [`599897f`](https://github.com/scrapy/parsel/commit/599897f486ccc066555dacbd5014812ee640eec2) |
 | [scrapy/protego](https://github.com/scrapy/protego) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [✅ 4/4](#typing) | [❌ 5/6](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [5](PROJECTS.md#scrapyprotego) | [`2ffbb5f`](https://github.com/scrapy/protego/commit/2ffbb5fd8dfe31454cdc0e7852d1f77cc63d8b9d) |
 | [scrapy/queuelib](https://github.com/scrapy/queuelib) | [❌ 3/5](#python-versions) | [❌ 6/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [9](PROJECTS.md#scrapyqueuelib) | [`d4ed6ab`](https://github.com/scrapy/queuelib/commit/d4ed6abbce003f953cc6a1163d2ea396243417e5) |
-| [scrapy/w3lib](https://github.com/scrapy/w3lib) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#scrapyw3lib) | [`5f50405`](https://github.com/scrapy/w3lib/commit/5f50405946524286e3dbc689f88eaf545417bba0) |
+| [scrapy/w3lib](https://github.com/scrapy/w3lib) | [❌ 4/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 3/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 11/13](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#scrapyw3lib) | [`eaefacd`](https://github.com/scrapy/w3lib/commit/eaefacddb86250ef302e680453e3887072b47c9b) |
 | [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌ 1/5](#python-versions) | [✅ 7/7](#packaging) | [➖](#dependencies) | [❌ 1/3](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 8/10](#linting) | [❌ 2/5](#documentation) | [✅ 4/4](#releases) | [15](PROJECTS.md#scrapyxtractmime) | [`9d50fcb`](https://github.com/scrapy/xtractmime/commit/9d50fcb0d7abd7a96f7dee746d9285faba4af6db) |
 | **Scrapy plugins** | | | | | | | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 4/7](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [6](PROJECTS.md#scrapy-pluginsscrapy-download-handlers-incubator) | [`f585f8d`](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator/commit/f585f8da60d14ec804c4b3b7d105c4ce55d5238b) |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | [✅ 3/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 5/7](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [4](PROJECTS.md#scrapy-pluginsscrapy-download-handlers-incubator) | [`8afd624`](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator/commit/8afd624c81f171cc8965850794e01aca81cfd8b8) |
 | [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 1/7](#tests-and-coverage) | [❌ 4/11](#linting) | [❌ 8/11](#documentation) | [❌ 1/4](#releases) | [28](PROJECTS.md#scrapy-pluginsscrapy-playwright) | [`2658f86`](https://github.com/scrapy-plugins/scrapy-playwright/commit/2658f86a4771b918dbe1d32c345ca70e34d43648) |
 | [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | [❌ 4/5](#python-versions) | [❌ 3/6](#packaging) | [✅ 2/2](#dependencies) | [✅ 4/4](#typing) | [❌ 4/7](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 8/11](#documentation) | [❌ 2/4](#releases) | [13](PROJECTS.md#scrapy-pluginsscrapy-spider-metadata) | [`bde680a`](https://github.com/scrapy-plugins/scrapy-spider-metadata/commit/bde680ab6865e920b06b970417125ace5c03ce71) |
 | [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/4](#typing) | [❌ 2/7](#tests-and-coverage) | [❌ 2/7](#linting) | [❌ 2/4](#documentation) | [❌ 1/4](#releases) | [24](PROJECTS.md#zytedataduplicate-url-discarder) | [`8db08b3`](https://github.com/zytedata/duplicate-url-discarder/commit/8db08b3edf638f34ee6ad7393612f579b5bfb90f) |
@@ -65,23 +65,23 @@ Checks passing per group.
 | [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | [❌ 1/5](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 0/9](#linting) | [❌ 9/11](#documentation) | [✅ 4/4](#releases) | [27](PROJECTS.md#scrapinghubpython-scrapinghub) | [`d0d7b29`](https://github.com/scrapinghub/python-scrapinghub/commit/d0d7b29153e40bbb0f9c56ab23caab86393f853e) |
 | [scrapinghub/shub](https://github.com/scrapinghub/shub) | [❌ 0/3](#python-versions) | [❌ 4/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 5/11](#linting) | [❌ 9/11](#documentation) | [❌ 2/4](#releases) | [24](PROJECTS.md#scrapinghubshub) | [`8c1a5db`](https://github.com/scrapinghub/shub/commit/8c1a5db761c4e6ee40fe3122d8a33e461eef4edd) |
 | [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/7](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 2/5](#documentation) | [❌ 2/4](#releases) | [24](PROJECTS.md#scrapinghubscrapinghub-entrypoint-scrapy) | [`bf9632c`](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy/commit/bf9632c78355b545126363ce557106c1b9c3bb54) |
-| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 1/4](#documentation) | [❌ 0/4](#releases) | [24](PROJECTS.md#scrapinghubshub-workflow) | [`4696153`](https://github.com/scrapinghub/shub-workflow/commit/4696153f1eaada4cee923c183ca35b34569aafac) |
+| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 1/4](#documentation) | [❌ 0/4](#releases) | [24](PROJECTS.md#scrapinghubshub-workflow) | [`97b59ba`](https://github.com/scrapinghub/shub-workflow/commit/97b59badcbec4ce8a0e5d6c9d4a116fb4f71f64c) |
 | [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | [❌ 0/3](#python-versions) | [❌ 0/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/7](#tests-and-coverage) | [❌ 3/9](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [25](PROJECTS.md#scrapinghubscrapy-frontera) | [`56ea2e1`](https://github.com/scrapinghub/scrapy-frontera/commit/56ea2e1ef39a174eac61da2edcdb21d1f1ecf5e5) |
 | [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/7](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 0/4](#documentation) | [❌ 1/4](#releases) | [25](PROJECTS.md#scrapinghubfrontera) | [`c94beae`](https://github.com/scrapinghub/frontera/commit/c94beae2f438492139d24759729d0201779ccf1c) |
 | [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/6](#tests-and-coverage) | [❌ 3/9](#linting) | [❌ 2/5](#documentation) | [❌ 2/4](#releases) | [24](PROJECTS.md#scrapinghubhcf-backend) | [`bbdc50c`](https://github.com/scrapinghub/hcf-backend/commit/bbdc50cd1d250742234aacc2d5da10c4fe4d9508) |
 | **Data extraction** | | | | | | | | | | |
 | [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [14](PROJECTS.md#zytedatazyte-parsers) | [`4f5d08d`](https://github.com/zytedata/zyte-parsers/commit/4f5d08d1be951fa438f0aedd598d61a61c360ea0) |
 | [zytedata/clear-html](https://github.com/zytedata/clear-html) | [❌ 0/3](#python-versions) | [✅ 7/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 3/6](#tests-and-coverage) | [❌ 9/10](#linting) | [❌ 3/5](#documentation) | [✅ 4/4](#releases) | [10](PROJECTS.md#zytedataclear-html) | [`6b820b1`](https://github.com/zytedata/clear-html/commit/6b820b13221145ceb0814e47e9583e5574d28865) |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 5/9](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [19](PROJECTS.md#zytedatahtml-text) | [`2dc4e94`](https://github.com/zytedata/html-text/commit/2dc4e94dd92a8b15476a237f0a1693b051f53d6f) |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | [✅ 3/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 6/9](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [13](PROJECTS.md#zytedatahtml-text) | [`3955be2`](https://github.com/zytedata/html-text/commit/3955be2f85381e7198bdd99f5e9ce903786c7a9e) |
 | [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 1/2](#dependencies) | [❌ 3/4](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 8/11](#linting) | [❌ 3/5](#documentation) | [❌ 2/4](#releases) | [18](PROJECTS.md#scrapinghubprice-parser) | [`6718bfe`](https://github.com/scrapinghub/price-parser/commit/6718bfe8447f2de17ecc152d3ad2a4c51520c755) |
-| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/3](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 7/13](#linting) | [❌ 5/9](#documentation) | [❌ 3/4](#releases) | [23](PROJECTS.md#scrapinghubdateparser) | [`f858b9e`](https://github.com/scrapinghub/dateparser/commit/f858b9eabe7b3578007d77d42a2b8d2411da2a36) |
+| [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌ 0/3](#python-versions) | [❌ 2/6](#packaging) | [✅ 2/2](#dependencies) | [❌ 2/3](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 7/13](#linting) | [❌ 5/9](#documentation) | [❌ 3/4](#releases) | [23](PROJECTS.md#scrapinghubdateparser) | [`2f54bb0`](https://github.com/scrapinghub/dateparser/commit/2f54bb035c9e52d30d33af82300f127de4acec6f) |
 | [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 2/7](#linting) | [❌ 2/4](#documentation) | [❌ 1/4](#releases) | [23](PROJECTS.md#scrapinghubextruct) | [`d24f541`](https://github.com/scrapinghub/extruct/commit/d24f5414fd32c874989492ebd04cb1deb6d7d04e) |
 | [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser) | [❌ 0/2](#python-versions) | [❌ 0/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 1/3](#typing) | [❌ 2/6](#tests-and-coverage) | [❌ 4/9](#linting) | [❌ 2/4](#documentation) | [❌ 0/4](#releases) | [24](PROJECTS.md#scrapinghubnumber-parser) | [`a126357`](https://github.com/scrapinghub/number-parser/commit/a1263578628a7743054879095e50532fba1cdb67) |
 | **Forms** | | | | | | | | | | |
 | [scrapy/form2request](https://github.com/scrapy/form2request) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 3/4](#typing) | [❌ 4/6](#tests-and-coverage) | [❌ 11/12](#linting) | [❌ 5/9](#documentation) | [✅ 4/4](#releases) | [13](PROJECTS.md#scrapyform2request) | [`a251597`](https://github.com/scrapy/form2request/commit/a251597d9fa44cbd03736ec1da37f85593dfe820) |
 | [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | [❌ 0/3](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 4/9](#documentation) | [❌ 2/4](#releases) | [25](PROJECTS.md#scrapinghubformasaurus) | [`4bb46a9`](https://github.com/scrapinghub/Formasaurus/commit/4bb46a95c7851622bb63ca7459d4d6d2587297ab) |
 | [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [✅ 1/1](#dependencies) | [❌ 0/2](#typing) | [❌ 2/5](#tests-and-coverage) | [❌ 2/9](#linting) | [❌ 3/8](#documentation) | [❌ 1/4](#releases) | [25](PROJECTS.md#scrapinghubsklearn-crfsuite) | [`e18a02a`](https://github.com/scrapinghub/sklearn-crfsuite/commit/e18a02ae11b61f703c0ec460c44cfdd90db00591) |
-| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌ 0/3](#python-versions) | [❌ 0/6](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 0/6](#linting) | [❌ 5/9](#documentation) | [❌ 2/4](#releases) | [28](PROJECTS.md#scrapinghubpython-crfsuite) | [`c2eee32`](https://github.com/scrapinghub/python-crfsuite/commit/c2eee3267750c585d3ef5eebaf632d3ee7855249) |
+| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | [❌ 0/3](#python-versions) | [❌ 0/6](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 0/6](#linting) | [❌ 5/9](#documentation) | [❌ 2/4](#releases) | [28](PROJECTS.md#scrapinghubpython-crfsuite) | [`d3ee2eb`](https://github.com/scrapinghub/python-crfsuite/commit/d3ee2eba443d5d3b313741bed5076b5a36a840d1) |
 | **Monitoring** | | | | | | | | | | |
 | [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | [❌ 0/3](#python-versions) | [❌ 6/7](#packaging) | [✅ 2/2](#dependencies) | [❌ 1/3](#typing) | [❌ 3/7](#tests-and-coverage) | [❌ 9/11](#linting) | [❌ 5/9](#documentation) | [❌ 3/4](#releases) | [17](PROJECTS.md#scrapinghubspidermon) | [`5bac6dd`](https://github.com/scrapinghub/spidermon/commit/5bac6dd768463ece308ca67dc9fd18525364c940) |
 | [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | [❌ 0/2](#python-versions) | [❌ 1/4](#packaging) | [❌ 0/1](#dependencies) | [❌ 0/2](#typing) | [❌ 1/5](#tests-and-coverage) | [❌ 0/4](#linting) | [❌ 0/4](#documentation) | [❌ 0/4](#releases) | [24](PROJECTS.md#scrapy-pluginszyte-spidermon) | [`8186fbe`](https://github.com/scrapy-plugins/zyte-spidermon/commit/8186fbe6d1c9233dc576ec725d3b2e046de032dd) |
@@ -95,7 +95,7 @@ Checks passing per group.
 | **Maintenance** | | | | | | | | | | |
 | [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy) | [❌ 0/3](#python-versions) | [❌ 5/7](#packaging) | [❌ 0/2](#dependencies) | [❌ 2/3](#typing) | [❌ 0/4](#tests-and-coverage) | [❌ 8/10](#linting) | [❌ 3/5](#documentation) | [❌ 3/4](#releases) | [17](PROJECTS.md#scrapysphinx-scrapy) | [`9231605`](https://github.com/scrapy/sphinx-scrapy/commit/9231605ac5f164edf053998ed9ba4b61b385f691) |
 | [scrapy/unattended-pr-guard](https://github.com/scrapy/unattended-pr-guard) | [➖](#python-versions) | [➖](#packaging) | [➖](#dependencies) | [➖](#typing) | [➖](#tests-and-coverage) | [❌ 6/8](#linting) | [❌ 2/4](#documentation) | [✅ 1/1](#releases) | [4](PROJECTS.md#scrapyunattended-pr-guard) | [`ccef11a`](https://github.com/scrapy/unattended-pr-guard/commit/ccef11ac919a3a50196cc4097fda79c25d705ff7) |
-| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [❌ 1/2](#python-versions) | [✅ 4/4](#packaging) | [➖](#dependencies) | [✅ 1/1](#typing) | [❌ 0/4](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 0/2](#documentation) | [➖](#releases) | [7](PROJECTS.md#zytedatazyte-oss-maintenance) | [`46a34dc`](https://github.com/zytedata/zyte-oss-maintenance/commit/46a34dc9b33a003afa14c095b633032830f8626c) |
+| [zytedata/zyte-oss-maintenance](https://github.com/zytedata/zyte-oss-maintenance) | [❌ 1/2](#python-versions) | [✅ 4/4](#packaging) | [➖](#dependencies) | [✅ 1/1](#typing) | [❌ 0/4](#tests-and-coverage) | [✅ 10/10](#linting) | [❌ 0/2](#documentation) | [➖](#releases) | [7](PROJECTS.md#zytedatazyte-oss-maintenance) | [`33546be`](https://github.com/zytedata/zyte-oss-maintenance/commit/33546be47ed3018078b5afe31c1da7b7c6a46897) |
 
 ## Release candidates
 
@@ -116,6 +116,7 @@ Projects with commits since their latest release, oldest release first.
 - [zytedata/html-text](https://github.com/zytedata/html-text): 0.7.1 (2025-10-06)
 - [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): 0.6.0 (2025-10-24)
 - [zytedata/clear-html](https://github.com/zytedata/clear-html): 0.5.0 (2025-10-24)
+- [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite): 0.9.12 (2025-12-23)
 - [scrapy/itemadapter](https://github.com/scrapy/itemadapter): 0.13.1 (2026-01-08)
 - [scrapy/scrapy-lint](https://github.com/scrapy/scrapy-lint): 0.1.1 (2026-01-27)
 - [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy): 0.18.1 (2026-01-28)
@@ -133,7 +134,6 @@ Projects with commits since their latest release, oldest release first.
 - [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser): 1.4.3 (2026-09-03)
 - [scrapy/scrapy-mcp-official](https://github.com/scrapy/scrapy-mcp-official): 0.1.2 (2026-09-07)
 - [scrapy/scrapy](https://github.com/scrapy/scrapy): 2.19.0 (2026-09-10)
-- [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator): 0.5.1 (2026-09-11)
 - [zytedata/claude-measure-usage](https://github.com/zytedata/claude-measure-usage): 0.1.1 (2026-09-14)
 - [scrapinghub/andi](https://github.com/scrapinghub/andi): 0.9.0 (2026-09-17)
 - [scrapy/protego](https://github.com/scrapy/protego): 0.7.0 (2026-09-21)
@@ -144,15 +144,16 @@ Projects with commits since their latest release, oldest release first.
 - [scrapy/w3lib](https://github.com/scrapy/w3lib): 2.5.0 (2026-09-30)
 - [scrapy/cssselect](https://github.com/scrapy/cssselect): 1.6.0 (2026-10-09)
 - [zytedata/agent-exam](https://github.com/zytedata/agent-exam): 0.3.0 (2026-10-20)
+- [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator): 0.6.0 (2026-10-24)
 
 ## Python versions
 
 | Check | Statement | Results |
 | --- | --- | --- |
-| [`no-eol-python`](#no-eol-python) | Support for end-of-life Python versions is dropped. | 16/60 passing |
-| [`latest-python`](#latest-python) | The latest stable Python version is declared as supported and tested in CI. | 18/60 passing |
+| [`no-eol-python`](#no-eol-python) | Support for end-of-life Python versions is dropped. | 17/60 passing |
+| [`latest-python`](#latest-python) | The latest stable Python version is declared as supported and tested in CI. | 19/60 passing |
 | [`unreleased-python`](#unreleased-python) | The upcoming Python version is tested in CI, once it has a release candidate. | 0/0 passing |
-| [`python-classifiers`](#python-classifiers) | Python version classifiers match requires-python: there is one for every supported Python version it allows, and none for versions it excludes. | 18/52 passing |
+| [`python-classifiers`](#python-classifiers) | Python version classifiers match requires-python: there is one for every supported Python version it allows, and none for versions it excludes. | 19/52 passing |
 | [`supports-pypy`](#supports-pypy) | The project supports PyPy: it has the PyPy classifier or tests PyPy in CI. | 11/60 yes |
 | [`latest-pypy`](#latest-pypy) | The latest PyPy version is declared as supported and tested in CI. | 1/11 passing |
 | [`no-eol-pypy`](#no-eol-pypy) | End-of-life PyPy versions are not tested in CI. | 11/11 passing |
@@ -209,7 +210,7 @@ Projects with commits since their latest release, oldest release first.
 | **Data extraction** | | | | | | | |
 | [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
 | [zytedata/clear-html](https://github.com/zytedata/clear-html) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | ✅ | ✅ | [➖](#unreleased-python) | ✅ | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
 | [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
 | [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
 | [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌](#no-eol-python) | [❌](#latest-python) | [➖](#unreleased-python) | [❌](#python-classifiers) | no | [➖](#latest-pypy) | [➖](#no-eol-pypy) |
@@ -266,7 +267,6 @@ Support for end-of-life Python versions is dropped.
 - ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): requires-python is not declared
 - ❌ [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [zytedata/clear-html](https://github.com/zytedata/clear-html): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): requires-python '>=3.9' allows 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01); classifiers list 3.9, 3.10
 - ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): requires-python '>=3.9' allows 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01); classifiers list 3.9, 3.10
 - ❌ [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser): requires-python '>=3.10' allows 3.10 (EOL 2026-10-01); classifiers list 3.10
 - ❌ [scrapinghub/extruct](https://github.com/scrapinghub/extruct): requires-python '>=3.8' allows 3.8 (EOL 2024-10-07), 3.9 (EOL 2025-10-31), 3.10 (EOL 2026-10-01); classifiers list 3.8, 3.9, 3.10
@@ -315,7 +315,6 @@ The latest stable Python version is declared as supported and tested in CI.
 - ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [zytedata/clear-html](https://github.com/zytedata/clear-html): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
 - ❌ [scrapinghub/extruct](https://github.com/scrapinghub/extruct): no 'Programming Language :: Python :: 3.15' classifier; 3.15 not found in CI workflows or tox config
@@ -368,7 +367,6 @@ Python version classifiers match requires-python: there is one for every support
 - ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): no Python version classifiers
 - ❌ [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): no classifiers for 3.15
 - ❌ [zytedata/clear-html](https://github.com/zytedata/clear-html): no classifiers for 3.15
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): no classifiers for 3.15
 - ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): no classifiers for 3.15
 - ❌ [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser): no classifiers for 3.15
 - ❌ [scrapinghub/extruct](https://github.com/scrapinghub/extruct): no classifiers for 3.13, 3.14, 3.15
@@ -702,8 +700,8 @@ The sdist includes only listed files, which include the tests, the docs and the 
 
 | Check | Statement | Results |
 | --- | --- | --- |
-| [`dependency-lower-bounds`](#dependency-lower-bounds) | Every runtime dependency has a lower bound. | 25/34 passing |
-| [`min-deps-env`](#min-deps-env) | A tox environment tests the minimum versions of dependencies (its name has min, minimum, lowest or pinned in it). | 30/51 passing |
+| [`dependency-lower-bounds`](#dependency-lower-bounds) | Every runtime dependency has a lower bound. | 26/34 passing |
+| [`min-deps-env`](#min-deps-env) | A tox environment tests the minimum versions of dependencies (its name has min, minimum, lowest or pinned in it). | 31/51 passing |
 
 | Project | [dependency-lower-bounds](#dependency-lower-bounds) | [min-deps-env](#min-deps-env) |
 | --- | :---: | :---: |
@@ -757,7 +755,7 @@ The sdist includes only listed files, which include the tests, the docs and the 
 | **Data extraction** | | |
 | [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | [❌](#dependency-lower-bounds) | [❌](#min-deps-env) |
 | [zytedata/clear-html](https://github.com/zytedata/clear-html) | ✅ | ✅ |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | [❌](#dependency-lower-bounds) | [❌](#min-deps-env) |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | ✅ | ✅ |
 | [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | ✅ | [❌](#min-deps-env) |
 | [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | ✅ | ✅ |
 | [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [➖](#dependency-lower-bounds) | [❌](#min-deps-env) |
@@ -791,7 +789,6 @@ Every runtime dependency has a lower bound.
 - ❌ [scrapy-plugins/scrapy-feedexporter-onedrive](https://github.com/scrapy-plugins/scrapy-feedexporter-onedrive): no lower bound: requests
 - ❌ [scrapinghub/shub](https://github.com/scrapinghub/shub): no lower bound: docker, importlib-metadata, packaging, PyYAML, requests, retrying, setuptools, toml
 - ❌ [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): no lower bound: html-text, lxml, parsel, six, w3lib
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): no lower bound: lxml, lxml-html-clean
 - ❌ [zytedata/harness-run](https://github.com/zytedata/harness-run): no lower bound: google-cloud-storage, google-auth, packaging, pyyaml, jsonschema
 - ❌ [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly): no lower bound: docutils, tabulate
 - ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): no lower bound: docutils, packaging, sphinx-copybutton, sphinx-design, sphinx-sitemap, sphinxcontrib-youtube, tomli
@@ -817,7 +814,6 @@ A tox environment tests the minimum versions of dependencies (its name has min, 
 - ❌ [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow): no tox environment for minimum dependency versions
 - ❌ [scrapinghub/frontera](https://github.com/scrapinghub/frontera): no tox environment for minimum dependency versions
 - ❌ [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers): no tox environment for minimum dependency versions
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): no tox environment for minimum dependency versions
 - ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): no tox environment for minimum dependency versions
 - ❌ [scrapinghub/extruct](https://github.com/scrapinghub/extruct): no tox environment for minimum dependency versions
 - ❌ [scrapinghub/number-parser](https://github.com/scrapinghub/number-parser): no tox environment for minimum dependency versions
@@ -836,7 +832,7 @@ A tox environment tests the minimum versions of dependencies (its name has min, 
 | Check | Statement | Results |
 | --- | --- | --- |
 | [`py-typed`](#py-typed) | The package ships type hints (a py.typed marker). | 28/59 passing |
-| [`typed-classifier`](#typed-classifier) | A package with a py.typed marker has the 'Typing :: Typed' classifier. | 5/28 passing |
+| [`typed-classifier`](#typed-classifier) | A package with a py.typed marker has the 'Typing :: Typed' classifier. | 6/28 passing |
 | [`type-checker`](#type-checker) | A type checker (mypy or pyrefly) runs in tox, CI workflows or pre-commit. | 39/60 passing |
 | [`mypy`](#mypy) | mypy runs in tox, CI workflows or pre-commit. | 38/59 yes |
 | [`pyrefly`](#pyrefly) | pyrefly runs in tox, CI workflows or pre-commit. | 1/60 yes |
@@ -856,7 +852,7 @@ A tox environment tests the minimum versions of dependencies (its name has min, 
 | [scrapy/w3lib](https://github.com/scrapy/w3lib) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
 | [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
 | **Scrapy plugins** | | | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | ✅ |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | ✅ | ✅ | ✅ | yes | no | ✅ |
 | [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | [❌](#py-typed) | [➖](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
 | [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | ✅ | ✅ | ✅ | yes | no | ✅ |
 | [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | ✅ | [❌](#typed-classifier) | ✅ | yes | no | [❌](#mypy-strict) |
@@ -968,7 +964,6 @@ A package with a py.typed marker has the 'Typing :: Typed' classifier.
 - ❌ [scrapy/itemloaders](https://github.com/scrapy/itemloaders): no 'Typing :: Typed' classifier
 - ❌ [scrapy/queuelib](https://github.com/scrapy/queuelib): no 'Typing :: Typed' classifier
 - ❌ [scrapy/w3lib](https://github.com/scrapy/w3lib): no 'Typing :: Typed' classifier
-- ❌ [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator): no 'Typing :: Typed' classifier
 - ❌ [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder): no 'Typing :: Typed' classifier
 - ❌ [zytedata/duplicate-url-discarder-rules](https://github.com/zytedata/duplicate-url-discarder-rules): no 'Typing :: Typed' classifier
 - ❌ [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet): no 'Typing :: Typed' classifier
@@ -1064,7 +1059,7 @@ mypy runs in strict mode: strict = true in its config, or --strict.
 | [`codecov-auth`](#codecov-auth) | Codecov uploads use OIDC (use_oidc: true, with id-token: write permission) in scrapinghub, where tokenless uploads are not allowed, and are tokenless elsewhere. | 17/42 passing |
 | [`codecov-status`](#codecov-status) | The Codecov config disables the patch status and sets a 100% target for the project status. | 8/45 passing |
 | [`branch-coverage`](#branch-coverage) | Branch coverage is enabled. | 32/60 passing |
-| [`warnings-as-errors`](#warnings-as-errors) | pytest turns warnings into errors: "error" in filterwarnings, or -W error. | 8/60 passing |
+| [`warnings-as-errors`](#warnings-as-errors) | pytest turns warnings into errors: "error" in filterwarnings, or -W error. | 9/60 passing |
 | [`scrapy-master`](#scrapy-master) | CI tests against Scrapy installed from its master branch. | 2/21 passing |
 
 | Project | [codecov](#codecov) | [codecov-test-results](#codecov-test-results) | [codecov-auth](#codecov-auth) | [codecov-status](#codecov-status) | [branch-coverage](#branch-coverage) | [warnings-as-errors](#warnings-as-errors) | [scrapy-master](#scrapy-master) |
@@ -1081,7 +1076,7 @@ mypy runs in strict mode: strict = true in its config, or --strict.
 | [scrapy/w3lib](https://github.com/scrapy/w3lib) | ✅ | [❌](#codecov-test-results) | ✅ | ✅ | ✅ | [❌](#warnings-as-errors) | [➖](#scrapy-master) |
 | [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | ✅ | [❌](#codecov-test-results) | ✅ | [❌](#codecov-status) | [❌](#branch-coverage) | [❌](#warnings-as-errors) | [➖](#scrapy-master) |
 | **Scrapy plugins** | | | | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | ✅ | ✅ | ✅ | [❌](#codecov-status) | ✅ | [❌](#warnings-as-errors) | [❌](#scrapy-master) |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | ✅ | ✅ | ✅ | [❌](#codecov-status) | ✅ | ✅ | [❌](#scrapy-master) |
 | [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | ✅ | [❌](#codecov-test-results) | [❌](#codecov-auth) | [❌](#codecov-status) | [❌](#branch-coverage) | [❌](#warnings-as-errors) | [❌](#scrapy-master) |
 | [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | ✅ | ✅ | [❌](#codecov-auth) | ✅ | ✅ | [❌](#warnings-as-errors) | [❌](#scrapy-master) |
 | [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | ✅ | [❌](#codecov-test-results) | [❌](#codecov-auth) | [❌](#codecov-status) | ✅ | [❌](#warnings-as-errors) | [❌](#scrapy-master) |
@@ -1342,7 +1337,6 @@ pytest turns warnings into errors: "error" in filterwarnings, or -W error.
 - ❌ [scrapy/queuelib](https://github.com/scrapy/queuelib): no "error" in pytest filterwarnings, and no -W error
 - ❌ [scrapy/w3lib](https://github.com/scrapy/w3lib): no "error" in pytest filterwarnings, and no -W error
 - ❌ [scrapy/xtractmime](https://github.com/scrapy/xtractmime): no "error" in pytest filterwarnings, and no -W error
-- ❌ [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator): no "error" in pytest filterwarnings, and no -W error
 - ❌ [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright): no "error" in pytest filterwarnings, and no -W error
 - ❌ [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata): no "error" in pytest filterwarnings, and no -W error
 - ❌ [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder): no "error" in pytest filterwarnings, and no -W error
@@ -1426,7 +1420,7 @@ CI tests against Scrapy installed from its master branch.
 | [`pre-commit-in-ci`](#pre-commit-in-ci) | pre-commit runs in CI workflows, directly or through tox, or in pre-commit.ci. | 47/52 passing |
 | [`pre-commit-tox`](#pre-commit-tox) | A tox environment runs pre-commit on all files. | 39/52 passing |
 | [`pre-commit-hooks`](#pre-commit-hooks) | The hooks of https://github.com/pre-commit/pre-commit-hooks are used. | 36/52 passing |
-| [`pre-commit-updates`](#pre-commit-updates) | The ruff and zizmor pre-commit hooks are updated within 180 days of a new release. | 35/45 passing |
+| [`pre-commit-updates`](#pre-commit-updates) | The ruff and zizmor pre-commit hooks are updated within 180 days of a new release. | 36/45 passing |
 | [`actionlint`](#actionlint) | GitHub Actions workflows are linted with actionlint. | 28/58 passing |
 | [`zizmor`](#zizmor) | GitHub Actions workflows are audited with zizmor. | 34/58 passing |
 | [`dependabot`](#dependabot) | Dependabot updates GitHub Actions, which zizmor requires pinning. | 32/34 passing |
@@ -1488,7 +1482,7 @@ CI tests against Scrapy installed from its master branch.
 | **Data extraction** | | | | | | | | | | | | | | | |
 | [zytedata/zyte-parsers](https://github.com/zytedata/zyte-parsers) | ✅ | ✅ | no | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [❌](#workflow-concurrency) | [➖](#pr-guard-trusted-users) | yes | ✅ | ✅ |
 | [zytedata/clear-html](https://github.com/zytedata/clear-html) | ✅ | ✅ | no | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [❌](#workflow-concurrency) | [➖](#pr-guard-trusted-users) | no | [➖](#blacken-docs) | [➖](#sphinx-lint) |
-| [zytedata/html-text](https://github.com/zytedata/html-text) | ✅ | ✅ | no | ✅ | ✅ | ✅ | [❌](#pre-commit-updates) | [❌](#actionlint) | [❌](#zizmor) | [➖](#dependabot) | [❌](#workflow-concurrency) | [➖](#pr-guard-trusted-users) | no | [➖](#blacken-docs) | [➖](#sphinx-lint) |
+| [zytedata/html-text](https://github.com/zytedata/html-text) | ✅ | ✅ | no | ✅ | ✅ | ✅ | ✅ | [❌](#actionlint) | [❌](#zizmor) | [➖](#dependabot) | [❌](#workflow-concurrency) | [➖](#pr-guard-trusted-users) | no | [➖](#blacken-docs) | [➖](#sphinx-lint) |
 | [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser) | ✅ | ✅ | no | ✅ | ✅ | ✅ | [❌](#pre-commit-updates) | [❌](#actionlint) | ✅ | ✅ | [❌](#workflow-concurrency) | ✅ | no | [➖](#blacken-docs) | [➖](#sphinx-lint) |
 | [scrapinghub/dateparser](https://github.com/scrapinghub/dateparser) | ✅ | ✅ | no | ✅ | ✅ | [❌](#pre-commit-hooks) | ✅ | [❌](#actionlint) | ✅ | ✅ | [❌](#workflow-concurrency) | [❌](#pr-guard-trusted-users) | yes | [❌](#blacken-docs) | [❌](#sphinx-lint) |
 | [scrapinghub/extruct](https://github.com/scrapinghub/extruct) | [❌](#ruff) | [➖](#ruff-rules) | no | ✅ | ✅ | [❌](#pre-commit-hooks) | [➖](#pre-commit-updates) | [❌](#actionlint) | [❌](#zizmor) | [➖](#dependabot) | [❌](#workflow-concurrency) | [➖](#pr-guard-trusted-users) | no | [➖](#blacken-docs) | [➖](#sphinx-lint) |
@@ -1619,7 +1613,6 @@ The ruff and zizmor pre-commit hooks are updated within 180 days of a new releas
 - ❌ [scrapinghub/scrapy-poet](https://github.com/scrapinghub/scrapy-poet): outdated: ruff v0.15.6 (0.15.12 or later expected)
 - ❌ [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera): outdated: ruff v0.9.4 (0.15.12 or later expected)
 - ❌ [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend): outdated: ruff v0.11.12 (0.15.12 or later expected)
-- ❌ [zytedata/html-text](https://github.com/zytedata/html-text): outdated: ruff v0.13.2 (0.15.12 or later expected)
 - ❌ [scrapinghub/price-parser](https://github.com/scrapinghub/price-parser): outdated: ruff v0.13.2 (0.15.12 or later expected)
 - ❌ [scrapy/sphinx-llm-friendly](https://github.com/scrapy/sphinx-llm-friendly): outdated: ruff v0.11.13 (0.15.12 or later expected)
 - ❌ [scrapy/sphinx-scrapy](https://github.com/scrapy/sphinx-scrapy): outdated: ruff v0.11.13 (0.15.12 or later expected)
@@ -2144,8 +2137,8 @@ bump-my-version replaces (unreleased) in the changelog with the release date.
 
 | Check | Statement | Results |
 | --- | --- | --- |
-| [`latest-release`](#latest-release) | The latest release on PyPI, with its date. | no (5), 0.1.0 (2026-10-21) (2), 2.19.0 (2026-09-10) (1), 1.6.0 (2026-10-09) (1), 0.1.0 (2026-08-05) (1), 0.13.1 (2026-01-08) (1), 1.5.0 (2026-09-29) (1), 1.12.1 (2026-09-28) (1), 0.7.0 (2026-09-21) (1), 1.10.0 (2026-08-24) (1), 2.5.0 (2026-09-30) (1), 0.2.1 (2024-01-16) (1), 0.5.1 (2026-09-11) (1), 0.0.48 (2026-07-10) (1), 0.2.0 (2024-09-26) (1), 0.3.0 (2024-12-30) (1), 2024.11.5 (2024-11-05) (1), 0.1.1 (2026-01-27) (1), 0.18.1 (2026-06-29) (1), 1.1.0 (2025-02-12) (1), 0.27.2 (2026-04-28) (1), 0.9.0 (2026-09-17) (1), 0.24.1 (2026-04-28) (1), 0.6.0 (2025-02-14) (1), 0.1.6 (2026-09-23) (1), 0.36.0 (2026-08-20) (1), 0.11.0 (2026-07-23) (1), 2.4.1 (2025-03-24) (1), 0.31.0 (2026-10-16) (1), 2.9.0 (2026-08-12) (1), 2.18.1 (2026-07-08) (1), 0.18.1 (2026-01-28) (1), 1.14.44.2 (2026-10-22) (1), 0.3.0 (2025-06-06) (1), 0.8.1 (2019-04-05) (1), 0.6.1 (2025-10-31) (1), 0.6.0 (2025-10-24) (1), 0.5.0 (2025-10-24) (1), 0.7.1 (2025-10-06) (1), 0.5.1 (2026-03-19) (1), 1.4.3 (2026-09-03) (1), 0.18.0 (2024-11-08) (1), 0.3.2 (2023-03-28) (1), 0.2.0 (2024-07-15) (1), 0.10.0 (2024-11-07) (1), 0.5.0 (2024-06-18) (1), 0.9.12 (2025-12-23) (1), 1.27.0 (2026-08-10) (1), 0.1.2 (2026-09-07) (1), 0.3.0 (2026-10-20) (1), 0.1.1 (2026-09-14) (1), 0.4.0 (2026-09-23) (1), 0.7.0 (2026-10-03) (1), 0.14.0 (2026-10-14) (1) |
-| [`unreleased-changes`](#unreleased-changes) | The default branch has commits since the latest release on PyPI. | 43/54 yes |
+| [`latest-release`](#latest-release) | The latest release on PyPI, with its date. | no (5), 0.1.0 (2026-10-21) (2), 2.19.0 (2026-09-10) (1), 1.6.0 (2026-10-09) (1), 0.1.0 (2026-08-05) (1), 0.13.1 (2026-01-08) (1), 1.5.0 (2026-09-29) (1), 1.12.1 (2026-09-28) (1), 0.7.0 (2026-09-21) (1), 1.10.0 (2026-08-24) (1), 2.5.0 (2026-09-30) (1), 0.2.1 (2024-01-16) (1), 0.6.0 (2026-10-24) (1), 0.0.48 (2026-07-10) (1), 0.2.0 (2024-09-26) (1), 0.3.0 (2024-12-30) (1), 2024.11.5 (2024-11-05) (1), 0.1.1 (2026-01-27) (1), 0.18.1 (2026-06-29) (1), 1.1.0 (2025-02-12) (1), 0.27.2 (2026-04-28) (1), 0.9.0 (2026-09-17) (1), 0.24.1 (2026-04-28) (1), 0.6.0 (2025-02-14) (1), 0.1.6 (2026-09-23) (1), 0.36.0 (2026-08-20) (1), 0.11.0 (2026-07-23) (1), 2.4.1 (2025-03-24) (1), 0.31.0 (2026-10-16) (1), 2.9.0 (2026-08-12) (1), 2.18.1 (2026-07-08) (1), 0.18.1 (2026-01-28) (1), 1.14.44.3 (2026-10-23) (1), 0.3.0 (2025-06-06) (1), 0.8.1 (2019-04-05) (1), 0.6.1 (2025-10-31) (1), 0.6.0 (2025-10-24) (1), 0.5.0 (2025-10-24) (1), 0.7.1 (2025-10-06) (1), 0.5.1 (2026-03-19) (1), 1.4.3 (2026-09-03) (1), 0.18.0 (2024-11-08) (1), 0.3.2 (2023-03-28) (1), 0.2.0 (2024-07-15) (1), 0.10.0 (2024-11-07) (1), 0.5.0 (2024-06-18) (1), 0.9.12 (2025-12-23) (1), 1.27.0 (2026-08-10) (1), 0.1.2 (2026-09-07) (1), 0.3.0 (2026-10-20) (1), 0.1.1 (2026-09-14) (1), 0.4.0 (2026-09-23) (1), 0.7.0 (2026-10-03) (1), 0.14.0 (2026-10-14) (1) |
+| [`unreleased-changes`](#unreleased-changes) | The default branch has commits since the latest release on PyPI. | 44/54 yes |
 | [`trusted-publishing`](#trusted-publishing) | Releases are published to PyPI from GitHub Actions through trusted publishing, in a job with a GitHub environment. | 37/59 passing |
 | [`publish-on-tag`](#publish-on-tag) | Publishing is triggered by pushing a tag, not by creating a GitHub release. | 48/59 passing |
 | [`separate-build-job`](#separate-build-job) | The publish workflow builds distributions in a separate job from the one that publishes them. | 22/59 passing |
@@ -2165,7 +2158,7 @@ bump-my-version replaces (unreleased) in the changelog with the release date.
 | [scrapy/w3lib](https://github.com/scrapy/w3lib) | 2.5.0 (2026-09-30) | yes | ✅ | ✅ | ✅ | ✅ |
 | [scrapy/xtractmime](https://github.com/scrapy/xtractmime) | 0.2.1 (2024-01-16) | yes | ✅ | ✅ | ✅ | ✅ |
 | **Scrapy plugins** | | | | | | |
-| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | 0.5.1 (2026-09-11) | yes | ✅ | ✅ | ✅ | ✅ |
+| [scrapy-plugins/scrapy-download-handlers-incubator](https://github.com/scrapy-plugins/scrapy-download-handlers-incubator) | 0.6.0 (2026-10-24) | yes | ✅ | ✅ | ✅ | ✅ |
 | [scrapy-plugins/scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright) | 0.0.48 (2026-07-10) | yes | [❌](#trusted-publishing) | [❌](#publish-on-tag) | [❌](#separate-build-job) | ✅ |
 | [scrapy-plugins/scrapy-spider-metadata](https://github.com/scrapy-plugins/scrapy-spider-metadata) | 0.2.0 (2024-09-26) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | ✅ |
 | [zytedata/duplicate-url-discarder](https://github.com/zytedata/duplicate-url-discarder) | 0.3.0 (2024-12-30) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | [❌](#bump-my-version) |
@@ -2196,7 +2189,7 @@ bump-my-version replaces (unreleased) in the changelog with the release date.
 | [scrapinghub/python-scrapinghub](https://github.com/scrapinghub/python-scrapinghub) | 2.9.0 (2026-08-12) | no | ✅ | ✅ | ✅ | ✅ |
 | [scrapinghub/shub](https://github.com/scrapinghub/shub) | 2.18.1 (2026-07-08) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | ✅ |
 | [scrapinghub/scrapinghub-entrypoint-scrapy](https://github.com/scrapinghub/scrapinghub-entrypoint-scrapy) | 0.18.1 (2026-01-28) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | ✅ |
-| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | 1.14.44.2 (2026-10-22) | no | [❌](#trusted-publishing) | [❌](#publish-on-tag) | [❌](#separate-build-job) | [❌](#bump-my-version) |
+| [scrapinghub/shub-workflow](https://github.com/scrapinghub/shub-workflow) | 1.14.44.3 (2026-10-23) | no | [❌](#trusted-publishing) | [❌](#publish-on-tag) | [❌](#separate-build-job) | [❌](#bump-my-version) |
 | [scrapinghub/scrapy-frontera](https://github.com/scrapinghub/scrapy-frontera) | 0.3.0 (2025-06-06) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | ✅ |
 | [scrapinghub/frontera](https://github.com/scrapinghub/frontera) | 0.8.1 (2019-04-05) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | [❌](#bump-my-version) |
 | [scrapinghub/hcf-backend](https://github.com/scrapinghub/hcf-backend) | 0.6.1 (2025-10-31) | no | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | ✅ |
@@ -2212,7 +2205,7 @@ bump-my-version replaces (unreleased) in the changelog with the release date.
 | [scrapy/form2request](https://github.com/scrapy/form2request) | 0.2.0 (2024-07-15) | yes | ✅ | ✅ | ✅ | ✅ |
 | [scrapinghub/Formasaurus](https://github.com/scrapinghub/Formasaurus) | 0.10.0 (2024-11-07) | yes | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | ✅ |
 | [scrapinghub/sklearn-crfsuite](https://github.com/scrapinghub/sklearn-crfsuite) | 0.5.0 (2024-06-18) | no | [❌](#trusted-publishing) | ✅ | [❌](#separate-build-job) | [❌](#bump-my-version) |
-| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | 0.9.12 (2025-12-23) | no | [❌](#trusted-publishing) | [❌](#publish-on-tag) | ✅ | ✅ |
+| [scrapinghub/python-crfsuite](https://github.com/scrapinghub/python-crfsuite) | 0.9.12 (2025-12-23) | yes | [❌](#trusted-publishing) | [❌](#publish-on-tag) | ✅ | ✅ |
 | **Monitoring** | | | | | | |
 | [scrapinghub/spidermon](https://github.com/scrapinghub/spidermon) | 1.27.0 (2026-08-10) | yes | ✅ | ✅ | [❌](#separate-build-job) | ✅ |
 | [scrapy-plugins/zyte-spidermon](https://github.com/scrapy-plugins/zyte-spidermon) | no | [➖](#unreleased-changes) | [❌](#trusted-publishing) | [❌](#publish-on-tag) | [❌](#separate-build-job) | [❌](#bump-my-version) |
